@@ -11,7 +11,7 @@ Helper libraries used in the implementation of the Prema PHP framework.
 
 Read the [documentation][docs].
 
-[docs]: https://github.com/btafoya/SqueakyMindsPhpHelper/docs/classes/SqueakyMindsPhpHelper.html
+[docs]: (docs/classes/SqueakyMindsPhpHelper.html)
 
 ## Installation
 

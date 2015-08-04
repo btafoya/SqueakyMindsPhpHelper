@@ -22,5 +22,13 @@
         "psr-0": {
             "SqueakyMindsPhpHelper": "src"
         }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "vendor/bin/phpdoc -f SqueakyMindsPhpHelper.php -t docs"
+        ],
+        "post-update-cmd": [
+            "vendor/bin/phpdoc -f SqueakyMindsPhpHelper.php -t docs"
+        ]
     }
 }
