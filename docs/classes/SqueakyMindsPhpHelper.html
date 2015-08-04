@@ -1,0 +1,3587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>API Documentation</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+    <link href="../css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/prism.css" rel="stylesheet" media="all"/>
+    <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+    <!--[if lt IE 9]>
+    <script src="../js/html5.js"></script>
+    <![endif]-->
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <script src="../js/ui/1.10.4/jquery-ui.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.smooth-scroll.js"></script>
+    <script src="../js/prism.min.js"></script>
+    <!-- TODO: Add http://jscrollpane.kelvinluck.com/ to style the scrollbars for browsers not using webkit-->
+    <script type="text/javascript">
+    function loadExternalCodeSnippets() {
+        Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach(function (pre) {
+            var src = pre.getAttribute('data-src');
+            var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
+            var language = 'php';
+
+            var code = document.createElement('code');
+            code.className = 'language-' + language;
+
+            pre.textContent = '';
+
+            code.textContent = 'Loading…';
+
+            pre.appendChild(code);
+
+            var xhr = new XMLHttpRequest();
+
+            xhr.open('GET', src, true);
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4) {
+
+                    if (xhr.status < 400 && xhr.responseText) {
+                        code.textContent = xhr.responseText;
+
+                        Prism.highlightElement(code);
+                    }
+                    else if (xhr.status >= 400) {
+                        code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
+                    }
+                    else {
+                        code.textContent = '✖ Error: File does not exist or is empty';
+                    }
+                }
+            };
+
+            xhr.send(null);
+        });
+    }
+
+    $(document).ready(function(){
+        loadExternalCodeSnippets();
+    });
+    $('#source-view').on('shown', function () {
+        loadExternalCodeSnippets();
+    })
+</script>
+
+    <link rel="shortcut icon" href="../images/favicon.ico"/>
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+</head>
+<body>
+
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <i class="icon-ellipsis-vertical"></i>
+            </a>
+            <a class="brand" href="../index.html">API Documentation</a>
+
+            <div class="nav-collapse">
+                <ul class="nav pull-right">
+                                        <li class="dropdown" id="charts-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Charts <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../graphs/class.html">
+                                    <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown" id="reports-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Reports <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../reports/errors.html">
+                                                                                                                                                                                        <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">90</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/markers.html">
+                                                                                                                                                                                        <i class="icon-list-alt"></i>&#160;Markers <span class="label label-info pull-right">0</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/deprecated.html">
+                                                                                                            <i class="icon-list-alt"></i>&#160;Deprecated <span class="label label-info pull-right">0</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--<div class="go_to_top">-->
+    <!--<a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>-->
+    <!--</div>-->
+</div>
+
+<div id="___" class="container-fluid">
+        <section class="row-fluid">
+        <div class="span2 sidebar">
+                                <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-69936287"></a>
+                                <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
+            </div>
+            <div id="namespace-69936287" class="accordion-body collapse in">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/SqueakyMindsPhpHelper.html">SqueakyMindsPhpHelper</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        </div>
+    </section>
+    <section class="row-fluid">
+        <div class="span10 offset2">
+            <div class="row-fluid">
+                <div class="span8 content class">
+                    <nav>
+                                                <a href="../namespaces/default.html">\</a> <i class="icon-level-up"></i>
+                                            </nav>
+                    <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal"><i class="icon-code"></i></a>
+
+                    <h1><small>\</small>SqueakyMindsPhpHelper</h1>
+                    <p><em>SQUEAKYMINDS.COM Helper Classes</em></p>
+                    <p>Copyright (c) 2001-2015, Brian Tafoya</p>
+                    
+                                        
+                    <section id="summary">
+                        <h2>Summary</h2>
+                        <section class="row-fluid heading">
+                            <section class="span4">
+                                <a href="#methods">Methods</a>
+                            </section>
+                            <section class="span4">
+                                <a href="#properties">Properties</a>
+                            </section>
+                            <section class="span4">
+                                <a href="#constants">Constants</a>
+                            </section>
+                        </section>
+                        <section class="row-fluid public">
+                            <section class="span4">
+                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method_uuid" class="">uuid()</a><br />
+                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method_postvar" class="">postvar()</a><br />
+                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method_getvar" class="">getvar()</a><br />
+                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method_sessionvar" class="">sessionvar()</a><br />
+                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method_cookievar" class="">cookievar()</a><br />
+                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method_getvar_default" class="">getvar_default()</a><br />
+                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method_left" class="">left()</a><br />
+                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method_right" class="">right()</a><br />
+                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method_mid" class="">mid()</a><br />
+                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method_ArrayToList" class="">ArrayToList()</a><br />
+                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method_ListAppend" class="">ListAppend()</a><br />
+                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method_ListChangeDelims" class="">ListChangeDelims()</a><br />
+                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method_ListContains" class="">ListContains()</a><br />
+                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method_ListContainsNoCase" class="">ListContainsNoCase()</a><br />
+                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method_ListDeleteAt" class="">ListDeleteAt()</a><br />
+                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method_ListFind" class="">ListFind()</a><br />
+                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method_ListFindNoCase" class="">ListFindNoCase()</a><br />
+                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method_ListFirst" class="">ListFirst()</a><br />
+                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method_ListGetAt" class="">ListGetAt()</a><br />
+                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method_ListInsertAt" class="">ListInsertAt()</a><br />
+                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method_ListLast" class="">ListLast()</a><br />
+                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method_ListLen" class="">ListLen()</a><br />
+                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method_ListPrepend" class="">ListPrepend()</a><br />
+                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method_ListQualify" class="">ListQualify()</a><br />
+                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method_ListRest" class="">ListRest()</a><br />
+                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method_ListSetAt" class="">ListSetAt()</a><br />
+                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method_ListSort" class="">ListSort()</a><br />
+                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method_ListToArray" class="">ListToArray()</a><br />
+                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method_ListValueCount" class="">ListValueCount()</a><br />
+                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method_ListValueCountNoCase" class="">ListValueCountNoCase()</a><br />
+                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method_dump_simple_array" class="">dump_simple_array()</a><br />
+                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method_truncate" class="">truncate()</a><br />
+                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method_multi_stripslashes" class="">multi_stripslashes()</a><br />
+                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method_numberToRoman" class="">numberToRoman()</a><br />
+                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method_duration" class="">duration()</a><br />
+                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method_object2array" class="">object2array()</a><br />
+                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method_xml2array" class="">xml2array()</a><br />
+                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method_json_indent" class="">json_indent()</a><br />
+                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method_array_last" class="">array_last()</a><br />
+                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method_array_first" class="">array_first()</a><br />
+                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method_requested_url" class="">requested_url()</a><br />
+                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method_linkify" class="">linkify()</a><br />
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No public properties found</em>
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No constants found</em>
+                                                            </section>
+                        </section>
+                        <section class="row-fluid protected">
+                            <section class="span4">
+                                                                    <em>No protected methods found</em>
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No protected properties found</em>
+                                                            </section>
+                            <section class="span4">
+                                <em>N/A</em>
+                            </section>
+                        </section>
+                        <section class="row-fluid private">
+                            <section class="span4">
+                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method__listFuncs_PrepListAsArray" class="">_listFuncs_PrepListAsArray()</a><br />
+                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method__listFuncs_PrepListAsList" class="">_listFuncs_PrepListAsList()</a><br />
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No private properties found</em>
+                                                            </section>
+                            <section class="span4">
+                                <em>N/A</em>
+                            </section>
+                        </section>
+                    </section>
+                </div>
+                <aside class="span4 detailsbar">
+                                        
+                    
+                    <dl>
+                        <dt>File</dt>
+                            <dd><a href="../files/SqueakyMindsPhpHelper.html"><div class="path-wrapper">SqueakyMindsPhpHelper.php</div></a></dd>
+                                                <dt>Package</dt>
+                            <dd><div class="namespace-wrapper">SqueakyMindsPhpHelper</div></dd>
+                                                <dt>Class hierarchy</dt>
+                            <dd class="hierarchy">
+                                                                                                                                                                    <div class="namespace-wrapper">\SqueakyMindsPhpHelper</div>
+                            </dd>
+
+                        
+                        
+                        
+                                                                            <dt>See also</dt>
+                                                                                    <dd><a href="https://github.com/btafoya/SqueakyMindsPhpHelper"><div class="namespace-wrapper">The SqueakyMindsPhpHelper GitHub project</div></a></dd>
+                                                    
+                                                                        </dl>
+                    <h2>Tags</h2>
+                    <table class="table table-condensed">
+                                            <tr>
+                            <th>
+                                author
+                            </th>
+                            <td>
+                                                                    <p>Brian Tafoya <a href="mailto:btafoya@briantafoya.com">btafoya@briantafoya.com</a></p>
+                                                            </td>
+                        </tr>
+                                            <tr>
+                            <th>
+                                copyright
+                            </th>
+                            <td>
+                                                                    <p>2001 - 2015, Brian Tafoya.</p>
+                                                                    <p>2003, The Fusebox Corporation. &quot;This software consists of voluntary contributions made by many individuals on behalf of the Fusebox Corporation. For more information on Fusebox, please see <a href="http://www.fusebox.org/">http://www.fusebox.org/</a>.&quot;</p>
+                                                            </td>
+                        </tr>
+                                            <tr>
+                            <th>
+                                license
+                            </th>
+                            <td>
+                                                                    <p><a href="http://www.gnu.org/copyleft/lesser.html">http://www.gnu.org/copyleft/lesser.html</a> GNU Lesser General Public License</p>
+                                                            </td>
+                        </tr>
+                                            <tr>
+                            <th>
+                                note
+                            </th>
+                            <td>
+                                                                    <p>This program is distributed in the hope that it will be useful - WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
+                                                            </td>
+                        </tr>
+                                        </table>
+                </aside>
+            </div>
+
+                        
+                        
+                                    <a id="methods" name="methods"></a>
+            <div class="row-fluid">
+                <div class="span8 content class"><h2>Methods</h2></div>
+                <aside class="span4 detailsbar"></aside>
+            </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_uuid" name="method_uuid" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">uuid()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">uuid() : string</pre>
+                <p><em>Return a 32 bit unique ID</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            method
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Brian Tafoya</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            copyright
+                        </th>
+                        <td>
+                                                                                            <p>Copyright 2001 - 2015, Brian Tafoya.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            version
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_postvar" name="method_postvar" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">postvar()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">postvar(  <span class="argument">$name</span>,   <span class="argument">$isint = &quot;&quot;</span>) : string</pre>
+                <p><em>Prevent undefined post variables</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$name </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$isint </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>or int</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            method
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Brian Tafoya</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            copyright
+                        </th>
+                        <td>
+                                                                                            <p>Copyright 2001 - 2015, Brian Tafoya.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            version
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getvar" name="method_getvar" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getvar()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getvar(  <span class="argument">$name</span>,   <span class="argument">$isint = &quot;&quot;</span>) : string</pre>
+                <p><em>Prevent undefined get variables</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$name </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$isint </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>or int</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            method
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Brian Tafoya</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            copyright
+                        </th>
+                        <td>
+                                                                                            <p>Copyright 2001 - 2015, Brian Tafoya.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            version
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_sessionvar" name="method_sessionvar" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">sessionvar()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">sessionvar(  <span class="argument">$name</span>,   <span class="argument">$isint = &quot;&quot;</span>) : string</pre>
+                <p><em>Prevent undefined session variables</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$name </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$isint </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>or int</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            method
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Brian Tafoya</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            copyright
+                        </th>
+                        <td>
+                                                                                            <p>Copyright 2001 - 2015, Brian Tafoya.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            version
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_cookievar" name="method_cookievar" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">cookievar()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">cookievar(  <span class="argument">$name</span>,   <span class="argument">$isint = &quot;&quot;</span>) : string</pre>
+                <p><em>Prevent undefined cookie variables</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$name </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$isint </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>or int</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            method
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Brian Tafoya</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            copyright
+                        </th>
+                        <td>
+                                                                                            <p>Copyright 2001 - 2015, Brian Tafoya.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            version
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getvar_default" name="method_getvar_default" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getvar_default()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getvar_default(  <span class="argument">$field_name</span>,   <span class="argument">$default_val = &quot;&quot;</span>) : string</pre>
+                <p><em>Return getvar with a default is blank.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$field_name </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$default_val </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>or int</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            method
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Brian Tafoya</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            copyright
+                        </th>
+                        <td>
+                                                                                            <p>Copyright 2001 - 2015, Brian Tafoya.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            version
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_left" name="method_left" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">left()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">left(  <span class="argument">$str</span>,   <span class="argument">$howManyCharsFromLeft</span>) : string</pre>
+                <p><em>Return characters from the left</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$str </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$howManyCharsFromLeft </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            method
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Brian Tafoya</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            copyright
+                        </th>
+                        <td>
+                                                                                            <p>Copyright 2001 - 2015, Brian Tafoya.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            version
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_right" name="method_right" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">right()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">right(  <span class="argument">$str</span>,   <span class="argument">$howManyCharsFromRight</span>) : string</pre>
+                <p><em>Return characters from the right</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$str </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$howManyCharsFromRight </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            method
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Brian Tafoya</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            copyright
+                        </th>
+                        <td>
+                                                                                            <p>Copyright 2001 - 2015, Brian Tafoya.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            version
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_mid" name="method_mid" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">mid()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">mid(  <span class="argument">$str</span>,   <span class="argument">$start</span>,   <span class="argument">$howManyCharsToRetrieve</span>) : string</pre>
+                <p><em>Return x many characters from the starting point</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$str </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$start </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$howManyCharsToRetrieve </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            method
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Brian Tafoya</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            copyright
+                        </th>
+                        <td>
+                                                                                            <p>Copyright 2001 - 2015, Brian Tafoya.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            version
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_ArrayToList" name="method_ArrayToList" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">ArrayToList()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">ArrayToList(  <span class="argument">$inArray</span>,   <span class="argument">$inDelim = &quot;,&quot;</span>) : string</pre>
+                <p><em>ArrayToList</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$inArray </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$inDelim </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            method
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>The Fusebox Corporation.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            copyright
+                        </th>
+                        <td>
+                                                                                            <p>Copyright (c) 2003 The Fusebox Corporation. All rights reserved.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            version
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_ListAppend" name="method_ListAppend" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">ListAppend()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">ListAppend(  <span class="argument">$inList</span>,   <span class="argument">$inValue</span>,   <span class="argument">$inDelim = &quot;,&quot;</span>) : string</pre>
+                <p><em>ListAppend</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$inList </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$inValue </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$inDelim </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            method
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>The Fusebox Corporation.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            copyright
+                        </th>
+                        <td>
+                                                                                            <p>Copyright (c) 2003 The Fusebox Corporation. All rights reserved.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            version
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_ListChangeDelims" name="method_ListChangeDelims" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">ListChangeDelims()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">ListChangeDelims(  <span class="argument">$inList</span>,   <span class="argument">$inNewDelim</span>,   <span class="argument">$inDelim = &quot;,&quot;</span>) : string</pre>
+                <p><em>ListChangeDelims</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$inList </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$inNewDelim </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$inDelim </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            method
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>The Fusebox Corporation.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            copyright
+                        </th>
+                        <td>
+                                                                                            <p>Copyright (c) 2003 The Fusebox Corporation. All rights reserved.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            version
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_ListContains" name="method_ListContains" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">ListContains()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">ListContains(  <span class="argument">$inList</span>,   <span class="argument">$inSubstr</span>,   <span class="argument">$inDelim = &quot;,&quot;</span>) : integer</pre>
+                <p><em>ListContains</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$inList </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$inSubstr </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$inDelim </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    integer
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            method
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>The Fusebox Corporation.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            copyright
+                        </th>
+                        <td>
+                                                                                            <p>Copyright (c) 2003 The Fusebox Corporation. All rights reserved.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            version
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_ListContainsNoCase" name="method_ListContainsNoCase" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">ListContainsNoCase()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">ListContainsNoCase(  <span class="argument">$inList</span>,   <span class="argument">$inSubstr</span>,   <span class="argument">$inDelim = &quot;,&quot;</span>) : integer</pre>
+                <p><em>ListContainsNoCase</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$inList </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$inSubstr </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$inDelim </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    integer
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            method
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>The Fusebox Corporation.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            copyright
+                        </th>
+                        <td>
+                                                                                            <p>Copyright (c) 2003 The Fusebox Corporation. All rights reserved.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            version
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_ListDeleteAt" name="method_ListDeleteAt" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">ListDeleteAt()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">ListDeleteAt(  <span class="argument">$inList</span>,   <span class="argument">$inPosition</span>,   <span class="argument">$inDelim = &quot;,&quot;</span>) : string</pre>
+                <p><em>ListDeleteAt</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$inList </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$inPosition </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$inDelim </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            method
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>The Fusebox Corporation.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            copyright
+                        </th>
+                        <td>
+                                                                                            <p>Copyright (c) 2003 The Fusebox Corporation. All rights reserved.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            version
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_ListFind" name="method_ListFind" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">ListFind()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">ListFind(  <span class="argument">$inList</span>,   <span class="argument">$inSubstr</span>,   <span class="argument">$inDelim = &quot;,&quot;</span>) : integer</pre>
+                <p><em>ListFind</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$inList </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$inSubstr </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$inDelim </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    integer
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            method
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>The Fusebox Corporation.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            copyright
+                        </th>
+                        <td>
+                                                                                            <p>Copyright (c) 2003 The Fusebox Corporation. All rights reserved.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            version
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_ListFindNoCase" name="method_ListFindNoCase" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">ListFindNoCase()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">ListFindNoCase(  <span class="argument">$inList</span>,   <span class="argument">$inSubstr</span>,   <span class="argument">$inDelim = &quot;,&quot;</span>) : integer</pre>
+                <p><em>ListFindNoCase</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$inList </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$inSubstr </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$inDelim </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    integer
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            method
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>The Fusebox Corporation.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            copyright
+                        </th>
+                        <td>
+                                                                                            <p>Copyright (c) 2003 The Fusebox Corporation. All rights reserved.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            version
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_ListFirst" name="method_ListFirst" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">ListFirst()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">ListFirst(  <span class="argument">$inList</span>,   <span class="argument">$inDelim = &quot;,&quot;</span>) : string</pre>
+                <p><em>ListFirst</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$inList </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$inDelim </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            method
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>The Fusebox Corporation.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            copyright
+                        </th>
+                        <td>
+                                                                                            <p>Copyright (c) 2003 The Fusebox Corporation. All rights reserved.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            version
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_ListGetAt" name="method_ListGetAt" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">ListGetAt()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">ListGetAt(  <span class="argument">$inList</span>,   <span class="argument">$inPosition</span>,   <span class="argument">$inDelim = &quot;,&quot;</span>) : string</pre>
+                <p><em>ListGetAt</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$inList </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$inPosition </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$inDelim </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            method
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>The Fusebox Corporation.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            copyright
+                        </th>
+                        <td>
+                                                                                            <p>Copyright (c) 2003 The Fusebox Corporation. All rights reserved.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            version
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_ListInsertAt" name="method_ListInsertAt" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">ListInsertAt()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">ListInsertAt(  <span class="argument">$inList</span>,   <span class="argument">$inPosition</span>,   <span class="argument">$inValue</span>,   <span class="argument">$inDelim = &quot;,&quot;</span>) : string</pre>
+                <p><em>ListInsertAt</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$inList </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$inPosition </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$inValue </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$inDelim </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            method
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>The Fusebox Corporation.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            copyright
+                        </th>
+                        <td>
+                                                                                            <p>Copyright (c) 2003 The Fusebox Corporation. All rights reserved.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            version
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_ListLast" name="method_ListLast" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">ListLast()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">ListLast(  <span class="argument">$inList</span>,   <span class="argument">$inDelim = &quot;,&quot;</span>) : string</pre>
+                <p><em>ListLast</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$inList </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$inDelim </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            method
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>The Fusebox Corporation.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            copyright
+                        </th>
+                        <td>
+                                                                                            <p>Copyright (c) 2003 The Fusebox Corporation. All rights reserved.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            version
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_ListLen" name="method_ListLen" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">ListLen()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">ListLen(  <span class="argument">$inList</span>,   <span class="argument">$inDelim = &quot;,&quot;</span>) : integer</pre>
+                <p><em>ListLen</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$inList </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$inDelim </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    integer
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            method
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>The Fusebox Corporation.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            copyright
+                        </th>
+                        <td>
+                                                                                            <p>Copyright (c) 2003 The Fusebox Corporation. All rights reserved.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            version
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_ListPrepend" name="method_ListPrepend" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">ListPrepend()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">ListPrepend(  <span class="argument">$inList</span>,   <span class="argument">$inValue</span>,   <span class="argument">$inDelim = &quot;,&quot;</span>) : string</pre>
+                <p><em>ListPrepend</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$inList </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$inValue </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$inDelim </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            method
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>The Fusebox Corporation.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            copyright
+                        </th>
+                        <td>
+                                                                                            <p>Copyright (c) 2003 The Fusebox Corporation. All rights reserved.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            version
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_ListQualify" name="method_ListQualify" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">ListQualify()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">ListQualify(  <span class="argument">$inList</span>,   <span class="argument">$inQualifier</span>,   <span class="argument">$inDelim = &quot;,&quot;</span>) : string</pre>
+                <p><em>ListPrepend</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$inList </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$inQualifier </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$inDelim </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            method
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>The Fusebox Corporation.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            copyright
+                        </th>
+                        <td>
+                                                                                            <p>Copyright (c) 2003 The Fusebox Corporation. All rights reserved.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            version
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_ListRest" name="method_ListRest" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">ListRest()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">ListRest(  <span class="argument">$inList</span>,   <span class="argument">$inDelim = &quot;,&quot;</span>) : string</pre>
+                <p><em>ListRest</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$inList </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$inDelim </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            method
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>The Fusebox Corporation.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            copyright
+                        </th>
+                        <td>
+                                                                                            <p>Copyright (c) 2003 The Fusebox Corporation. All rights reserved.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            version
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_ListSetAt" name="method_ListSetAt" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">ListSetAt()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">ListSetAt(  <span class="argument">$inList</span>,   <span class="argument">$inPosition</span>,   <span class="argument">$inValue</span>,   <span class="argument">$inDelim = &quot;,&quot;</span>) : string</pre>
+                <p><em>ListSetAt</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$inList </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$inPosition </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$inValue </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$inDelim </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            method
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>The Fusebox Corporation.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            copyright
+                        </th>
+                        <td>
+                                                                                            <p>Copyright (c) 2003 The Fusebox Corporation. All rights reserved.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            version
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_ListSort" name="method_ListSort" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">ListSort()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">ListSort(  <span class="argument">$inList</span>,   <span class="argument">$inSortType</span>,   <span class="argument">$inSortOrder = &quot;ASC&quot;</span>) : string</pre>
+                <p><em>ListSort</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$inList </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$inSortType </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$inSortOrder </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            method
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>The Fusebox Corporation.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            copyright
+                        </th>
+                        <td>
+                                                                                            <p>Copyright (c) 2003 The Fusebox Corporation. All rights reserved.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            version
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_ListToArray" name="method_ListToArray" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">ListToArray()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">ListToArray(  <span class="argument">$inList</span>,   <span class="argument">$inDelim = &quot;,&quot;</span>) : array</pre>
+                <p><em>ListToArray</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$inList </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$inDelim </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    array
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            method
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>The Fusebox Corporation.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            copyright
+                        </th>
+                        <td>
+                                                                                            <p>Copyright (c) 2003 The Fusebox Corporation. All rights reserved.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            version
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_ListValueCount" name="method_ListValueCount" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">ListValueCount()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">ListValueCount(  <span class="argument">$inList</span>,   <span class="argument">$inValue</span>,   <span class="argument">$inDelim = &quot;,&quot;</span>) : integer</pre>
+                <p><em>ListValueCount</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$inList </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$inValue </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$inDelim </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    integer
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            method
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>The Fusebox Corporation.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            copyright
+                        </th>
+                        <td>
+                                                                                            <p>Copyright (c) 2003 The Fusebox Corporation. All rights reserved.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            version
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_ListValueCountNoCase" name="method_ListValueCountNoCase" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">ListValueCountNoCase()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">ListValueCountNoCase(  <span class="argument">$inList</span>,   <span class="argument">$inValue</span>,   <span class="argument">$inDelim = &quot;,&quot;</span>) : integer</pre>
+                <p><em>ListValueCountNoCase</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$inList </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$inValue </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$inDelim </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    integer
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            method
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>The Fusebox Corporation.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            copyright
+                        </th>
+                        <td>
+                                                                                            <p>Copyright (c) 2003 The Fusebox Corporation. All rights reserved.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            version
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_dump_simple_array" name="method_dump_simple_array" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">dump_simple_array()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">dump_simple_array(  <span class="argument">$array</span>,   <span class="argument">$title = &quot;&quot;</span>) : string</pre>
+                <p><em>HTML Dump of string/array/etc.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$array </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$title </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            method
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Brian Tafoya</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            copyright
+                        </th>
+                        <td>
+                                                                                            <p>Copyright 2001 - 2015, Brian Tafoya.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            version
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_truncate" name="method_truncate" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">truncate()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">truncate(  <span class="argument">$num</span>,   <span class="argument">$digits</span>) : integer</pre>
+                <p><em>Return truncated number.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$num </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$digits </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    integer
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            method
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Brian Tafoya</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            copyright
+                        </th>
+                        <td>
+                                                                                            <p>Copyright 2001 - 2015, Brian Tafoya.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            version
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_multi_stripslashes" name="method_multi_stripslashes" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">multi_stripslashes()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">multi_stripslashes(  <span class="argument">$arr</span>) : array</pre>
+                <p><em>Return array stripslasshes recursive.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$arr </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    array
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            method
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Brian Tafoya</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            copyright
+                        </th>
+                        <td>
+                                                                                            <p>Copyright 2001 - 2015, Brian Tafoya.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            version
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_numberToRoman" name="method_numberToRoman" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">numberToRoman()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">numberToRoman(  <span class="argument">$num</span>) : string</pre>
+                <p><em>Return roman numeral.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$num </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            method
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Brian Tafoya</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            copyright
+                        </th>
+                        <td>
+                                                                                            <p>Copyright 2001 - 2015, Brian Tafoya.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            version
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_duration" name="method_duration" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">duration()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">duration(  <span class="argument">$secs</span>) : string</pre>
+                <p><em>Return duration from seconds.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$secs </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            method
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Brian Tafoya</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            copyright
+                        </th>
+                        <td>
+                                                                                            <p>Copyright 2001 - 2015, Brian Tafoya.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            version
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_object2array" name="method_object2array" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">object2array()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">object2array(  <span class="argument">$object</span>) : array</pre>
+                <p><em>Return an array from an object.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$object </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    array
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            method
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Brian Tafoya</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            copyright
+                        </th>
+                        <td>
+                                                                                            <p>Copyright 2001 - 2015, Brian Tafoya.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            version
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_xml2array" name="method_xml2array" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">xml2array()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">xml2array(  <span class="argument">$xml</span>) : array</pre>
+                <p><em>Return an array from xml string.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$xml </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    array
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            method
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Brian Tafoya</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            copyright
+                        </th>
+                        <td>
+                                                                                            <p>Copyright 2001 - 2015, Brian Tafoya.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            version
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_json_indent" name="method_json_indent" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">json_indent()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">json_indent(string  <span class="argument">$json</span>) : string</pre>
+                <p><em>Indents a flat JSON string to make it more human-readable.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$json </td>
+                                <td><p>The original JSON string to process.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>Indented version of the original JSON string.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            method
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Brian Tafoya</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            copyright
+                        </th>
+                        <td>
+                                                                                            <p>Copyright 2001 - 2015, Brian Tafoya.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            version
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_array_last" name="method_array_last" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">array_last()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">array_last(array  <span class="argument">$array_val</span>) : array</pre>
+                <p><em>Return the last array member.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>array</td>
+                                <td>$array_val </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    array
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            method
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Brian Tafoya</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            copyright
+                        </th>
+                        <td>
+                                                                                            <p>Copyright 2001 - 2015, Brian Tafoya.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            version
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_array_first" name="method_array_first" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">array_first()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">array_first(array  <span class="argument">$array_val</span>) : array</pre>
+                <p><em>Return the first array member.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>array</td>
+                                <td>$array_val </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    array
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            method
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Brian Tafoya</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            copyright
+                        </th>
+                        <td>
+                                                                                            <p>Copyright 2001 - 2015, Brian Tafoya.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            version
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_requested_url" name="method_requested_url" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">requested_url()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">requested_url() : string</pre>
+                <p><em>Return the requested url.</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            method
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Brian Tafoya</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            copyright
+                        </th>
+                        <td>
+                                                                                            <p>Copyright 2001 - 2015, Brian Tafoya.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            version
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_linkify" name="method_linkify" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">linkify()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">linkify(string  <span class="argument">$value</span>, array  <span class="argument">$protocols = array(&#039;http&#039;, &#039;mail&#039;)</span>, array  <span class="argument">$attributes = array()</span>) : string</pre>
+                <p><em>Turn all URLs in clickable links.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$value </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td>array</td>
+                                <td>$protocols </td>
+                                <td><p>http/https, ftp, mail, twitter</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>array</td>
+                                <td>$attributes </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            method
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Brian Tafoya</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            copyright
+                        </th>
+                        <td>
+                                                                                            <p>Copyright 2001 - 2015, Brian Tafoya.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            version
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method__listFuncs_PrepListAsArray" name="method__listFuncs_PrepListAsArray" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">_listFuncs_PrepListAsArray()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">_listFuncs_PrepListAsArray(  <span class="argument">$inList</span>,   <span class="argument">$inDelim</span>) : array</pre>
+                <p><em>_listFuncs_PrepListAsArray</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$inList </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$inDelim </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    array
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            method
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>The Fusebox Corporation.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            copyright
+                        </th>
+                        <td>
+                                                                                            <p>Copyright (c) 2003 The Fusebox Corporation. All rights reserved.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            version
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method__listFuncs_PrepListAsList" name="method__listFuncs_PrepListAsList" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">_listFuncs_PrepListAsList()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">_listFuncs_PrepListAsList(  <span class="argument">$inList</span>,   <span class="argument">$inDelim</span>) : string</pre>
+                <p><em>_listFuncs_PrepListAsList</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$inList </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$inDelim </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            method
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>The Fusebox Corporation.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            copyright
+                        </th>
+                        <td>
+                                                                                            <p>Copyright (c) 2003 The Fusebox Corporation. All rights reserved.</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            version
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    </div>
+    </section>
+
+    <div id="source-view" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="source-view-label" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="source-view-label">SqueakyMindsPhpHelper.php</h3>
+        </div>
+        <div class="modal-body">
+            <pre data-src="../files/SqueakyMindsPhpHelper.php.txt" class="language-php line-numbers"></pre>
+        </div>
+    </div>
+
+    <footer class="row-fluid">
+        <section class="span10 offset2">
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <section class="row-fluid footer-sections">
+                        <section class="span4">
+                                                        <h1><i class="icon-code"></i></h1>
+                            <div>
+                                <ul>
+                                                                    </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-bar-chart"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../graphs/class.html">Class Hierarchy Diagram</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-pushpin"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../reports/errors.html">Errors</a></li>
+                                    <li><a href="../reports/markers.html">Markers</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                    </section>
+                </section>
+            </section>
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <hr />
+                    Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
+                    on August 4th, 2015 at 18:59.
+                </section>
+            </section>
+        </section>
+    </footer>
+</div>
+
+</body>
+</html>
