@@ -1,5 +1,5 @@
 {
-    "name": "SqueakyMinds/SqueakyMindsPhpHelper",
+    "name": "squeaky-minds/squeaky-minds-php-helper",
 	"type": "library",
 	"license": "LGP-2.1",
     "description": "A collection of missing php functions.",
