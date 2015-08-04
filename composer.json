@@ -1,0 +1,26 @@
+{
+    "name": "SqueakyMinds/SqueakyMindsPhpHelper",
+	"type": "library",
+	"license": "LGP-2.1",
+    "description": "A collection of missing php functions.",
+	"authors": [
+		{
+			"name": "Brian Tafoya",
+			"email": "btafoya@briantafoya.com",
+			"homepage": "https://www.briantafoya.com",
+			"role": "Developer"
+		}
+	],
+    "require": {
+        "php": ">=5.5.0"
+    }
+    "require-dev": {
+        "phpdocumentor/phpdocumentor": "2.*",
+		"phpunit/phpunit": "^4.5"
+    },
+	"autoload": {
+        "psr-0": {
+            "SqueakyMindsPhpHelper": "src"
+        }
+    }
+}
