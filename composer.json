@@ -3,6 +3,7 @@
 	"type": "library",
 	"license": "LGP-2.1",
     "description": "A collection of missing php functions.",
+	"homepage": "http://btafoya.github.io/SqueakyMindsPhpHelper/",
 	"authors": [
 		{
 			"name": "Brian Tafoya",
