@@ -3,7 +3,7 @@
 Copyright (c) 2001-2015, Brian Tafoya
 This program is distributed in the hope that it will be useful - WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
-[![Packagist Version](https://img.shields.io/packagist/v/squeaky-minds/squeaky-minds-php-helper.svg)](https://packagist.org/packages/squeaky-minds/squeaky-minds-php-helper)
+[![Latest Stable Version](https://poser.pugx.org/squeaky-minds/squeaky-minds-php-helper/version)](https://packagist.org/packages/squeaky-minds/squeaky-minds-php-helper)
 [![Code Climate](https://codeclimate.com/github/btafoya/SqueakyMindsPhpHelper/badges/gpa.svg)](https://codeclimate.com/github/btafoya/SqueakyMindsPhpHelper)
 [![License](https://poser.pugx.org/squeaky-minds/squeaky-minds-php-helper/license.svg)](https://packagist.org/packages/squeaky-minds/squeaky-minds-php-helper)
 
