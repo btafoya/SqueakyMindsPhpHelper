@@ -22,7 +22,7 @@ Add the following line to the `require` section of `composer.json`:
 ```json
 {
     "require": {
-        "squeaky-minds/squeaky-minds-php-helper": "0.*"
+        "squeaky-minds/squeaky-minds-php-helper": "^1.0.0"
     }
 }
 ```
