@@ -10,7 +10,7 @@
 * @copyright 2001 - 2015, Brian Tafoya.
 * @copyright 2003, The Fusebox Corporation. "This software consists of voluntary contributions made by many individuals on behalf of the Fusebox Corporation. For more information on Fusebox, please see <http://www.fusebox.org/>."
 * @license http://www.gnu.org/copyleft/lesser.html GNU Lesser General Public License
-* @note This program is distributed in the hope that it will be useful - WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+* @note This brary is distributed in the hope that it will be useful - WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 */
 
 

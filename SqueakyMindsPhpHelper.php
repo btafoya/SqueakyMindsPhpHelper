@@ -8,13 +8,21 @@
 * @link https://github.com/btafoya/SqueakyMindsPhpHelper The SqueakyMindsPhpHelper GitHub project
 * @author Brian Tafoya <btafoya@briantafoya.com>
 * @copyright 2001 - 2015, Brian Tafoya.
-* @copyright 2003, The Fusebox Corporation. "This software consists of voluntary contributions made by many individuals on behalf of the Fusebox Corporation. For more information on Fusebox, please see <http://www.fusebox.org/>."
 * @license http://www.gnu.org/copyleft/lesser.html GNU Lesser General Public License
-* @note This program is distributed in the hope that it will be useful - WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+* @note This library is distributed in the hope that it will be useful - WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 */
 
 
 class SqueakyMindsPhpHelper {
+	
+	private $sessionvariable;
+	
+	
+    public function __construct() {
+		$sessionvariable = $_SESSION;
+    } 
+
+
 	/**
 	* Return a 32 bit unique ID
 	*
@@ -77,8 +85,25 @@ class SqueakyMindsPhpHelper {
 	* @version    1.0
 	*/
 	public function sessionvar($name,$isint="") {
-		$response = (isset($_SESSION[$name])?$_SESSION[$name]:"");
+		$response = (isset($this->sessionvariable[$name])?$this->sessionvariable[$name]:"");
 		return ((int)$isint?(int)$response:(string)$response);
+	}
+	
+	
+	/**
+	* Set session variables
+	*
+	* @method string setsessionvar()
+	* @access public
+	* @return null
+	*
+	* @author     Brian Tafoya
+	* @copyright  Copyright 2001 - 2015, Brian Tafoya.
+	* @version    1.0
+	*/
+	public function setsessionvar($name, $value) {
+		$this->sessionvar[$name] = $value;
+		$_SESSION[$name] = $value;
 	}
 	
 	
