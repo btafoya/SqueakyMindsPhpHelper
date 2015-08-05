@@ -1,7 +1,8 @@
 # SqueakyMindsPhpHelper
 
 Copyright (c) 2001-2015, Brian Tafoya
-This program is distributed in the hope that it will be useful - WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+This library is distributed in the hope that it will be useful - WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
 [![Latest Stable Version](https://poser.pugx.org/squeaky-minds/squeaky-minds-php-helper/version)](https://packagist.org/packages/squeaky-minds/squeaky-minds-php-helper)
 [![Code Climate](https://codeclimate.com/github/btafoya/SqueakyMindsPhpHelper/badges/gpa.svg)](https://codeclimate.com/github/btafoya/SqueakyMindsPhpHelper)
