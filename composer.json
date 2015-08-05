@@ -27,10 +27,10 @@
     },
     "scripts": {
         "post-install-cmd": [
-            "vendor/bin/phpdoc -f SqueakyMindsPhpHelper.php -t docs"
+            "vendor/bin/phpdoc -f SqueakyMindsPhpHelper.php,SqueakyMindsPhpHelper_lists.php -t docs"
         ],
         "post-update-cmd": [
-            "vendor/bin/phpdoc -f SqueakyMindsPhpHelper.php -t docs"
+            "vendor/bin/phpdoc -f SqueakyMindsPhpHelper.php,SqueakyMindsPhpHelper_lists.php -t docs"
         ]
     }
 }
