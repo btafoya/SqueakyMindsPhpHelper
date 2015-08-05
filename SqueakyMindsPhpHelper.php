@@ -43,7 +43,7 @@ class SqueakyMindsPhpHelper {
 	* @version    1.0
 	*/
 	public function postvar($name,$isint="") {
-		$response = (isset($_POST[$name])?$_POST[$name]:"");
+		$response = filter_input(INPUT_POST, $name, FILTER_SANITIZE_STRING);
 		return ((int)$isint?(int)$response:(string)$response);
 	}
 
@@ -60,7 +60,7 @@ class SqueakyMindsPhpHelper {
 	* @version    1.0
 	*/
 	public function getvar($name,$isint="") {
-		$response = (isset($_GET[$name])?$_GET[$name]:"");
+		$response = filter_input(INPUT_GET, $name, FILTER_SANITIZE_STRING);
 		return ((int)$isint?(int)$response:(string)$response);
 	}
 	
@@ -94,7 +94,7 @@ class SqueakyMindsPhpHelper {
 	* @version    1.0
 	*/
 	public function cookievar($name,$isint="") {
-		$response = (isset($_COOKIE[$name])?$_COOKIE[$name]:"");
+		$response = filter_input(INPUT_COOKIE, $name, FILTER_SANITIZE_STRING);
 		return ((int)$isint?(int)$response:(string)$response);
 	}
 	
@@ -159,12 +159,12 @@ class SqueakyMindsPhpHelper {
 	* @copyright  Copyright 2001 - 2015, Brian Tafoya.
 	* @version    1.0
 	*/
-	public function mid($str, $start, $howManyCharsToRetrieve = 0){
+	public function mid($str, $start, $howManyChars = 0){
 		$start--;
-		if ($howManyCharsToRetrieve === 0)
-		$howManyCharsToRetrieve = strlen ($str) - $start;
+		if ($howManyChars === 0)
+		$howManyChars = strlen ($str) - $start;
 		
-		return (string)substr($str, $start, $howManyCharsToRetrieve);
+		return (string)substr($str, $start, $howManyChars);
 	}
 
 	
@@ -226,58 +226,6 @@ class SqueakyMindsPhpHelper {
 	
 	
 	/**
-	* ListContains
-	*
-	* @method ListContains()
-	* @access public
-	* @return int
-	*
-	* @author     The Fusebox Corporation.
-	* @copyright  Copyright (c) 2003 The Fusebox Corporation. All rights reserved.
-	* @version    1.0
-	*/	
-	public function ListContains($inList, $inSubstr, $inDelim = ",") {
-		$aryList = $this->__listFuncs_PrepListAsArray($inList, $inDelim);
-		$outIndex = 0;
-		$intCounter = 0;
-		foreach($aryList as $item) {
-			$intCounter++;
-			if(preg_match("/" . preg_quote($inSubstr) . "/", $item)) {
-				$outIndex = $intCounter;
-				break;
-			}
-		}
-		return $outIndex;
-	}
-	
-	
-	/**
-	* ListContainsNoCase
-	*
-	* @method ListContainsNoCase()
-	* @access public
-	* @return int
-	*
-	* @author     The Fusebox Corporation.
-	* @copyright  Copyright (c) 2003 The Fusebox Corporation. All rights reserved.
-	* @version    1.0
-	*/	
-	public function ListContainsNoCase($inList, $inSubstr, $inDelim = ",") {
-		$aryList = $this->__listFuncs_PrepListAsArray($inList, $inDelim);
-		$outIndex = 0;
-		$intCounter = 0;
-		foreach($aryList as $item) {
-			$intCounter++;
-			if(preg_match("/" . preg_quote($inSubstr) . "/i", $item)) {
-				$outIndex = $intCounter;
-				break;
-			}
-		}
-		return $outIndex;
-	}
-	
-	
-	/**
 	* ListDeleteAt
 	*
 	* @method ListDeleteAt()
@@ -295,7 +243,7 @@ class SqueakyMindsPhpHelper {
 		return $outList;
 	}
 	
-	
+
 	/**
 	* ListFind
 	*
@@ -306,34 +254,8 @@ class SqueakyMindsPhpHelper {
 	* @author     The Fusebox Corporation.
 	* @copyright  Copyright (c) 2003 The Fusebox Corporation. All rights reserved.
 	* @version    1.0
-	*/	
+	*/		
 	public function ListFind($inList, $inSubstr, $inDelim = ",") {
-		$aryList = $this->__listFuncs_PrepListAsArray($inList, $inDelim);
-		$outIndex = 0;
-		$intCounter = 0;
-		foreach($aryList as $item) {
-			$intCounter++;
-			if(preg_match("/^" . preg_quote($inSubstr, "/") . "$/", $item)) {
-				$outIndex = $intCounter;
-				break;
-			}
-		}
-		return $outIndex;
-	}
-	
-	
-	/**
-	* ListFindNoCase
-	*
-	* @method ListFindNoCase()
-	* @access public
-	* @return int
-	*
-	* @author     The Fusebox Corporation.
-	* @copyright  Copyright (c) 2003 The Fusebox Corporation. All rights reserved.
-	* @version    1.0
-	*/	
-	public function ListFindNoCase($inList, $inSubstr, $inDelim = ",") {
 		$aryList = $this->__listFuncs_PrepListAsArray($inList, $inDelim);
 		$outIndex = 0;
 		$intCounter = 0;
@@ -738,7 +660,7 @@ class SqueakyMindsPhpHelper {
 	*/	
 	public function numberToRoman($num){
 		// Make sure that we only use the integer portion of the value
-		$n = intval($num);
+		$numr = intval($num);
 		$result = '';
 		
 		// Declare a lookup array that we will use to traverse the number:
@@ -748,13 +670,13 @@ class SqueakyMindsPhpHelper {
 		
 		foreach ($lookup as $roman => $value){
 			// Determine the number of matches
-			$matches = intval($n / $value);
+			$matches = intval($numr / $value);
 			
 			// Store that many characters
 			$result .= str_repeat($roman, $matches);
 			
 			// Substract that from the number
-			$n = $n % $value;
+			$numr = $numr % $value;
 		}
 		
 		// The Roman numeral should be built, return it
