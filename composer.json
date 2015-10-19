@@ -21,9 +21,7 @@
 		"codeclimate/php-test-reporter": "dev-master"
     },
 	"autoload": {
-        "psr-0": {
-            "SqueakyMindsPhpHelper": "src"
-        }
+        "classmap": ["SqueakyMindsPhpHelper.php", "SqueakyMindsPhpHelper_lists.php"]
     },
     "scripts": {
         "post-install-cmd": [
