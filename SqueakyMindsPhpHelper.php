@@ -19,7 +19,7 @@ class SqueakyMindsPhpHelper {
 	
 	
     public function __construct() {
-		$sessionvariable = (isset($_SESSION?$_SESSION:array());
+		$sessionvariable = (isset($_SESSION)?$_SESSION:array());
     } 
 
 
