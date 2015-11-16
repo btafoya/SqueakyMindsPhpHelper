@@ -392,7 +392,7 @@ class SqueakyMindsPhpHelper_lists {
 	* @copyright  Copyright (c) 2003 The Fusebox Corporation. All rights reserved.
 	* @version    1.0
 	*/
-	private function _listFuncs_PrepListAsArray($inList, $inDelim) {
+	private function __listFuncs_PrepListAsArray($inList, $inDelim) {
 		$inList = trim($inList);
 		$inList = preg_replace("/^" . preg_quote($inDelim, "/") . "+/", "", $inList);
 		$inList = preg_replace("/" . preg_quote($inDelim, "/") . "+$/", "", $inList);
@@ -415,7 +415,7 @@ class SqueakyMindsPhpHelper_lists {
 	* @copyright  Copyright (c) 2003 The Fusebox Corporation. All rights reserved.
 	* @version    1.0
 	*/
-	private function _listFuncs_PrepListAsList($inList, $inDelim) {
+	private function __listFuncs_PrepListAsList($inList, $inDelim) {
 		$inList = trim($inList);
 		$inList = preg_replace("/^" . preg_quote($inDelim, "/") . "+/", "", $inList);
 		$inList = preg_replace("/" . preg_quote($inDelim, "/") . "+$/", "", $inList);
