@@ -385,7 +385,7 @@ class SqueakyMindsPhpHelper {
 		header("Pragma: no-cache");
 	}
 
-	
+
 	/**
 	 * Indents a flat JSON string to make it more human-readable.
 	 *
