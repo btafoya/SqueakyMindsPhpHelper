@@ -1,16 +1,21 @@
 # SqueakyMindsPhpHelper
 
-Copyright (c) 2001-2015, Brian Tafoya
+Copyright (c) 2001-2017, Brian Tafoya
 
 This library is distributed in the hope that it will be useful - WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
+[![Author](https://img.shields.io/badge/author-btafoya@briantafoya.com-blue.svg?style=flat-square)](https://www.briantafoya.com)
 [![Latest Stable Version](https://poser.pugx.org/squeaky-minds/squeaky-minds-php-helper/version)](https://packagist.org/packages/squeaky-minds/squeaky-minds-php-helper)
+[![GitHub Tag](https://img.shields.io/github/tag/btafoya/SqueakyMindsPhpHelper.svg?style=flat-square)](https://github.com/openwebpresence/owp-framework)
 [![Code Climate](https://codeclimate.com/github/btafoya/SqueakyMindsPhpHelper/badges/gpa.svg)](https://codeclimate.com/github/btafoya/SqueakyMindsPhpHelper)
-[![License](https://poser.pugx.org/squeaky-minds/squeaky-minds-php-helper/license.svg)](https://packagist.org/packages/squeaky-minds/squeaky-minds-php-helper)
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
+[![Packagist](https://img.shields.io/packagist/dt//squeaky-minds/squeaky-minds-php-helper.svg?maxAge=86400&style=flat-square)](https://packagist.org/packages//squeaky-minds/squeaky-minds-php-helper)
+[![Build Status](https://travis-ci.org/btafoya/SqueakyMindsPhpHelper.png?branch=master&style=flat-square)](https://travis-ci.org/btafoya/SqueakyMindsPhpHelper)
+
 
 ## Description
 
-Helper libraries used in the implementation of the Prema PHP framework.
+Helper libraries used in the implementation of various PHP web applications I have developed over the years. (15+!)
 
 ## Documentation
 
