@@ -1,0 +1,11 @@
+Changing into directory /mnt/hgfs/www/SqueakyMindsPhpHelper/src
+Processing SqueakyMindsPhpHelper_lists.php [PHP => 3879 tokens in 586 lines]... DONE in 107ms (0 fixable violations)
+Processing SqueakyMindsPhpHelper.php [PHP => 5001 tokens in 726 lines]... DONE in 272ms (0 fixable violations)
+No fixable errors were found
+Time: 672ms; Memory: 13.25Mb
+
+Changing into directory /mnt/hgfs/www/SqueakyMindsPhpHelper/tests
+Processing SqueakyMindsPhpHelper_test.php [PHP => 900 tokens in 180 lines]... DONE in 59ms (0 fixable violations)
+No fixable errors were found
+Time: 438ms; Memory: 5.5Mb
+

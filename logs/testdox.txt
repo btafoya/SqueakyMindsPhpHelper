@@ -1,0 +1,14 @@
+SqueakyMindsPhpHelper_test
+ [x] Uuid
+ [x] Post var
+ [x] Get var
+ [x] Session var
+ [x] Set session var
+ [x] Cookie var
+ [x] Get var default
+ [x] Post var default
+ [x] Left
+ [x] Right
+ [x] Mid
+ [x] Requested url
+

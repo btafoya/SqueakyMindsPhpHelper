@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<phpunit bootstrap="./vendor/autoload.php">
+    <testsuites>
+        <testsuite name="SqueakyMindsPhpHelper">
+            <file>tests/SqueakyMindsPhpHelper_test.php</file>
+        </testsuite>
+    </testsuites>
+    <logging>
+        <log type="junit" target="./logs/logfile.xml" logIncompleteSkipped="false"/>
+        <log type="testdox-text" target="./logs/testdox.txt"/>
+    </logging>
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">./src/</directory>
+        </whitelist>
+    </filter>
+    <php>
+        <post name="q" value="This Is A Query"/>
+        <get name="action" value="ajax"/>
+        <cookie name="mycookie" value="isbetterthanyours"/>
+        <server name="HTTPS" value="s"/>
+        <server name="HTTP_HOST" value="www.SqueakyMindsPhpHelper.com"/>
+        <server name="REQUEST_URI" value="?action=ajax"/>
+    </php>
+</phpunit>

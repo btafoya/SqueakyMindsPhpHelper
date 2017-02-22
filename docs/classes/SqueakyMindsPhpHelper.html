@@ -1,1956 +1,1143 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
-    <meta charset="utf-8"/>
-    <title>API Documentation</title>
-    <meta name="author" content=""/>
-    <meta name="description" content=""/>
-
-    <link href="../css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
-    <link href="../css/font-awesome.min.css" rel="stylesheet">
-    <link href="../css/prism.css" rel="stylesheet" media="all"/>
-    <link href="../css/template.css" rel="stylesheet" media="all"/>
-    
-    <!--[if lt IE 9]>
-    <script src="../js/html5.js"></script>
-    <![endif]-->
-    <script src="../js/jquery-1.11.0.min.js"></script>
-    <script src="../js/ui/1.10.4/jquery-ui.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/jquery.smooth-scroll.js"></script>
-    <script src="../js/prism.min.js"></script>
-    <!-- TODO: Add http://jscrollpane.kelvinluck.com/ to style the scrollbars for browsers not using webkit-->
-    <script type="text/javascript">
-    function loadExternalCodeSnippets() {
-        Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach(function (pre) {
-            var src = pre.getAttribute('data-src');
-            var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
-            var language = 'php';
-
-            var code = document.createElement('code');
-            code.className = 'language-' + language;
-
-            pre.textContent = '';
-
-            code.textContent = 'Loading…';
-
-            pre.appendChild(code);
-
-            var xhr = new XMLHttpRequest();
-
-            xhr.open('GET', src, true);
-
-            xhr.onreadystatechange = function () {
-                if (xhr.readyState == 4) {
-
-                    if (xhr.status < 400 && xhr.responseText) {
-                        code.textContent = xhr.responseText;
-
-                        Prism.highlightElement(code);
-                    }
-                    else if (xhr.status >= 400) {
-                        code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
-                    }
-                    else {
-                        code.textContent = '✖ Error: File does not exist or is empty';
-                    }
-                }
-            };
-
-            xhr.send(null);
-        });
-    }
-
-    $(document).ready(function(){
-        loadExternalCodeSnippets();
-    });
-    $('#source-view').on('shown', function () {
-        loadExternalCodeSnippets();
-    })
-</script>
-
-    <link rel="shortcut icon" href="../images/favicon.ico"/>
-    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
-    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
-    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>SqueakyMindsPhpHelper » \SqueakyMindsPhpHelper</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
 </head>
 <body>
-
 <div class="navbar navbar-fixed-top">
-    <div class="navbar-inner">
-        <div class="container">
-            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                <i class="icon-ellipsis-vertical"></i>
-            </a>
-            <a class="brand" href="../index.html">API Documentation</a>
-
-            <div class="nav-collapse">
-                <ul class="nav pull-right">
-                                        <li class="dropdown" id="charts-menu">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            Charts <b class="caret"></b>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="../graphs/class.html">
-                                    <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="dropdown" id="reports-menu">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            Reports <b class="caret"></b>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="../reports/errors.html">
-                                                                                                                                                                                                                                                                    <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">86</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="../reports/markers.html">
-                                                                                                                                                                                                                                                                    <i class="icon-list-alt"></i>&#160;Markers <span class="label label-info pull-right">0</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="../reports/deprecated.html">
-                                                                                                            <i class="icon-list-alt"></i>&#160;Deprecated <span class="label label-info pull-right">0</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!--<div class="go_to_top">-->
-    <!--<a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>-->
-    <!--</div>-->
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">SqueakyMindsPhpHelper</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/SqueakyMindsPhpHelper.html"><i class="icon-folder-open"></i> SqueakyMindsPhpHelper</a></li>
+<li><a href="../packages/SqueakyMindsPhpHelper_lists.html"><i class="icon-folder-open"></i> SqueakyMindsPhpHelper_lists</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">0</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
 </div>
-
-<div id="___" class="container-fluid">
-        <section class="row-fluid">
-        <div class="span2 sidebar">
-                                <div class="accordion" style="margin-bottom: 0">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-681091038"></a>
-                                <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
-            </div>
-            <div id="namespace-681091038" class="accordion-body collapse in">
-                <div class="accordion-inner">
-
-                    
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<div xmlns:php="http://php.net/xsl" class="btn-toolbar">
+<div class="btn-group visibility" data-toggle="buttons-checkbox">
+<button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button>
+</div>
+<div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+</div>
+<ul xmlns:php="http://php.net/xsl" class="side-nav nav nav-list"><li class="nav-header">
+<i title="Methods" class="icon-custom icon-method"></i> Methods
                     <ul>
-                                                                                                    <li class="class"><a href="../classes/SqueakyMindsPhpHelper.html">SqueakyMindsPhpHelper</a></li>
-                                                    <li class="class"><a href="../classes/SqueakyMindsPhpHelper_lists.html">SqueakyMindsPhpHelper_lists</a></li>
-                                            </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-        </div>
-    </section>
-    <section class="row-fluid">
-        <div class="span10 offset2">
-            <div class="row-fluid">
-                <div class="span8 content class">
-                    <nav>
-                                                <a href="../namespaces/default.html">\</a> <i class="icon-level-up"></i>
-                                            </nav>
-                    <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal"><i class="icon-code"></i></a>
-
-                    <h1><small>\</small>SqueakyMindsPhpHelper</h1>
-                    <p><em>SQUEAKYMINDS.COM Helper Classes</em></p>
-                    <p>Copyright (c) 2001-2015, Brian Tafoya</p>
-                    
-                                        
-                    <section id="summary">
-                        <h2>Summary</h2>
-                        <section class="row-fluid heading">
-                            <section class="span4">
-                                <a href="#methods">Methods</a>
-                            </section>
-                            <section class="span4">
-                                <a href="#properties">Properties</a>
-                            </section>
-                            <section class="span4">
-                                <a href="#constants">Constants</a>
-                            </section>
-                        </section>
-                        <section class="row-fluid public">
-                            <section class="span4">
-                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method___construct" class="">__construct()</a><br />
-                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method_uuid" class="">uuid()</a><br />
-                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method_postvar" class="">postvar()</a><br />
-                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method_getvar" class="">getvar()</a><br />
-                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method_sessionvar" class="">sessionvar()</a><br />
-                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method_setsessionvar" class="">setsessionvar()</a><br />
-                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method_cookievar" class="">cookievar()</a><br />
-                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method_getvar_default" class="">getvar_default()</a><br />
-                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method_left" class="">left()</a><br />
-                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method_right" class="">right()</a><br />
-                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method_mid" class="">mid()</a><br />
-                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method_dump_simple_array" class="">dump_simple_array()</a><br />
-                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method_truncate" class="">truncate()</a><br />
-                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method_multi_stripslashes" class="">multi_stripslashes()</a><br />
-                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method_numberToRoman" class="">numberToRoman()</a><br />
-                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method_duration" class="">duration()</a><br />
-                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method_object2array" class="">object2array()</a><br />
-                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method_xml2array" class="">xml2array()</a><br />
-                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method_json_indent" class="">json_indent()</a><br />
-                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method_array_last" class="">array_last()</a><br />
-                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method_array_first" class="">array_first()</a><br />
-                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method_requested_url" class="">requested_url()</a><br />
-                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#method_linkify" class="">linkify()</a><br />
-                                                            </section>
-                            <section class="span4">
-                                                                    <em>No public properties found</em>
-                                                            </section>
-                            <section class="span4">
-                                                                    <em>No constants found</em>
-                                                            </section>
-                        </section>
-                        <section class="row-fluid protected">
-                            <section class="span4">
-                                                                    <em>No protected methods found</em>
-                                                            </section>
-                            <section class="span4">
-                                                                    <em>No protected properties found</em>
-                                                            </section>
-                            <section class="span4">
-                                <em>N/A</em>
-                            </section>
-                        </section>
-                        <section class="row-fluid private">
-                            <section class="span4">
-                                                                    <em>No private methods found</em>
-                                                            </section>
-                            <section class="span4">
-                                                                    <a href="../classes/SqueakyMindsPhpHelper.html#property_sessionvariable" class="">$sessionvariable</a><br />
-                                                            </section>
-                            <section class="span4">
-                                <em>N/A</em>
-                            </section>
-                        </section>
-                    </section>
-                </div>
-                <aside class="span4 detailsbar">
-                                        
-                    
-                    <dl>
-                        <dt>File</dt>
-                            <dd><a href="../files/SqueakyMindsPhpHelper.html"><div class="path-wrapper">SqueakyMindsPhpHelper.php</div></a></dd>
-                                                <dt>Package</dt>
-                            <dd><div class="namespace-wrapper">SqueakyMindsPhpHelper</div></dd>
-                                                <dt>Class hierarchy</dt>
-                            <dd class="hierarchy">
-                                                                                                                                                                    <div class="namespace-wrapper">\SqueakyMindsPhpHelper</div>
-                            </dd>
-
-                        
-                        
-                        
-                                                                            <dt>See also</dt>
-                                                                                    <dd><a href="https://github.com/btafoya/SqueakyMindsPhpHelper"><div class="namespace-wrapper">The SqueakyMindsPhpHelper GitHub project</div></a></dd>
-                                                    
-                                                                        </dl>
-                    <h2>Tags</h2>
-                    <table class="table table-condensed">
-                                            <tr>
-                            <th>
-                                author
-                            </th>
-                            <td>
-                                                                    <p>Brian Tafoya <a href="mailto:btafoya@briantafoya.com">btafoya@briantafoya.com</a></p>
-                                                            </td>
-                        </tr>
-                                            <tr>
-                            <th>
-                                copyright
-                            </th>
-                            <td>
-                                                                    <p>2001 - 2015, Brian Tafoya.</p>
-                                                            </td>
-                        </tr>
-                                            <tr>
-                            <th>
-                                license
-                            </th>
-                            <td>
-                                                                    <p><a href="http://www.gnu.org/copyleft/lesser.html">http://www.gnu.org/copyleft/lesser.html</a> GNU Lesser General Public License</p>
-                                                            </td>
-                        </tr>
-                                            <tr>
-                            <th>
-                                note
-                            </th>
-                            <td>
-                                                                    <p>This library is distributed in the hope that it will be useful - WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
-                                                            </td>
-                        </tr>
-                                        </table>
-                </aside>
-            </div>
-
-                        
-                                    <a id="properties" name="properties"></a>
-            <div class="row-fluid">
-                <div class="span8 content class">
-                    <h2>Properties</h2>
-                </div>
-                <aside class="span4 detailsbar"></aside>
-            </div>
-
-                                                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="property_sessionvariable" name="property_sessionvariable" class="anchor"></a>
-            <article class="property">
-                <h3 class="private ">$sessionvariable</h3>
-                <pre class="signature">$sessionvariable : </pre>
-                <p><em></em></p>
-                
-
-                                <h4>Type</h4>
-                
-                                            </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                        <dl>
-                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
-                            </table>
-        </aside>
-    </div>
-
-                            
-                                    <a id="methods" name="methods"></a>
-            <div class="row-fluid">
-                <div class="span8 content class"><h2>Methods</h2></div>
-                <aside class="span4 detailsbar"></aside>
-            </div>
-
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="method___construct" name="method___construct" class="anchor"></a>
-            <article class="method">
-                <h3 class="public ">__construct()</h3>
-                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">__construct() </pre>
-                <p><em></em></p>
-                
-
-                
-                
-                				
-                            </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                                                            <dl>
-                                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
-                            </table>
-        </aside>
-    </div>
-
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="method_uuid" name="method_uuid" class="anchor"></a>
-            <article class="method">
-                <h3 class="public ">uuid()</h3>
-                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">uuid() : string</pre>
-                <p><em>Return a 32 bit unique ID</em></p>
-                
-
-                
-                
-                                    <h4>Returns</h4>
-                    string
-                                    				
-                            </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                                                            <dl>
-                                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr>
-                        <th>
-                            method
-                        </th>
-                        <td>
-                                                                                            
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            author
-                        </th>
-                        <td>
-                                                                                            <p>Brian Tafoya</p>
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            copyright
-                        </th>
-                        <td>
-                                                                                            <p>Copyright 2001 - 2015, Brian Tafoya.</p>
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            version
-                        </th>
-                        <td>
-                                                            1.0                                
-                                                    </td>
-                    </tr>
-                            </table>
-        </aside>
-    </div>
-
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="method_postvar" name="method_postvar" class="anchor"></a>
-            <article class="method">
-                <h3 class="public ">postvar()</h3>
-                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">postvar(  <span class="argument">$name</span>,   <span class="argument">$isint = &quot;&quot;</span>) : string</pre>
-                <p><em>Prevent undefined post variables</em></p>
-                
-
-                                    <h4>Parameters</h4>
-                    <table class="table table-condensed table-hover">
-                                                    <tr>
-                                <td></td>
-                                <td>$name </td>
-                                <td></td>
-                            </tr>
-                                                    <tr>
-                                <td></td>
-                                <td>$isint </td>
-                                <td></td>
-                            </tr>
-                                            </table>
-                
-                
-                                    <h4>Returns</h4>
-                    string
-                                            &mdash; <p>or int</p>
-                                    				
-                            </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                                                            <dl>
-                                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr>
-                        <th>
-                            method
-                        </th>
-                        <td>
-                                                                                            
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            author
-                        </th>
-                        <td>
-                                                                                            <p>Brian Tafoya</p>
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            copyright
-                        </th>
-                        <td>
-                                                                                            <p>Copyright 2001 - 2015, Brian Tafoya.</p>
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            version
-                        </th>
-                        <td>
-                                                            1.0                                
-                                                    </td>
-                    </tr>
-                            </table>
-        </aside>
-    </div>
-
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="method_getvar" name="method_getvar" class="anchor"></a>
-            <article class="method">
-                <h3 class="public ">getvar()</h3>
-                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">getvar(  <span class="argument">$name</span>,   <span class="argument">$isint = &quot;&quot;</span>) : string</pre>
-                <p><em>Prevent undefined get variables</em></p>
-                
-
-                                    <h4>Parameters</h4>
-                    <table class="table table-condensed table-hover">
-                                                    <tr>
-                                <td></td>
-                                <td>$name </td>
-                                <td></td>
-                            </tr>
-                                                    <tr>
-                                <td></td>
-                                <td>$isint </td>
-                                <td></td>
-                            </tr>
-                                            </table>
-                
-                
-                                    <h4>Returns</h4>
-                    string
-                                            &mdash; <p>or int</p>
-                                    				
-                            </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                                                            <dl>
-                                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr>
-                        <th>
-                            method
-                        </th>
-                        <td>
-                                                                                            
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            author
-                        </th>
-                        <td>
-                                                                                            <p>Brian Tafoya</p>
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            copyright
-                        </th>
-                        <td>
-                                                                                            <p>Copyright 2001 - 2015, Brian Tafoya.</p>
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            version
-                        </th>
-                        <td>
-                                                            1.0                                
-                                                    </td>
-                    </tr>
-                            </table>
-        </aside>
-    </div>
-
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="method_sessionvar" name="method_sessionvar" class="anchor"></a>
-            <article class="method">
-                <h3 class="public ">sessionvar()</h3>
-                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">sessionvar(  <span class="argument">$name</span>,   <span class="argument">$isint = &quot;&quot;</span>) : string</pre>
-                <p><em>Prevent undefined session variables</em></p>
-                
-
-                                    <h4>Parameters</h4>
-                    <table class="table table-condensed table-hover">
-                                                    <tr>
-                                <td></td>
-                                <td>$name </td>
-                                <td></td>
-                            </tr>
-                                                    <tr>
-                                <td></td>
-                                <td>$isint </td>
-                                <td></td>
-                            </tr>
-                                            </table>
-                
-                
-                                    <h4>Returns</h4>
-                    string
-                                            &mdash; <p>or int</p>
-                                    				
-                            </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                                                            <dl>
-                                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr>
-                        <th>
-                            method
-                        </th>
-                        <td>
-                                                                                            
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            author
-                        </th>
-                        <td>
-                                                                                            <p>Brian Tafoya</p>
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            copyright
-                        </th>
-                        <td>
-                                                                                            <p>Copyright 2001 - 2015, Brian Tafoya.</p>
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            version
-                        </th>
-                        <td>
-                                                            1.0                                
-                                                    </td>
-                    </tr>
-                            </table>
-        </aside>
-    </div>
-
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="method_setsessionvar" name="method_setsessionvar" class="anchor"></a>
-            <article class="method">
-                <h3 class="public ">setsessionvar()</h3>
-                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">setsessionvar(  <span class="argument">$name</span>,   <span class="argument">$value</span>) : null</pre>
-                <p><em>Set session variables</em></p>
-                
-
-                                    <h4>Parameters</h4>
-                    <table class="table table-condensed table-hover">
-                                                    <tr>
-                                <td></td>
-                                <td>$name </td>
-                                <td></td>
-                            </tr>
-                                                    <tr>
-                                <td></td>
-                                <td>$value </td>
-                                <td></td>
-                            </tr>
-                                            </table>
-                
-                
-                                    <h4>Returns</h4>
-                    null
-                                    				
-                            </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                                                            <dl>
-                                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr>
-                        <th>
-                            method
-                        </th>
-                        <td>
-                                                                                            
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            author
-                        </th>
-                        <td>
-                                                                                            <p>Brian Tafoya</p>
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            copyright
-                        </th>
-                        <td>
-                                                                                            <p>Copyright 2001 - 2015, Brian Tafoya.</p>
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            version
-                        </th>
-                        <td>
-                                                            1.0                                
-                                                    </td>
-                    </tr>
-                            </table>
-        </aside>
-    </div>
-
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="method_cookievar" name="method_cookievar" class="anchor"></a>
-            <article class="method">
-                <h3 class="public ">cookievar()</h3>
-                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">cookievar(  <span class="argument">$name</span>,   <span class="argument">$isint = &quot;&quot;</span>) : string</pre>
-                <p><em>Prevent undefined cookie variables</em></p>
-                
-
-                                    <h4>Parameters</h4>
-                    <table class="table table-condensed table-hover">
-                                                    <tr>
-                                <td></td>
-                                <td>$name </td>
-                                <td></td>
-                            </tr>
-                                                    <tr>
-                                <td></td>
-                                <td>$isint </td>
-                                <td></td>
-                            </tr>
-                                            </table>
-                
-                
-                                    <h4>Returns</h4>
-                    string
-                                            &mdash; <p>or int</p>
-                                    				
-                            </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                                                            <dl>
-                                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr>
-                        <th>
-                            method
-                        </th>
-                        <td>
-                                                                                            
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            author
-                        </th>
-                        <td>
-                                                                                            <p>Brian Tafoya</p>
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            copyright
-                        </th>
-                        <td>
-                                                                                            <p>Copyright 2001 - 2015, Brian Tafoya.</p>
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            version
-                        </th>
-                        <td>
-                                                            1.0                                
-                                                    </td>
-                    </tr>
-                            </table>
-        </aside>
-    </div>
-
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="method_getvar_default" name="method_getvar_default" class="anchor"></a>
-            <article class="method">
-                <h3 class="public ">getvar_default()</h3>
-                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">getvar_default(  <span class="argument">$field_name</span>,   <span class="argument">$default_val = &quot;&quot;</span>) : string</pre>
-                <p><em>Return getvar with a default is blank.</em></p>
-                
-
-                                    <h4>Parameters</h4>
-                    <table class="table table-condensed table-hover">
-                                                    <tr>
-                                <td></td>
-                                <td>$field_name </td>
-                                <td></td>
-                            </tr>
-                                                    <tr>
-                                <td></td>
-                                <td>$default_val </td>
-                                <td></td>
-                            </tr>
-                                            </table>
-                
-                
-                                    <h4>Returns</h4>
-                    string
-                                            &mdash; <p>or int</p>
-                                    				
-                            </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                                                            <dl>
-                                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr>
-                        <th>
-                            method
-                        </th>
-                        <td>
-                                                                                            
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            author
-                        </th>
-                        <td>
-                                                                                            <p>Brian Tafoya</p>
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            copyright
-                        </th>
-                        <td>
-                                                                                            <p>Copyright 2001 - 2015, Brian Tafoya.</p>
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            version
-                        </th>
-                        <td>
-                                                            1.0                                
-                                                    </td>
-                    </tr>
-                            </table>
-        </aside>
-    </div>
-
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="method_left" name="method_left" class="anchor"></a>
-            <article class="method">
-                <h3 class="public ">left()</h3>
-                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">left(  <span class="argument">$str</span>,   <span class="argument">$howManyCharsFromLeft</span>) : string</pre>
-                <p><em>Return characters from the left</em></p>
-                
-
-                                    <h4>Parameters</h4>
-                    <table class="table table-condensed table-hover">
-                                                    <tr>
-                                <td></td>
-                                <td>$str </td>
-                                <td></td>
-                            </tr>
-                                                    <tr>
-                                <td></td>
-                                <td>$howManyCharsFromLeft </td>
-                                <td></td>
-                            </tr>
-                                            </table>
-                
-                
-                                    <h4>Returns</h4>
-                    string
-                                    				
-                            </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                                                            <dl>
-                                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr>
-                        <th>
-                            method
-                        </th>
-                        <td>
-                                                                                            
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            author
-                        </th>
-                        <td>
-                                                                                            <p>Brian Tafoya</p>
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            copyright
-                        </th>
-                        <td>
-                                                                                            <p>Copyright 2001 - 2015, Brian Tafoya.</p>
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            version
-                        </th>
-                        <td>
-                                                            1.0                                
-                                                    </td>
-                    </tr>
-                            </table>
-        </aside>
-    </div>
-
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="method_right" name="method_right" class="anchor"></a>
-            <article class="method">
-                <h3 class="public ">right()</h3>
-                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">right(  <span class="argument">$str</span>,   <span class="argument">$howManyCharsFromRight</span>) : string</pre>
-                <p><em>Return characters from the right</em></p>
-                
-
-                                    <h4>Parameters</h4>
-                    <table class="table table-condensed table-hover">
-                                                    <tr>
-                                <td></td>
-                                <td>$str </td>
-                                <td></td>
-                            </tr>
-                                                    <tr>
-                                <td></td>
-                                <td>$howManyCharsFromRight </td>
-                                <td></td>
-                            </tr>
-                                            </table>
-                
-                
-                                    <h4>Returns</h4>
-                    string
-                                    				
-                            </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                                                            <dl>
-                                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr>
-                        <th>
-                            method
-                        </th>
-                        <td>
-                                                                                            
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            author
-                        </th>
-                        <td>
-                                                                                            <p>Brian Tafoya</p>
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            copyright
-                        </th>
-                        <td>
-                                                                                            <p>Copyright 2001 - 2015, Brian Tafoya.</p>
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            version
-                        </th>
-                        <td>
-                                                            1.0                                
-                                                    </td>
-                    </tr>
-                            </table>
-        </aside>
-    </div>
-
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="method_mid" name="method_mid" class="anchor"></a>
-            <article class="method">
-                <h3 class="public ">mid()</h3>
-                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">mid(  <span class="argument">$str</span>,   <span class="argument">$start</span>,   <span class="argument">$howManyChars</span>) : string</pre>
-                <p><em>Return x many characters from the starting point</em></p>
-                
-
-                                    <h4>Parameters</h4>
-                    <table class="table table-condensed table-hover">
-                                                    <tr>
-                                <td></td>
-                                <td>$str </td>
-                                <td></td>
-                            </tr>
-                                                    <tr>
-                                <td></td>
-                                <td>$start </td>
-                                <td></td>
-                            </tr>
-                                                    <tr>
-                                <td></td>
-                                <td>$howManyChars </td>
-                                <td></td>
-                            </tr>
-                                            </table>
-                
-                
-                                    <h4>Returns</h4>
-                    string
-                                    				
-                            </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                                                            <dl>
-                                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr>
-                        <th>
-                            method
-                        </th>
-                        <td>
-                                                                                            
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            author
-                        </th>
-                        <td>
-                                                                                            <p>Brian Tafoya</p>
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            copyright
-                        </th>
-                        <td>
-                                                                                            <p>Copyright 2001 - 2015, Brian Tafoya.</p>
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            version
-                        </th>
-                        <td>
-                                                            1.0                                
-                                                    </td>
-                    </tr>
-                            </table>
-        </aside>
-    </div>
-
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="method_dump_simple_array" name="method_dump_simple_array" class="anchor"></a>
-            <article class="method">
-                <h3 class="public ">dump_simple_array()</h3>
-                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">dump_simple_array(  <span class="argument">$array</span>,   <span class="argument">$title = &quot;&quot;</span>) : string</pre>
-                <p><em>HTML Dump of string/array/etc.</em></p>
-                
-
-                                    <h4>Parameters</h4>
-                    <table class="table table-condensed table-hover">
-                                                    <tr>
-                                <td></td>
-                                <td>$array </td>
-                                <td></td>
-                            </tr>
-                                                    <tr>
-                                <td></td>
-                                <td>$title </td>
-                                <td></td>
-                            </tr>
-                                            </table>
-                
-                
-                                    <h4>Returns</h4>
-                    string
-                                    				
-                            </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                                                            <dl>
-                                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr>
-                        <th>
-                            method
-                        </th>
-                        <td>
-                                                                                            
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            author
-                        </th>
-                        <td>
-                                                                                            <p>Brian Tafoya</p>
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            copyright
-                        </th>
-                        <td>
-                                                                                            <p>Copyright 2001 - 2015, Brian Tafoya.</p>
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            version
-                        </th>
-                        <td>
-                                                            1.0                                
-                                                    </td>
-                    </tr>
-                            </table>
-        </aside>
-    </div>
-
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="method_truncate" name="method_truncate" class="anchor"></a>
-            <article class="method">
-                <h3 class="public ">truncate()</h3>
-                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">truncate(  <span class="argument">$num</span>,   <span class="argument">$digits</span>) : integer</pre>
-                <p><em>Return truncated number.</em></p>
-                
-
-                                    <h4>Parameters</h4>
-                    <table class="table table-condensed table-hover">
-                                                    <tr>
-                                <td></td>
-                                <td>$num </td>
-                                <td></td>
-                            </tr>
-                                                    <tr>
-                                <td></td>
-                                <td>$digits </td>
-                                <td></td>
-                            </tr>
-                                            </table>
-                
-                
-                                    <h4>Returns</h4>
-                    integer
-                                    				
-                            </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                                                            <dl>
-                                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr>
-                        <th>
-                            method
-                        </th>
-                        <td>
-                                                                                            
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            author
-                        </th>
-                        <td>
-                                                                                            <p>Brian Tafoya</p>
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            copyright
-                        </th>
-                        <td>
-                                                                                            <p>Copyright 2001 - 2015, Brian Tafoya.</p>
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            version
-                        </th>
-                        <td>
-                                                            1.0                                
-                                                    </td>
-                    </tr>
-                            </table>
-        </aside>
-    </div>
-
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="method_multi_stripslashes" name="method_multi_stripslashes" class="anchor"></a>
-            <article class="method">
-                <h3 class="public ">multi_stripslashes()</h3>
-                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">multi_stripslashes(  <span class="argument">$arr</span>) : array</pre>
-                <p><em>Return array stripslasshes recursive.</em></p>
-                
-
-                                    <h4>Parameters</h4>
-                    <table class="table table-condensed table-hover">
-                                                    <tr>
-                                <td></td>
-                                <td>$arr </td>
-                                <td></td>
-                            </tr>
-                                            </table>
-                
-                
-                                    <h4>Returns</h4>
-                    array
-                                    				
-                            </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                                                            <dl>
-                                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr>
-                        <th>
-                            method
-                        </th>
-                        <td>
-                                                                                            
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            author
-                        </th>
-                        <td>
-                                                                                            <p>Brian Tafoya</p>
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            copyright
-                        </th>
-                        <td>
-                                                                                            <p>Copyright 2001 - 2015, Brian Tafoya.</p>
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            version
-                        </th>
-                        <td>
-                                                            1.0                                
-                                                    </td>
-                    </tr>
-                            </table>
-        </aside>
-    </div>
-
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="method_numberToRoman" name="method_numberToRoman" class="anchor"></a>
-            <article class="method">
-                <h3 class="public ">numberToRoman()</h3>
-                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">numberToRoman(  <span class="argument">$num</span>) : string</pre>
-                <p><em>Return roman numeral.</em></p>
-                
-
-                                    <h4>Parameters</h4>
-                    <table class="table table-condensed table-hover">
-                                                    <tr>
-                                <td></td>
-                                <td>$num </td>
-                                <td></td>
-                            </tr>
-                                            </table>
-                
-                
-                                    <h4>Returns</h4>
-                    string
-                                    				
-                            </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                                                            <dl>
-                                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr>
-                        <th>
-                            method
-                        </th>
-                        <td>
-                                                                                            
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            author
-                        </th>
-                        <td>
-                                                                                            <p>Brian Tafoya</p>
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            copyright
-                        </th>
-                        <td>
-                                                                                            <p>Copyright 2001 - 2015, Brian Tafoya.</p>
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            version
-                        </th>
-                        <td>
-                                                            1.0                                
-                                                    </td>
-                    </tr>
-                            </table>
-        </aside>
-    </div>
-
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="method_duration" name="method_duration" class="anchor"></a>
-            <article class="method">
-                <h3 class="public ">duration()</h3>
-                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">duration(  <span class="argument">$secs</span>) : string</pre>
-                <p><em>Return duration from seconds.</em></p>
-                
-
-                                    <h4>Parameters</h4>
-                    <table class="table table-condensed table-hover">
-                                                    <tr>
-                                <td></td>
-                                <td>$secs </td>
-                                <td></td>
-                            </tr>
-                                            </table>
-                
-                
-                                    <h4>Returns</h4>
-                    string
-                                    				
-                            </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                                                            <dl>
-                                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr>
-                        <th>
-                            method
-                        </th>
-                        <td>
-                                                                                            
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            author
-                        </th>
-                        <td>
-                                                                                            <p>Brian Tafoya</p>
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            copyright
-                        </th>
-                        <td>
-                                                                                            <p>Copyright 2001 - 2015, Brian Tafoya.</p>
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            version
-                        </th>
-                        <td>
-                                                            1.0                                
-                                                    </td>
-                    </tr>
-                            </table>
-        </aside>
-    </div>
-
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="method_object2array" name="method_object2array" class="anchor"></a>
-            <article class="method">
-                <h3 class="public ">object2array()</h3>
-                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">object2array(  <span class="argument">$object</span>) : array</pre>
-                <p><em>Return an array from an object.</em></p>
-                
-
-                                    <h4>Parameters</h4>
-                    <table class="table table-condensed table-hover">
-                                                    <tr>
-                                <td></td>
-                                <td>$object </td>
-                                <td></td>
-                            </tr>
-                                            </table>
-                
-                
-                                    <h4>Returns</h4>
-                    array
-                                    				
-                            </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                                                            <dl>
-                                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr>
-                        <th>
-                            method
-                        </th>
-                        <td>
-                                                                                            
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            author
-                        </th>
-                        <td>
-                                                                                            <p>Brian Tafoya</p>
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            copyright
-                        </th>
-                        <td>
-                                                                                            <p>Copyright 2001 - 2015, Brian Tafoya.</p>
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            version
-                        </th>
-                        <td>
-                                                            1.0                                
-                                                    </td>
-                    </tr>
-                            </table>
-        </aside>
-    </div>
-
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="method_xml2array" name="method_xml2array" class="anchor"></a>
-            <article class="method">
-                <h3 class="public ">xml2array()</h3>
-                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">xml2array(  <span class="argument">$xml</span>) : array</pre>
-                <p><em>Return an array from xml string.</em></p>
-                
-
-                                    <h4>Parameters</h4>
-                    <table class="table table-condensed table-hover">
-                                                    <tr>
-                                <td></td>
-                                <td>$xml </td>
-                                <td></td>
-                            </tr>
-                                            </table>
-                
-                
-                                    <h4>Returns</h4>
-                    array
-                                    				
-                            </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                                                            <dl>
-                                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr>
-                        <th>
-                            method
-                        </th>
-                        <td>
-                                                                                            
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            author
-                        </th>
-                        <td>
-                                                                                            <p>Brian Tafoya</p>
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            copyright
-                        </th>
-                        <td>
-                                                                                            <p>Copyright 2001 - 2015, Brian Tafoya.</p>
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            version
-                        </th>
-                        <td>
-                                                            1.0                                
-                                                    </td>
-                    </tr>
-                            </table>
-        </aside>
-    </div>
-
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="method_json_indent" name="method_json_indent" class="anchor"></a>
-            <article class="method">
-                <h3 class="public ">json_indent()</h3>
-                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">json_indent(string  <span class="argument">$json</span>) : string</pre>
-                <p><em>Indents a flat JSON string to make it more human-readable.</em></p>
-                
-
-                                    <h4>Parameters</h4>
-                    <table class="table table-condensed table-hover">
-                                                    <tr>
-                                <td>string</td>
-                                <td>$json </td>
-                                <td><p>The original JSON string to process.</p></td>
-                            </tr>
-                                            </table>
-                
-                
-                                    <h4>Returns</h4>
-                    string
-                                            &mdash; <p>Indented version of the original JSON string.</p>
-                                    				
-                            </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                                                            <dl>
-                                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr>
-                        <th>
-                            method
-                        </th>
-                        <td>
-                                                                                            
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            author
-                        </th>
-                        <td>
-                                                                                            <p>Brian Tafoya</p>
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            copyright
-                        </th>
-                        <td>
-                                                                                            <p>Copyright 2001 - 2015, Brian Tafoya.</p>
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            version
-                        </th>
-                        <td>
-                                                            1.0                                
-                                                    </td>
-                    </tr>
-                            </table>
-        </aside>
-    </div>
-
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="method_array_last" name="method_array_last" class="anchor"></a>
-            <article class="method">
-                <h3 class="public ">array_last()</h3>
-                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">array_last(array  <span class="argument">$array_val</span>) : array</pre>
-                <p><em>Return the last array member.</em></p>
-                
-
-                                    <h4>Parameters</h4>
-                    <table class="table table-condensed table-hover">
-                                                    <tr>
-                                <td>array</td>
-                                <td>$array_val </td>
-                                <td></td>
-                            </tr>
-                                            </table>
-                
-                
-                                    <h4>Returns</h4>
-                    array
-                                    				
-                            </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                                                            <dl>
-                                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr>
-                        <th>
-                            method
-                        </th>
-                        <td>
-                                                                                            
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            author
-                        </th>
-                        <td>
-                                                                                            <p>Brian Tafoya</p>
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            copyright
-                        </th>
-                        <td>
-                                                                                            <p>Copyright 2001 - 2015, Brian Tafoya.</p>
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            version
-                        </th>
-                        <td>
-                                                            1.0                                
-                                                    </td>
-                    </tr>
-                            </table>
-        </aside>
-    </div>
-
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="method_array_first" name="method_array_first" class="anchor"></a>
-            <article class="method">
-                <h3 class="public ">array_first()</h3>
-                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">array_first(array  <span class="argument">$array_val</span>) : array</pre>
-                <p><em>Return the first array member.</em></p>
-                
-
-                                    <h4>Parameters</h4>
-                    <table class="table table-condensed table-hover">
-                                                    <tr>
-                                <td>array</td>
-                                <td>$array_val </td>
-                                <td></td>
-                            </tr>
-                                            </table>
-                
-                
-                                    <h4>Returns</h4>
-                    array
-                                    				
-                            </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                                                            <dl>
-                                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr>
-                        <th>
-                            method
-                        </th>
-                        <td>
-                                                                                            
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            author
-                        </th>
-                        <td>
-                                                                                            <p>Brian Tafoya</p>
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            copyright
-                        </th>
-                        <td>
-                                                                                            <p>Copyright 2001 - 2015, Brian Tafoya.</p>
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            version
-                        </th>
-                        <td>
-                                                            1.0                                
-                                                    </td>
-                    </tr>
-                            </table>
-        </aside>
-    </div>
-
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="method_requested_url" name="method_requested_url" class="anchor"></a>
-            <article class="method">
-                <h3 class="public ">requested_url()</h3>
-                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">requested_url() : string</pre>
-                <p><em>Return the requested url.</em></p>
-                
-
-                
-                
-                                    <h4>Returns</h4>
-                    string
-                                    				
-                            </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                                                            <dl>
-                                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr>
-                        <th>
-                            method
-                        </th>
-                        <td>
-                                                                                            
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            author
-                        </th>
-                        <td>
-                                                                                            <p>Brian Tafoya</p>
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            copyright
-                        </th>
-                        <td>
-                                                                                            <p>Copyright 2001 - 2015, Brian Tafoya.</p>
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            version
-                        </th>
-                        <td>
-                                                            1.0                                
-                                                    </td>
-                    </tr>
-                            </table>
-        </aside>
-    </div>
-
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="method_linkify" name="method_linkify" class="anchor"></a>
-            <article class="method">
-                <h3 class="public ">linkify()</h3>
-                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">linkify(string  <span class="argument">$value</span>, array  <span class="argument">$protocols = array(&#039;http&#039;, &#039;mail&#039;)</span>, array  <span class="argument">$attributes = array()</span>) : string</pre>
-                <p><em>Turn all URLs in clickable links.</em></p>
-                
-
-                                    <h4>Parameters</h4>
-                    <table class="table table-condensed table-hover">
-                                                    <tr>
-                                <td>string</td>
-                                <td>$value </td>
-                                <td></td>
-                            </tr>
-                                                    <tr>
-                                <td>array</td>
-                                <td>$protocols </td>
-                                <td><p>http/https, ftp, mail, twitter</p></td>
-                            </tr>
-                                                    <tr>
-                                <td>array</td>
-                                <td>$attributes </td>
-                                <td></td>
-                            </tr>
-                                            </table>
-                
-                
-                                    <h4>Returns</h4>
-                    string
-                                    				
-                            </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                                                            <dl>
-                                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr>
-                        <th>
-                            method
-                        </th>
-                        <td>
-                                                                                            
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            author
-                        </th>
-                        <td>
-                                                                                            <p>Brian Tafoya</p>
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            copyright
-                        </th>
-                        <td>
-                                                                                            <p>Copyright 2001 - 2015, Brian Tafoya.</p>
-                                                    </td>
-                    </tr>
-                                    <tr>
-                        <th>
-                            version
-                        </th>
-                        <td>
-                                                            1.0                                
-                                                    </td>
-                    </tr>
-                            </table>
-        </aside>
-    </div>
-
-                                                                    </div>
-    </section>
-
-    <div id="source-view" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="source-view-label" aria-hidden="true">
-        <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            <h3 id="source-view-label">SqueakyMindsPhpHelper.php</h3>
-        </div>
-        <div class="modal-body">
-            <pre data-src="../files/SqueakyMindsPhpHelper.php.txt" class="language-php line-numbers"></pre>
-        </div>
-    </div>
-
-    <footer class="row-fluid">
-        <section class="span10 offset2">
-            <section class="row-fluid">
-                <section class="span10 offset1">
-                    <section class="row-fluid footer-sections">
-                        <section class="span4">
-                                                        <h1><i class="icon-code"></i></h1>
-                            <div>
-                                <ul>
-                                                                    </ul>
-                            </div>
-                        </section>
-                        <section class="span4">
-                                                        <h1><i class="icon-bar-chart"></i></h1>
-                            <div>
-                                <ul>
-                                    <li><a href="../graphs/class.html">Class Hierarchy Diagram</a></li>
-                                </ul>
-                            </div>
-                        </section>
-                        <section class="span4">
-                                                        <h1><i class="icon-pushpin"></i></h1>
-                            <div>
-                                <ul>
-                                    <li><a href="../reports/errors.html">Errors</a></li>
-                                    <li><a href="../reports/markers.html">Markers</a></li>
-                                </ul>
-                            </div>
-                        </section>
-                    </section>
-                </section>
-            </section>
-            <section class="row-fluid">
-                <section class="span10 offset1">
-                    <hr />
-                    Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
-                    on August 5th, 2015 at 05:36.
-                </section>
-            </section>
-        </section>
-    </footer>
+<li class="method public "><a href="#method_array_first" title="array_first() :: Return the first array member."><span class="description">Return the first array member.</span><pre>array_first()</pre></a></li>
+<li class="method public "><a href="#method_array_last" title="array_last() :: Return the last array member."><span class="description">Return the last array member.</span><pre>array_last()</pre></a></li>
+<li class="method public "><a href="#method_br2nl" title="br2nl() :: Convert BR tags to PHP_EOL."><span class="description">Convert BR tags to PHP_EOL.</span><pre>br2nl()</pre></a></li>
+<li class="method public "><a href="#method_cookievar" title="cookievar() :: Prevent undefined cookie variables"><span class="description">Prevent undefined cookie variables</span><pre>cookievar()</pre></a></li>
+<li class="method public "><a href="#method_dump_simple_array" title="dump_simple_array() :: HTML Dump of string/array/etc."><span class="description">HTML Dump of string/array/etc.</span><pre>dump_simple_array()</pre></a></li>
+<li class="method public "><a href="#method_duration" title="duration() :: Return duration from seconds."><span class="description">Return duration from seconds.</span><pre>duration()</pre></a></li>
+<li class="method public "><a href="#method_getvar" title="getvar() :: Prevent undefined get variables"><span class="description">Prevent undefined get variables</span><pre>getvar()</pre></a></li>
+<li class="method public "><a href="#method_getvar_default" title="getvar_default() :: Return getvar with a default when blank."><span class="description">Return getvar with a default when blank.</span><pre>getvar_default()</pre></a></li>
+<li class="method public "><a href="#method_json_indent" title="json_indent() :: Indents a flat JSON string to make it more human-readable."><span class="description">Indents a flat JSON string to make it more human-readable.</span><pre>json_indent()</pre></a></li>
+<li class="method public "><a href="#method_left" title="left() :: Return characters from the left"><span class="description">Return characters from the left</span><pre>left()</pre></a></li>
+<li class="method public "><a href="#method_linkify" title="linkify() :: Turn all URLs in clickable links."><span class="description">Turn all URLs in clickable links.</span><pre>linkify()</pre></a></li>
+<li class="method public "><a href="#method_mid" title="mid() :: Return x many characters from the starting point"><span class="description">Return x many characters from the starting point</span><pre>mid()</pre></a></li>
+<li class="method public "><a href="#method_multi_stripslashes" title="multi_stripslashes() :: Return array stripslasshes recursive."><span class="description">Return array stripslasshes recursive.</span><pre>multi_stripslashes()</pre></a></li>
+<li class="method public "><a href="#method_numberToRoman" title="numberToRoman() :: Return roman numeral."><span class="description">Return roman numeral.</span><pre>numberToRoman()</pre></a></li>
+<li class="method public "><a href="#method_object2array" title="object2array() :: Return an array from an object."><span class="description">Return an array from an object.</span><pre>object2array()</pre></a></li>
+<li class="method public "><a href="#method_postvar" title="postvar() :: Prevent undefined post variables"><span class="description">Prevent undefined post variables</span><pre>postvar()</pre></a></li>
+<li class="method public "><a href="#method_postvar_default" title="postvar_default() :: Return postvar with a default when blank."><span class="description">Return postvar with a default when blank.</span><pre>postvar_default()</pre></a></li>
+<li class="method public "><a href="#method_requested_url" title="requested_url() :: Return the requested url."><span class="description">Return the requested url.</span><pre>requested_url()</pre></a></li>
+<li class="method public "><a href="#method_right" title="right() :: Return characters from the right"><span class="description">Return characters from the right</span><pre>right()</pre></a></li>
+<li class="method public "><a href="#method_send_no_cache_header" title="send_no_cache_header() :: Send header stuff that tells the browser not to cache this page."><span class="description">Send header stuff that tells the browser not to cache this page.</span><pre>send_no_cache_header()</pre></a></li>
+<li class="method public "><a href="#method_servervar" title="servervar() :: Prevent undefined server variables"><span class="description">Prevent undefined server variables</span><pre>servervar()</pre></a></li>
+<li class="method public "><a href="#method_sessionvar" title="sessionvar() :: Prevent undefined session variables"><span class="description">Prevent undefined session variables</span><pre>sessionvar()</pre></a></li>
+<li class="method public "><a href="#method_setsessionvar" title="setsessionvar() :: Set session variables"><span class="description">Set session variables</span><pre>setsessionvar()</pre></a></li>
+<li class="method public "><a href="#method_stringTruncate" title="stringTruncate() :: Truncate a string."><span class="description">Truncate a string.</span><pre>stringTruncate()</pre></a></li>
+<li class="method public "><a href="#method_truncate" title="truncate() :: Return truncated number."><span class="description">Return truncated number.</span><pre>truncate()</pre></a></li>
+<li class="method public "><a href="#method_uuid" title="uuid() :: Return a 32 bit unique ID"><span class="description">Return a 32 bit unique ID</span><pre>uuid()</pre></a></li>
+<li class="method public "><a href="#method_xml2array" title="xml2array() :: Return an array from xml string."><span class="description">Return an array from xml string.</span><pre>xml2array()</pre></a></li>
+</ul>
+</li></ul>
 </div>
-
+<div class="span8">
+<a xmlns:php="http://php.net/xsl" id="\SqueakyMindsPhpHelper"></a><ul xmlns:php="http://php.net/xsl" class="breadcrumb">
+<li>
+<a href="../index.html"><i title="Classes" class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/SqueakyMindsPhpHelper.html">SqueakyMindsPhpHelper</a>
+</li>
+</ul>
+<div xmlns:php="http://php.net/xsl" class="element class">
+<p class="short_description">This class provides helper methods I have developed or aquired over the years.</p>
+<div class="details">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>package</th>
+<td><a href="../packages/SqueakyMindsPhpHelper.html">SqueakyMindsPhpHelper</a></td>
+</tr></table>
+<h3>
+<i title="Methods" class="icon-custom icon-method"></i> Methods</h3>
+<a id="method_array_first"></a><div class="element clickable method public method_array_first " data-toggle="collapse" data-target=".method_array_first .collapse" title="public">
+<h2>Return the first array member.</h2>
+<pre>array_first(array $array_val) : array</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>method</th>
+<td></td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+<tr>
+<th>author</th>
+<td><a href="">Brian Tafoya</a></td>
+</tr>
+<tr>
+<th>copyright</th>
+<td>Copyright 2001 - 2017, Brian Tafoya.</td>
+</tr>
+<tr>
+<th>version</th>
+<td>1.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$array_val</h4>
+<code>array</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code>\InvalidArgumentException</code></th>
+<td>Not array data.</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_array_last"></a><div class="element clickable method public method_array_last " data-toggle="collapse" data-target=".method_array_last .collapse" title="public">
+<h2>Return the last array member.</h2>
+<pre>array_last(array $array_val) : array</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>method</th>
+<td>Return the last array member.</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+<tr>
+<th>author</th>
+<td><a href="">Brian Tafoya</a></td>
+</tr>
+<tr>
+<th>copyright</th>
+<td>Copyright 2001 - 2017, Brian Tafoya.</td>
+</tr>
+<tr>
+<th>version</th>
+<td>1.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$array_val</h4>
+<code>array</code><p>Array data.</p></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code>\InvalidArgumentException</code></th>
+<td>Not array data.</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_br2nl"></a><div class="element clickable method public method_br2nl " data-toggle="collapse" data-target=".method_br2nl .collapse" title="public">
+<h2>Convert BR tags to PHP_EOL.</h2>
+<pre>br2nl(string $string) : string</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>method</th>
+<td>Convert BR tags to PHP_EOL.</td>
+</tr>
+<tr>
+<th>author</th>
+<td><a href="">Brian Tafoya</a></td>
+</tr>
+<tr>
+<th>copyright</th>
+<td>Copyright 2001 - 2017, Brian Tafoya.</td>
+</tr>
+<tr>
+<th>version</th>
+<td>1.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$string</h4>
+<code>string</code><p>The string to convert</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The converted string</div>
+</div></div>
+</div>
+<a id="method_cookievar"></a><div class="element clickable method public method_cookievar " data-toggle="collapse" data-target=".method_cookievar .collapse" title="public">
+<h2>Prevent undefined cookie variables</h2>
+<pre>cookievar(string $name, boolean $isint<code> = false</code>) : mixed</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>method</th>
+<td>Prevent undefined cookie variables</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+<tr>
+<th>author</th>
+<td><a href="">Brian Tafoya</a></td>
+</tr>
+<tr>
+<th>copyright</th>
+<td>Copyright 2001 - 2017, Brian Tafoya.</td>
+</tr>
+<tr>
+<th>version</th>
+<td>1.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code><p>$_COOKIE variable key</p></div>
+<div class="subelement argument">
+<h4>$isint</h4>
+<code>boolean</code><p>Response if an integer</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>mixed</code></div>
+</div></div>
+</div>
+<a id="method_dump_simple_array"></a><div class="element clickable method public method_dump_simple_array " data-toggle="collapse" data-target=".method_dump_simple_array .collapse" title="public">
+<h2>HTML Dump of string/array/etc.</h2>
+<pre>dump_simple_array(mixed $array, string $title<code> = ""</code>) : string</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>method</th>
+<td>HTML Dump of string/array/etc.</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+<tr>
+<th>author</th>
+<td><a href="">Brian Tafoya</a></td>
+</tr>
+<tr>
+<th>copyright</th>
+<td>Copyright 2001 - 2017, Brian Tafoya.</td>
+</tr>
+<tr>
+<th>version</th>
+<td>1.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$array</h4>
+<code>mixed</code><p>Data to dump.</p></div>
+<div class="subelement argument">
+<h4>$title</h4>
+<code>string</code><p>Table title.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_duration"></a><div class="element clickable method public method_duration " data-toggle="collapse" data-target=".method_duration .collapse" title="public">
+<h2>Return duration from seconds.</h2>
+<pre>duration(integer $secs) : string</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>method</th>
+<td>Return duration from seconds.</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+<tr>
+<th>author</th>
+<td><a href="">Brian Tafoya</a></td>
+</tr>
+<tr>
+<th>copyright</th>
+<td>Copyright 2001 - 2017, Brian Tafoya.</td>
+</tr>
+<tr>
+<th>version</th>
+<td>1.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$secs</h4>
+<code>integer</code><p>Seconds value.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_getvar"></a><div class="element clickable method public method_getvar " data-toggle="collapse" data-target=".method_getvar .collapse" title="public">
+<h2>Prevent undefined get variables</h2>
+<pre>getvar(string $name, boolean $isint<code> = false</code>) : mixed</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>method</th>
+<td>Prevent undefined get variables</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+<tr>
+<th>author</th>
+<td><a href="">Brian Tafoya</a></td>
+</tr>
+<tr>
+<th>copyright</th>
+<td>Copyright 2001 - 2017, Brian Tafoya.</td>
+</tr>
+<tr>
+<th>version</th>
+<td>1.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code><p>$_GET variable key</p></div>
+<div class="subelement argument">
+<h4>$isint</h4>
+<code>boolean</code><p>Response if an integer</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>mixed</code></div>
+</div></div>
+</div>
+<a id="method_getvar_default"></a><div class="element clickable method public method_getvar_default " data-toggle="collapse" data-target=".method_getvar_default .collapse" title="public">
+<h2>Return getvar with a default when blank.</h2>
+<pre>getvar_default(string $field_name, mixed $default_val<code> = ""</code>) : mixed</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>method</th>
+<td>Return getvar with a default is blank.</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+<tr>
+<th>author</th>
+<td><a href="">Brian Tafoya</a></td>
+</tr>
+<tr>
+<th>copyright</th>
+<td>Copyright 2001 - 2017, Brian Tafoya.</td>
+</tr>
+<tr>
+<th>version</th>
+<td>1.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$field_name</h4>
+<code>string</code><p>$_GET variable key name.</p></div>
+<div class="subelement argument">
+<h4>$default_val</h4>
+<code>mixed</code><p>The default value returned in the event the $_GET variable is empty or does not exist.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>mixed</code></div>
+</div></div>
+</div>
+<a id="method_json_indent"></a><div class="element clickable method public method_json_indent " data-toggle="collapse" data-target=".method_json_indent .collapse" title="public">
+<h2>Indents a flat JSON string to make it more human-readable.</h2>
+<pre>json_indent(string $json) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>method</th>
+<td></td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+<tr>
+<th>author</th>
+<td><a href="">Brian Tafoya</a></td>
+</tr>
+<tr>
+<th>copyright</th>
+<td>Copyright 2001 - 2017, Brian Tafoya.</td>
+</tr>
+<tr>
+<th>version</th>
+<td>1.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$json</h4>
+<code>string</code><p>The original JSON string to process.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>Indented version of the original JSON string.</div>
+</div></div>
+</div>
+<a id="method_left"></a><div class="element clickable method public method_left " data-toggle="collapse" data-target=".method_left .collapse" title="public">
+<h2>Return characters from the left</h2>
+<pre>left(string $str, integer $howManyCharsFromLeft) : string</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>method</th>
+<td>Return characters from the left.</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+<tr>
+<th>author</th>
+<td><a href="">Brian Tafoya</a></td>
+</tr>
+<tr>
+<th>copyright</th>
+<td>Copyright 2001 - 2017, Brian Tafoya.</td>
+</tr>
+<tr>
+<th>version</th>
+<td>1.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$str</h4>
+<code>string</code><p>String to truncate.</p></div>
+<div class="subelement argument">
+<h4>$howManyCharsFromLeft</h4>
+<code>integer</code><p>Number of characters to the left of the string.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_linkify"></a><div class="element clickable method public method_linkify " data-toggle="collapse" data-target=".method_linkify .collapse" title="public">
+<h2>Turn all URLs in clickable links.</h2>
+<pre>linkify(string $value, array $protocols<code> = array('http', 'mail')</code>, array $attributes<code> = array()</code>) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>method</th>
+<td></td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+<tr>
+<th>author</th>
+<td><a href="">Brian Tafoya</a></td>
+</tr>
+<tr>
+<th>copyright</th>
+<td>Copyright 2001 - 2017, Brian Tafoya.</td>
+</tr>
+<tr>
+<th>version</th>
+<td>1.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$value</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$protocols</h4>
+<code>array</code><p>http/https, ftp, mail, twitter</p></div>
+<div class="subelement argument">
+<h4>$attributes</h4>
+<code>array</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_mid"></a><div class="element clickable method public method_mid " data-toggle="collapse" data-target=".method_mid .collapse" title="public">
+<h2>Return x many characters from the starting point</h2>
+<pre>mid(string $str, integer $start, integer $howManyChars<code> = 0</code>) : string</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>method</th>
+<td>Return x many characters from the starting point</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+<tr>
+<th>author</th>
+<td><a href="">Brian Tafoya</a></td>
+</tr>
+<tr>
+<th>copyright</th>
+<td>Copyright 2001 - 2017, Brian Tafoya.</td>
+</tr>
+<tr>
+<th>version</th>
+<td>1.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$str</h4>
+<code>string</code><p>String to truncate.</p></div>
+<div class="subelement argument">
+<h4>$start</h4>
+<code>integer</code><p>Where to start from the left of the string.</p></div>
+<div class="subelement argument">
+<h4>$howManyChars</h4>
+<code>integer</code><p>Number of characters to return.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_multi_stripslashes"></a><div class="element clickable method public method_multi_stripslashes " data-toggle="collapse" data-target=".method_multi_stripslashes .collapse" title="public">
+<h2>Return array stripslasshes recursive.</h2>
+<pre>multi_stripslashes(callable $arr) </pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>method</th>
+<td>Return array stripslasshes recursive.</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+<tr>
+<th>author</th>
+<td><a href="">Brian Tafoya</a></td>
+</tr>
+<tr>
+<th>copyright</th>
+<td>Copyright 2001 - 2017, Brian Tafoya.</td>
+</tr>
+<tr>
+<th>version</th>
+<td>1.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$arr</h4>
+<code>callable</code><p>Input array.</p></div>
+</div></div>
+</div>
+<a id="method_numberToRoman"></a><div class="element clickable method public method_numberToRoman " data-toggle="collapse" data-target=".method_numberToRoman .collapse" title="public">
+<h2>Return roman numeral.</h2>
+<pre>numberToRoman(integer $num) : string</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>method</th>
+<td>Return roman numeral.</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+<tr>
+<th>author</th>
+<td><a href="">Brian Tafoya</a></td>
+</tr>
+<tr>
+<th>copyright</th>
+<td>Copyright 2001 - 2017, Brian Tafoya.</td>
+</tr>
+<tr>
+<th>version</th>
+<td>1.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$num</h4>
+<code>integer</code><p>Number to transform.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_object2array"></a><div class="element clickable method public method_object2array " data-toggle="collapse" data-target=".method_object2array .collapse" title="public">
+<h2>Return an array from an object.</h2>
+<pre>object2array(object $object) : array</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>method</th>
+<td>Return an array from an object.</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+<tr>
+<th>author</th>
+<td><a href="">Brian Tafoya</a></td>
+</tr>
+<tr>
+<th>copyright</th>
+<td>Copyright 2001 - 2017, Brian Tafoya.</td>
+</tr>
+<tr>
+<th>version</th>
+<td>1.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$object</h4>
+<code>object</code><p>Object to transform.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_postvar"></a><div class="element clickable method public method_postvar " data-toggle="collapse" data-target=".method_postvar .collapse" title="public">
+<h2>Prevent undefined post variables</h2>
+<pre>postvar(mixed $name, boolean $isint<code> = false</code>) : mixed</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>method</th>
+<td>Prevent undefined post variables</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+<tr>
+<th>author</th>
+<td><a href="">Brian Tafoya</a></td>
+</tr>
+<tr>
+<th>copyright</th>
+<td>Copyright 2001 - 2017, Brian Tafoya.</td>
+</tr>
+<tr>
+<th>version</th>
+<td>1.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>mixed</code><p>$_POST variable key</p></div>
+<div class="subelement argument">
+<h4>$isint</h4>
+<code>boolean</code><p>Response if an integer</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>mixed</code></div>
+</div></div>
+</div>
+<a id="method_postvar_default"></a><div class="element clickable method public method_postvar_default " data-toggle="collapse" data-target=".method_postvar_default .collapse" title="public">
+<h2>Return postvar with a default when blank.</h2>
+<pre>postvar_default(string $field_name, mixed $default_val<code> = ""</code>) : mixed</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>method</th>
+<td>Return postvar with a default is blank.</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+<tr>
+<th>author</th>
+<td><a href="">Brian Tafoya</a></td>
+</tr>
+<tr>
+<th>copyright</th>
+<td>Copyright 2001 - 2017, Brian Tafoya.</td>
+</tr>
+<tr>
+<th>version</th>
+<td>1.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$field_name</h4>
+<code>string</code><p>$_POST variable key name.</p></div>
+<div class="subelement argument">
+<h4>$default_val</h4>
+<code>mixed</code><p>The default value returned in the event the $_POST variable is empty or does not exist.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>mixed</code></div>
+</div></div>
+</div>
+<a id="method_requested_url"></a><div class="element clickable method public method_requested_url " data-toggle="collapse" data-target=".method_requested_url .collapse" title="public">
+<h2>Return the requested url.</h2>
+<pre>requested_url() : string</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>method</th>
+<td></td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+<tr>
+<th>author</th>
+<td><a href="">Brian Tafoya</a></td>
+</tr>
+<tr>
+<th>copyright</th>
+<td>Copyright 2001 - 2017, Brian Tafoya.</td>
+</tr>
+<tr>
+<th>version</th>
+<td>1.0</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_right"></a><div class="element clickable method public method_right " data-toggle="collapse" data-target=".method_right .collapse" title="public">
+<h2>Return characters from the right</h2>
+<pre>right(string $str, integer $howManyCharsFromRight) : string</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>method</th>
+<td>Return characters from the right.</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+<tr>
+<th>author</th>
+<td><a href="">Brian Tafoya</a></td>
+</tr>
+<tr>
+<th>copyright</th>
+<td>Copyright 2001 - 2017, Brian Tafoya.</td>
+</tr>
+<tr>
+<th>version</th>
+<td>1.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$str</h4>
+<code>string</code><p>String to truncate.</p></div>
+<div class="subelement argument">
+<h4>$howManyCharsFromRight</h4>
+<code>integer</code><p>Number of characters to the right of the string.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_send_no_cache_header"></a><div class="element clickable method public method_send_no_cache_header " data-toggle="collapse" data-target=".method_send_no_cache_header .collapse" title="public">
+<h2>Send header stuff that tells the browser not to cache this page.</h2>
+<pre>send_no_cache_header() </pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>method</th>
+<td></td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+<tr>
+<th>author</th>
+<td><a href="">Brian Tafoya</a></td>
+</tr>
+<tr>
+<th>copyright</th>
+<td>Copyright 2001 - 2017, Brian Tafoya.</td>
+</tr>
+<tr>
+<th>version</th>
+<td>1.0</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_servervar"></a><div class="element clickable method public method_servervar " data-toggle="collapse" data-target=".method_servervar .collapse" title="public">
+<h2>Prevent undefined server variables</h2>
+<pre>servervar(string $name, boolean $isint<code> = false</code>) : mixed</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>method</th>
+<td>Prevent undefined servervar variables</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+<tr>
+<th>author</th>
+<td><a href="">Brian Tafoya</a></td>
+</tr>
+<tr>
+<th>copyright</th>
+<td>Copyright 2001 - 2017, Brian Tafoya.</td>
+</tr>
+<tr>
+<th>version</th>
+<td>1.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code><p>$_SERVER variable key</p></div>
+<div class="subelement argument">
+<h4>$isint</h4>
+<code>boolean</code><p>Response if an integer</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>mixed</code></div>
+</div></div>
+</div>
+<a id="method_sessionvar"></a><div class="element clickable method public method_sessionvar " data-toggle="collapse" data-target=".method_sessionvar .collapse" title="public">
+<h2>Prevent undefined session variables</h2>
+<pre>sessionvar(string $name, boolean $isint<code> = false</code>) : mixed</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>method</th>
+<td>Prevent undefined session variables</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+<tr>
+<th>author</th>
+<td><a href="">Brian Tafoya</a></td>
+</tr>
+<tr>
+<th>copyright</th>
+<td>Copyright 2001 - 2017, Brian Tafoya.</td>
+</tr>
+<tr>
+<th>version</th>
+<td>1.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code><p>$_SESSION variable key</p></div>
+<div class="subelement argument">
+<h4>$isint</h4>
+<code>boolean</code><p>Response if an integer</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>mixed</code></div>
+</div></div>
+</div>
+<a id="method_setsessionvar"></a><div class="element clickable method public method_setsessionvar " data-toggle="collapse" data-target=".method_setsessionvar .collapse" title="public">
+<h2>Set session variables</h2>
+<pre>setsessionvar(string $name, boolean $value) </pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>method</th>
+<td></td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+<tr>
+<th>author</th>
+<td><a href="">Brian Tafoya</a></td>
+</tr>
+<tr>
+<th>copyright</th>
+<td>Copyright 2001 - 2017, Brian Tafoya.</td>
+</tr>
+<tr>
+<th>version</th>
+<td>1.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code><p>$_SESSION variable key</p></div>
+<div class="subelement argument">
+<h4>$value</h4>
+<code>boolean</code><p>$_SESSION variable value</p></div>
+</div></div>
+</div>
+<a id="method_stringTruncate"></a><div class="element clickable method public method_stringTruncate " data-toggle="collapse" data-target=".method_stringTruncate .collapse" title="public">
+<h2>Truncate a string.</h2>
+<pre>stringTruncate(string $string, integer $limit, string $break<code> = "."</code>, string $pad<code> = "..."</code>) : string</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>method</th>
+<td>Truncate a string.</td>
+</tr>
+<tr>
+<th>author</th>
+<td><a href="">Brian Tafoya</a></td>
+</tr>
+<tr>
+<th>copyright</th>
+<td>Copyright 2001 - 2017, Brian Tafoya.</td>
+</tr>
+<tr>
+<th>version</th>
+<td>1.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$string</h4>
+<code>string</code><p>The string to truncate.</p></div>
+<div class="subelement argument">
+<h4>$limit</h4>
+<code>integer</code><p>String length max.</p></div>
+<div class="subelement argument">
+<h4>$break</h4>
+<code>string</code><p>(optional) Break point, defauls to period.</p></div>
+<div class="subelement argument">
+<h4>$pad</h4>
+<code>string</code><p>(optional) String to append to the truncated string.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>Truncated string.</div>
+</div></div>
+</div>
+<a id="method_truncate"></a><div class="element clickable method public method_truncate " data-toggle="collapse" data-target=".method_truncate .collapse" title="public">
+<h2>Return truncated number.</h2>
+<pre>truncate(integer $num, integer $digits<code> = 0</code>) : integer</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>method</th>
+<td>Return truncated number.</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+<tr>
+<th>author</th>
+<td><a href="">Brian Tafoya</a></td>
+</tr>
+<tr>
+<th>copyright</th>
+<td>Copyright 2001 - 2017, Brian Tafoya.</td>
+</tr>
+<tr>
+<th>version</th>
+<td>1.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$num</h4>
+<code>integer</code><p>Number to truncate.</p></div>
+<div class="subelement argument">
+<h4>$digits</h4>
+<code>integer</code><p>Number of digits to truncate.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>integer</code></div>
+</div></div>
+</div>
+<a id="method_uuid"></a><div class="element clickable method public method_uuid " data-toggle="collapse" data-target=".method_uuid .collapse" title="public">
+<h2>Return a 32 bit unique ID</h2>
+<pre>uuid() : string</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>method</th>
+<td>Return a 32 bit unique ID</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+<tr>
+<th>author</th>
+<td><a href="">Brian Tafoya</a></td>
+</tr>
+<tr>
+<th>copyright</th>
+<td>Copyright 2001 - 2017, Brian Tafoya.</td>
+</tr>
+<tr>
+<th>version</th>
+<td>1.0</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>32 character unique ID.</div>
+</div></div>
+</div>
+<a id="method_xml2array"></a><div class="element clickable method public method_xml2array " data-toggle="collapse" data-target=".method_xml2array .collapse" title="public">
+<h2>Return an array from xml string.</h2>
+<pre>xml2array(string $xmlstring) : array</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>method</th>
+<td>Return an array from xml string.</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+<tr>
+<th>author</th>
+<td><a href="">Brian Tafoya</a></td>
+</tr>
+<tr>
+<th>copyright</th>
+<td>Copyright 2001 - 2017, Brian Tafoya.</td>
+</tr>
+<tr>
+<th>version</th>
+<td>1.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$xmlstring</h4>
+<code>string</code><p>XML to process.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.8.5</a> and<br>
+            generated on 2017-02-21T22:57:30-05:00.<br></footer></div>
+</div>
 </body>
 </html>

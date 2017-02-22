@@ -1,0 +1,37 @@
+Collecting files .. OK
+Initializing parser .. OK
+Parsing files
+Parsing /mnt/hgfs/www/SqueakyMindsPhpHelper/src/SqueakyMindsPhpHelper.php
+Parsing /mnt/hgfs/www/SqueakyMindsPhpHelper/src/SqueakyMindsPhpHelper_lists.php
+Storing cache in "/mnt/hgfs/www/SqueakyMindsPhpHelper/docs" .. OK
+Load cache                                                         ..    0.135s
+Preparing template "responsive"                                    ..    0.034s
+Preparing 13 transformations                                       ..    0.000s
+Build "elements" index                                             ..    0.000s
+Replace textual FQCNs with object aliases                          ..    0.012s
+Resolve @link and @see tags in descriptions                        ..    0.001s
+Enriches inline example tags with their sources                    ..    0.000s
+Build "packages" index                                             ..    0.007s
+Build "namespaces" index and add namespaces to "elements"          ..    0.000s
+Collect all markers embedded in tags                               ..    0.000s
+Transform analyzed project into artifacts                          .. 
+Applying 13 transformations
+  Initialize writer "phpDocumentor\Plugin\Core\Transformer\Writer\FileIo"
+  Initialize writer "phpDocumentor\Plugin\Core\Transformer\Writer\Xml"
+  Initialize writer "phpDocumentor\Plugin\Core\Transformer\Writer\Xsl"
+  Initialize writer "phpDocumentor\Plugin\Graphs\Writer\Graph"
+  Execute transformation using writer "FileIo"
+  Execute transformation using writer "FileIo"
+  Execute transformation using writer "FileIo"
+  Execute transformation using writer "xml"
+  Execute transformation using writer "xsl"
+  Execute transformation using writer "xsl"
+  Execute transformation using writer "xsl"
+  Execute transformation using writer "xsl"
+  Execute transformation using writer "xsl"
+  Execute transformation using writer "xsl"
+  Execute transformation using writer "xsl"
+  Execute transformation using writer "xsl"
+  Execute transformation using writer "Graph"
+   2.127s
+Analyze results and write report to log                            ..    0.000s
