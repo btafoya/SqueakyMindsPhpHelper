@@ -19,7 +19,7 @@ Helper libraries used in the implementation of various PHP web applications I ha
 
 ## Documentation
 
-Read the [documentation](http://htmlpreview.github.io/?https://github.com/btafoya/SqueakyMindsPhpHelper/blob/master/docs/index.html).
+Read the [documentation](http://btafoya.github.io/SqueakyMindsPhpHelper/).
 
 ## Installation
 
