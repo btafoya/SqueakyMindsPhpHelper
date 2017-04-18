@@ -546,7 +546,7 @@ class SqueakyMindsPhpHelper_lists
      * @copyright Copyright (c) 2003 The Fusebox Corporation. All rights reserved.
      * @version   1.0
      */
-    private function listFuncs_PrepListAsArray($inList, $inDelim) 
+    static private function listFuncs_PrepListAsArray($inList, $inDelim)
     {
         $inList = trim($inList);
         $inList = preg_replace("/^" . preg_quote($inDelim, "/") . "+/", "", $inList);
@@ -574,7 +574,7 @@ class SqueakyMindsPhpHelper_lists
      * @copyright Copyright (c) 2003 The Fusebox Corporation. All rights reserved.
      * @version   1.0
      */
-    static public function PrepListAsList($inList, $inDelim) 
+    static public function PrepListAsList($inList, $inDelim)
     {
         $inList = trim($inList);
         $inList = preg_replace("/^" . preg_quote($inDelim, "/") . "+/", "", $inList);
