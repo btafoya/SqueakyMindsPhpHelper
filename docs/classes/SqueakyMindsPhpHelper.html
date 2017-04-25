@@ -101,9 +101,9 @@
 </li>
 </ul>
 <div xmlns:php="http://php.net/xsl" class="element class">
-<p class="short_description">This class provides helper methods I have developed or aquired over the years.</p>
+<p class="short_description">Class SqueakyMindsPhpHelper</p>
 <div class="details">
-<div class="long_description"></div>
+<div class="long_description"><p>This class provides helper methods I have developed or acquired over the years.</p></div>
 <table class="table table-bordered"><tr>
 <th>package</th>
 <td><a href="../packages/SqueakyMindsPhpHelper.html">SqueakyMindsPhpHelper</a></td>
@@ -228,7 +228,7 @@
 </div>
 <a id="method_cookievar"></a><div class="element clickable method public method_cookievar " data-toggle="collapse" data-target=".method_cookievar .collapse" title="public">
 <h2>Prevent undefined cookie variables</h2>
-<pre>cookievar(string $name, boolean $isint<code> = false</code>) : mixed</pre>
+<pre>cookievar($name, boolean $isint<code> = false</code>) : array | integer | string</pre>
 <div class="labels"><span class="label">Static</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
@@ -255,14 +255,15 @@
 </tr>
 </table>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$name</h4>
-<code>string</code><p>$_COOKIE variable key</p></div>
+<div class="subelement argument"><h4>$name</h4></div>
 <div class="subelement argument">
 <h4>$isint</h4>
-<code>boolean</code><p>Response if an integer</p></div>
+<code>boolean</code>
+</div>
 <h3>Returns</h3>
-<div class="subelement response"><code>mixed</code></div>
+<div class="subelement response">
+<code>array</code><code>integer</code><code>string</code>
+</div>
 </div></div>
 </div>
 <a id="method_dump_simple_array"></a><div class="element clickable method public method_dump_simple_array " data-toggle="collapse" data-target=".method_dump_simple_array .collapse" title="public">
@@ -342,7 +343,7 @@
 </div>
 <a id="method_getvar"></a><div class="element clickable method public method_getvar " data-toggle="collapse" data-target=".method_getvar .collapse" title="public">
 <h2>Prevent undefined get variables</h2>
-<pre>getvar(string $name, boolean $isint<code> = false</code>) : mixed</pre>
+<pre>getvar($name, boolean $isint<code> = false</code>) : integer | mixed | string</pre>
 <div class="labels"><span class="label">Static</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
@@ -369,14 +370,15 @@
 </tr>
 </table>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$name</h4>
-<code>string</code><p>$_GET variable key</p></div>
+<div class="subelement argument"><h4>$name</h4></div>
 <div class="subelement argument">
 <h4>$isint</h4>
-<code>boolean</code><p>Response if an integer</p></div>
+<code>boolean</code>
+</div>
 <h3>Returns</h3>
-<div class="subelement response"><code>mixed</code></div>
+<div class="subelement response">
+<code>integer</code><code>mixed</code><code>string</code>
+</div>
 </div></div>
 </div>
 <a id="method_getvar_default"></a><div class="element clickable method public method_getvar_default " data-toggle="collapse" data-target=".method_getvar_default .collapse" title="public">
@@ -496,14 +498,14 @@
 </div>
 <a id="method_linkify"></a><div class="element clickable method public method_linkify " data-toggle="collapse" data-target=".method_linkify .collapse" title="public">
 <h2>Turn all URLs in clickable links.</h2>
-<pre>linkify(string $value, array $protocols<code> = array('http', 'mail')</code>, array $attributes<code> = array()</code>) : string</pre>
-<div class="labels"></div>
+<pre>linkify($value) : string</pre>
+<div class="labels"><span class="label">Static</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <table class="table table-bordered">
 <tr>
 <th>method</th>
-<td></td>
+<td>)</td>
 </tr>
 <tr>
 <th>access</th>
@@ -523,17 +525,7 @@
 </tr>
 </table>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$value</h4>
-<code>string</code>
-</div>
-<div class="subelement argument">
-<h4>$protocols</h4>
-<code>array</code><p>http/https, ftp, mail, twitter</p></div>
-<div class="subelement argument">
-<h4>$attributes</h4>
-<code>array</code>
-</div>
+<div class="subelement argument"><h4>$value</h4></div>
 <h3>Returns</h3>
 <div class="subelement response"><code>string</code></div>
 </div></div>
@@ -688,7 +680,7 @@
 </div>
 <a id="method_postvar"></a><div class="element clickable method public method_postvar " data-toggle="collapse" data-target=".method_postvar .collapse" title="public">
 <h2>Prevent undefined post variables</h2>
-<pre>postvar(mixed $name, boolean $isint<code> = false</code>) : mixed</pre>
+<pre>postvar($name, boolean $isint<code> = false</code>) : integer | mixed | string</pre>
 <div class="labels"><span class="label">Static</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
@@ -715,14 +707,15 @@
 </tr>
 </table>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$name</h4>
-<code>mixed</code><p>$_POST variable key</p></div>
+<div class="subelement argument"><h4>$name</h4></div>
 <div class="subelement argument">
 <h4>$isint</h4>
-<code>boolean</code><p>Response if an integer</p></div>
+<code>boolean</code>
+</div>
 <h3>Returns</h3>
-<div class="subelement response"><code>mixed</code></div>
+<div class="subelement response">
+<code>integer</code><code>mixed</code><code>string</code>
+</div>
 </div></div>
 </div>
 <a id="method_postvar_default"></a><div class="element clickable method public method_postvar_default " data-toggle="collapse" data-target=".method_postvar_default .collapse" title="public">
@@ -867,7 +860,7 @@
 </div>
 <a id="method_servervar"></a><div class="element clickable method public method_servervar " data-toggle="collapse" data-target=".method_servervar .collapse" title="public">
 <h2>Prevent undefined server variables</h2>
-<pre>servervar(string $name, boolean $isint<code> = false</code>) : mixed</pre>
+<pre>servervar($name, boolean $isint<code> = false</code>) : array | integer | string</pre>
 <div class="labels"><span class="label">Static</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
@@ -894,14 +887,15 @@
 </tr>
 </table>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$name</h4>
-<code>string</code><p>$_SERVER variable key</p></div>
+<div class="subelement argument"><h4>$name</h4></div>
 <div class="subelement argument">
 <h4>$isint</h4>
-<code>boolean</code><p>Response if an integer</p></div>
+<code>boolean</code>
+</div>
 <h3>Returns</h3>
-<div class="subelement response"><code>mixed</code></div>
+<div class="subelement response">
+<code>array</code><code>integer</code><code>string</code>
+</div>
 </div></div>
 </div>
 <a id="method_sessionvar"></a><div class="element clickable method public method_sessionvar " data-toggle="collapse" data-target=".method_sessionvar .collapse" title="public">
@@ -1137,7 +1131,7 @@
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.8.5</a> and<br>
-            generated on 2017-02-21T22:57:30-05:00.<br></footer></div>
+            generated on 2017-04-25T10:57:27-07:00.<br></footer></div>
 </div>
 </body>
 </html>

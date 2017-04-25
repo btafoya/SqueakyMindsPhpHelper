@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="SqueakyMindsPhpHelper" tests="12" assertions="12" failures="0" errors="0" time="0.032456">
-    <testsuite name="SqueakyMindsPhpHelper_test" file="/mnt/hgfs/www/SqueakyMindsPhpHelper/tests/SqueakyMindsPhpHelper_test.php" tests="12" assertions="12" failures="0" errors="0" time="0.032456">
-      <testcase name="testUuid" class="SqueakyMindsPhpHelper_test" file="/mnt/hgfs/www/SqueakyMindsPhpHelper/tests/SqueakyMindsPhpHelper_test.php" line="46" assertions="1" time="0.012211"/>
-      <testcase name="testPostVar" class="SqueakyMindsPhpHelper_test" file="/mnt/hgfs/www/SqueakyMindsPhpHelper/tests/SqueakyMindsPhpHelper_test.php" line="57" assertions="1" time="0.000427"/>
-      <testcase name="testGetVar" class="SqueakyMindsPhpHelper_test" file="/mnt/hgfs/www/SqueakyMindsPhpHelper/tests/SqueakyMindsPhpHelper_test.php" line="68" assertions="1" time="0.000252"/>
-      <testcase name="testSessionVar" class="SqueakyMindsPhpHelper_test" file="/mnt/hgfs/www/SqueakyMindsPhpHelper/tests/SqueakyMindsPhpHelper_test.php" line="79" assertions="1" time="0.017121"/>
-      <testcase name="testSetSessionVar" class="SqueakyMindsPhpHelper_test" file="/mnt/hgfs/www/SqueakyMindsPhpHelper/tests/SqueakyMindsPhpHelper_test.php" line="90" assertions="1" time="0.000348"/>
-      <testcase name="testCookieVar" class="SqueakyMindsPhpHelper_test" file="/mnt/hgfs/www/SqueakyMindsPhpHelper/tests/SqueakyMindsPhpHelper_test.php" line="105" assertions="1" time="0.000262"/>
-      <testcase name="testGetVarDefault" class="SqueakyMindsPhpHelper_test" file="/mnt/hgfs/www/SqueakyMindsPhpHelper/tests/SqueakyMindsPhpHelper_test.php" line="116" assertions="1" time="0.000277"/>
-      <testcase name="testPostVarDefault" class="SqueakyMindsPhpHelper_test" file="/mnt/hgfs/www/SqueakyMindsPhpHelper/tests/SqueakyMindsPhpHelper_test.php" line="127" assertions="1" time="0.000437"/>
-      <testcase name="testLeft" class="SqueakyMindsPhpHelper_test" file="/mnt/hgfs/www/SqueakyMindsPhpHelper/tests/SqueakyMindsPhpHelper_test.php" line="138" assertions="1" time="0.000348"/>
-      <testcase name="testRight" class="SqueakyMindsPhpHelper_test" file="/mnt/hgfs/www/SqueakyMindsPhpHelper/tests/SqueakyMindsPhpHelper_test.php" line="149" assertions="1" time="0.000251"/>
-      <testcase name="testMid" class="SqueakyMindsPhpHelper_test" file="/mnt/hgfs/www/SqueakyMindsPhpHelper/tests/SqueakyMindsPhpHelper_test.php" line="160" assertions="1" time="0.000270"/>
-      <testcase name="testRequested_url" class="SqueakyMindsPhpHelper_test" file="/mnt/hgfs/www/SqueakyMindsPhpHelper/tests/SqueakyMindsPhpHelper_test.php" line="171" assertions="1" time="0.000252"/>
+  <testsuite name="SqueakyMindsPhpHelper" tests="12" assertions="12" failures="0" errors="0" time="0.060296">
+    <testsuite name="SqueakyMindsPhpHelper_test" file="/mnt/hgfs/www/SqueakyMindsPhpHelper/tests/SqueakyMindsPhpHelper_test.php" tests="12" assertions="12" failures="0" errors="0" time="0.060296">
+      <testcase name="testUuid" class="SqueakyMindsPhpHelper_test" file="/mnt/hgfs/www/SqueakyMindsPhpHelper/tests/SqueakyMindsPhpHelper_test.php" line="46" assertions="1" time="0.020442"/>
+      <testcase name="testPostVar" class="SqueakyMindsPhpHelper_test" file="/mnt/hgfs/www/SqueakyMindsPhpHelper/tests/SqueakyMindsPhpHelper_test.php" line="57" assertions="1" time="0.000639"/>
+      <testcase name="testGetVar" class="SqueakyMindsPhpHelper_test" file="/mnt/hgfs/www/SqueakyMindsPhpHelper/tests/SqueakyMindsPhpHelper_test.php" line="68" assertions="1" time="0.000671"/>
+      <testcase name="testSessionVar" class="SqueakyMindsPhpHelper_test" file="/mnt/hgfs/www/SqueakyMindsPhpHelper/tests/SqueakyMindsPhpHelper_test.php" line="79" assertions="1" time="0.032005"/>
+      <testcase name="testSetSessionVar" class="SqueakyMindsPhpHelper_test" file="/mnt/hgfs/www/SqueakyMindsPhpHelper/tests/SqueakyMindsPhpHelper_test.php" line="90" assertions="1" time="0.000662"/>
+      <testcase name="testCookieVar" class="SqueakyMindsPhpHelper_test" file="/mnt/hgfs/www/SqueakyMindsPhpHelper/tests/SqueakyMindsPhpHelper_test.php" line="105" assertions="1" time="0.000577"/>
+      <testcase name="testGetVarDefault" class="SqueakyMindsPhpHelper_test" file="/mnt/hgfs/www/SqueakyMindsPhpHelper/tests/SqueakyMindsPhpHelper_test.php" line="116" assertions="1" time="0.000677"/>
+      <testcase name="testPostVarDefault" class="SqueakyMindsPhpHelper_test" file="/mnt/hgfs/www/SqueakyMindsPhpHelper/tests/SqueakyMindsPhpHelper_test.php" line="127" assertions="1" time="0.000546"/>
+      <testcase name="testLeft" class="SqueakyMindsPhpHelper_test" file="/mnt/hgfs/www/SqueakyMindsPhpHelper/tests/SqueakyMindsPhpHelper_test.php" line="138" assertions="1" time="0.000725"/>
+      <testcase name="testRight" class="SqueakyMindsPhpHelper_test" file="/mnt/hgfs/www/SqueakyMindsPhpHelper/tests/SqueakyMindsPhpHelper_test.php" line="149" assertions="1" time="0.001134"/>
+      <testcase name="testMid" class="SqueakyMindsPhpHelper_test" file="/mnt/hgfs/www/SqueakyMindsPhpHelper/tests/SqueakyMindsPhpHelper_test.php" line="160" assertions="1" time="0.001135"/>
+      <testcase name="testRequested_url" class="SqueakyMindsPhpHelper_test" file="/mnt/hgfs/www/SqueakyMindsPhpHelper/tests/SqueakyMindsPhpHelper_test.php" line="171" assertions="1" time="0.001083"/>
     </testsuite>
   </testsuite>
 </testsuites>

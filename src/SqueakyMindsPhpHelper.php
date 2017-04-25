@@ -52,8 +52,8 @@ class SqueakyMindsPhpHelper
      *
      * @method string postvar() Prevent undefined post variables
      * @access public
-     * @param $name
-     * @param bool $isint
+     * @param  $name
+     * @param  bool $isint
      * @return int|mixed|string
      *
      * @author    Brian Tafoya
@@ -75,8 +75,8 @@ class SqueakyMindsPhpHelper
      *
      * @method string getvar() Prevent undefined get variables
      * @access public
-     * @param $name
-     * @param bool $isint
+     * @param  $name
+     * @param  bool $isint
      * @return int|mixed|string
      *
      * @author    Brian Tafoya
@@ -139,8 +139,8 @@ class SqueakyMindsPhpHelper
      *
      * @method string cookievar() Prevent undefined cookie variables
      * @access public
-     * @param $name
-     * @param bool $isint
+     * @param  $name
+     * @param  bool $isint
      * @return array|int|string
      *
      * @author    Brian Tafoya
@@ -162,8 +162,8 @@ class SqueakyMindsPhpHelper
      *
      * @method string servervar() Prevent undefined servervar variables
      * @access public
-     * @param $name
-     * @param bool $isint
+     * @param  $name
+     * @param  bool $isint
      * @return array|int|string
      *
      * @author    Brian Tafoya
@@ -626,7 +626,7 @@ class SqueakyMindsPhpHelper
      *
      * @method linkify($value, $protocols = "", array $attributes = array())
      * @access public
-     * @param $value
+     * @param  $value
      * @return string
      *
      * @author    Brian Tafoya

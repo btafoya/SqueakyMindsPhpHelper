@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project title="SqueakyMindsPhpHelper" version="2.8.5">
   <partials/>
-  <file path="SqueakyMindsPhpHelper.php" generated-path="SqueakyMindsPhpHelper.html" hash="8a215d88e128a30ead740731dbe47308" package="SqueakyMindsPhpHelper">
+  <file path="SqueakyMindsPhpHelper.php" generated-path="SqueakyMindsPhpHelper.html" hash="0ffc22ec8e56b5a7942e83d3522a612a" package="SqueakyMindsPhpHelper">
     <docblock line="0">
       <description>SqueakyMindsPhpHelper Helper Classes</description>
       <long-description></long-description>
@@ -14,56 +14,56 @@
       <tag name="license" line="0" description="The MIT License" link="https://opensource.org/licenses/MIT"/>
       <tag name="category" line="0" description="SqueakyMindsPhpHelper_Library"/>
     </docblock>
-    <class final="false" abstract="false" namespace="" line="27" package="SqueakyMindsPhpHelper">
+    <class final="false" abstract="false" namespace="" line="29" package="SqueakyMindsPhpHelper">
       <extends/>
       <name>SqueakyMindsPhpHelper</name>
       <full_name>\SqueakyMindsPhpHelper</full_name>
-      <docblock line="27">
-        <description>This class provides helper methods I have developed or aquired over the years.</description>
-        <long-description></long-description>
-        <tag name="package" line="27" description="SqueakyMindsPhpHelper"/>
+      <docblock line="29">
+        <description>Class SqueakyMindsPhpHelper</description>
+        <long-description>This class provides helper methods I have developed or acquired over the years.</long-description>
+        <tag name="package" line="29" description="SqueakyMindsPhpHelper"/>
       </docblock>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="40" package="SqueakyMindsPhpHelper">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="44" package="SqueakyMindsPhpHelper">
         <name>uuid</name>
         <full_name>\SqueakyMindsPhpHelper::uuid()</full_name>
-        <docblock line="40">
+        <docblock line="44">
           <description>Return a 32 bit unique ID</description>
           <long-description></long-description>
-          <tag name="method" line="40" description="Return a 32 bit unique ID" method_name="uuid"/>
-          <tag name="access" line="40" description="public"/>
-          <tag name="return" line="40" description="32 character unique ID." type="string">
+          <tag name="method" line="44" description="Return a 32 bit unique ID" method_name="uuid"/>
+          <tag name="access" line="44" description="public"/>
+          <tag name="return" line="44" description="32 character unique ID." type="string">
             <type>string</type>
           </tag>
-          <tag name="author" line="40" description="Brian Tafoya"/>
-          <tag name="copyright" line="40" description="Copyright 2001 - 2017, Brian Tafoya."/>
-          <tag name="version" line="40" description="1.0"/>
+          <tag name="author" line="44" description="Brian Tafoya"/>
+          <tag name="copyright" line="44" description="Copyright 2001 - 2017, Brian Tafoya."/>
+          <tag name="version" line="44" description="1.0"/>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="59" package="SqueakyMindsPhpHelper">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="63" package="SqueakyMindsPhpHelper">
         <name>postvar</name>
         <full_name>\SqueakyMindsPhpHelper::postvar()</full_name>
-        <docblock line="59">
+        <docblock line="63">
           <description>Prevent undefined post variables</description>
           <long-description></long-description>
-          <tag name="method" line="59" description="Prevent undefined post variables" method_name="postvar"/>
-          <tag name="access" line="59" description="public"/>
-          <tag name="return" line="59" description="" type="mixed">
-            <type>mixed</type>
-          </tag>
-          <tag name="param" line="59" description="&lt;p&gt;$_POST variable key&lt;/p&gt;" type="mixed" variable="$name">
-            <type>mixed</type>
-          </tag>
-          <tag name="param" line="59" description="&lt;p&gt;Response if an integer&lt;/p&gt;" type="boolean" variable="$isint">
+          <tag name="method" line="63" description="Prevent undefined post variables" method_name="postvar"/>
+          <tag name="access" line="63" description="public"/>
+          <tag name="param" line="63" description="" type="" variable="$name"/>
+          <tag name="param" line="63" description="" type="boolean" variable="$isint">
             <type>boolean</type>
           </tag>
-          <tag name="author" line="59" description="Brian Tafoya"/>
-          <tag name="copyright" line="59" description="Copyright 2001 - 2017, Brian Tafoya."/>
-          <tag name="version" line="59" description="1.0"/>
+          <tag name="return" line="63" description="" type="integer|mixed|string">
+            <type>integer</type>
+            <type>mixed</type>
+            <type>string</type>
+          </tag>
+          <tag name="author" line="63" description="Brian Tafoya"/>
+          <tag name="copyright" line="63" description="Copyright 2001 - 2017, Brian Tafoya."/>
+          <tag name="version" line="63" description="1.0"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$name</name>
           <default></default>
-          <type>mixed</type>
+          <type/>
         </argument>
         <argument line="0" by_reference="false">
           <name>$isint</name>
@@ -71,31 +71,31 @@
           <type>boolean</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="79" package="SqueakyMindsPhpHelper">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="86" package="SqueakyMindsPhpHelper">
         <name>getvar</name>
         <full_name>\SqueakyMindsPhpHelper::getvar()</full_name>
-        <docblock line="79">
+        <docblock line="86">
           <description>Prevent undefined get variables</description>
           <long-description></long-description>
-          <tag name="method" line="79" description="Prevent undefined get variables" method_name="getvar"/>
-          <tag name="access" line="79" description="public"/>
-          <tag name="return" line="79" description="" type="mixed">
-            <type>mixed</type>
-          </tag>
-          <tag name="param" line="79" description="&lt;p&gt;$_GET variable key&lt;/p&gt;" type="string" variable="$name">
-            <type>string</type>
-          </tag>
-          <tag name="param" line="79" description="&lt;p&gt;Response if an integer&lt;/p&gt;" type="boolean" variable="$isint">
+          <tag name="method" line="86" description="Prevent undefined get variables" method_name="getvar"/>
+          <tag name="access" line="86" description="public"/>
+          <tag name="param" line="86" description="" type="" variable="$name"/>
+          <tag name="param" line="86" description="" type="boolean" variable="$isint">
             <type>boolean</type>
           </tag>
-          <tag name="author" line="79" description="Brian Tafoya"/>
-          <tag name="copyright" line="79" description="Copyright 2001 - 2017, Brian Tafoya."/>
-          <tag name="version" line="79" description="1.0"/>
+          <tag name="return" line="86" description="" type="integer|mixed|string">
+            <type>integer</type>
+            <type>mixed</type>
+            <type>string</type>
+          </tag>
+          <tag name="author" line="86" description="Brian Tafoya"/>
+          <tag name="copyright" line="86" description="Copyright 2001 - 2017, Brian Tafoya."/>
+          <tag name="version" line="86" description="1.0"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$name</name>
           <default></default>
-          <type>string</type>
+          <type/>
         </argument>
         <argument line="0" by_reference="false">
           <name>$isint</name>
@@ -103,26 +103,26 @@
           <type>boolean</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="99" package="SqueakyMindsPhpHelper">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="109" package="SqueakyMindsPhpHelper">
         <name>sessionvar</name>
         <full_name>\SqueakyMindsPhpHelper::sessionvar()</full_name>
-        <docblock line="99">
+        <docblock line="109">
           <description>Prevent undefined session variables</description>
           <long-description></long-description>
-          <tag name="method" line="99" description="Prevent undefined session variables" method_name="sessionvar"/>
-          <tag name="access" line="99" description="public"/>
-          <tag name="return" line="99" description="" type="mixed">
+          <tag name="method" line="109" description="Prevent undefined session variables" method_name="sessionvar"/>
+          <tag name="access" line="109" description="public"/>
+          <tag name="return" line="109" description="" type="mixed">
             <type>mixed</type>
           </tag>
-          <tag name="param" line="99" description="&lt;p&gt;$_SESSION variable key&lt;/p&gt;" type="string" variable="$name">
+          <tag name="param" line="109" description="&lt;p&gt;$_SESSION variable key&lt;/p&gt;" type="string" variable="$name">
             <type>string</type>
           </tag>
-          <tag name="param" line="99" description="&lt;p&gt;Response if an integer&lt;/p&gt;" type="boolean" variable="$isint">
+          <tag name="param" line="109" description="&lt;p&gt;Response if an integer&lt;/p&gt;" type="boolean" variable="$isint">
             <type>boolean</type>
           </tag>
-          <tag name="author" line="99" description="Brian Tafoya"/>
-          <tag name="copyright" line="99" description="Copyright 2001 - 2017, Brian Tafoya."/>
-          <tag name="version" line="99" description="1.0"/>
+          <tag name="author" line="109" description="Brian Tafoya"/>
+          <tag name="copyright" line="109" description="Copyright 2001 - 2017, Brian Tafoya."/>
+          <tag name="version" line="109" description="1.0"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$name</name>
@@ -135,23 +135,23 @@
           <type>boolean</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="118" package="SqueakyMindsPhpHelper">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="131" package="SqueakyMindsPhpHelper">
         <name>setsessionvar</name>
         <full_name>\SqueakyMindsPhpHelper::setsessionvar()</full_name>
-        <docblock line="118">
+        <docblock line="131">
           <description>Set session variables</description>
           <long-description></long-description>
-          <tag name="method" line="118" description="" method_name="setsessionvar"/>
-          <tag name="access" line="118" description="public"/>
-          <tag name="param" line="118" description="&lt;p&gt;$_SESSION variable key&lt;/p&gt;" type="string" variable="$name">
+          <tag name="method" line="131" description="" method_name="setsessionvar"/>
+          <tag name="access" line="131" description="public"/>
+          <tag name="param" line="131" description="&lt;p&gt;$_SESSION variable key&lt;/p&gt;" type="string" variable="$name">
             <type>string</type>
           </tag>
-          <tag name="param" line="118" description="&lt;p&gt;$_SESSION variable value&lt;/p&gt;" type="boolean" variable="$value">
+          <tag name="param" line="131" description="&lt;p&gt;$_SESSION variable value&lt;/p&gt;" type="boolean" variable="$value">
             <type>boolean</type>
           </tag>
-          <tag name="author" line="118" description="Brian Tafoya"/>
-          <tag name="copyright" line="118" description="Copyright 2001 - 2017, Brian Tafoya."/>
-          <tag name="version" line="118" description="1.0"/>
+          <tag name="author" line="131" description="Brian Tafoya"/>
+          <tag name="copyright" line="131" description="Copyright 2001 - 2017, Brian Tafoya."/>
+          <tag name="version" line="131" description="1.0"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$name</name>
@@ -164,31 +164,31 @@
           <type>boolean</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="138" package="SqueakyMindsPhpHelper">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="150" package="SqueakyMindsPhpHelper">
         <name>cookievar</name>
         <full_name>\SqueakyMindsPhpHelper::cookievar()</full_name>
-        <docblock line="138">
+        <docblock line="150">
           <description>Prevent undefined cookie variables</description>
           <long-description></long-description>
-          <tag name="method" line="138" description="Prevent undefined cookie variables" method_name="cookievar"/>
-          <tag name="access" line="138" description="public"/>
-          <tag name="return" line="138" description="" type="mixed">
-            <type>mixed</type>
-          </tag>
-          <tag name="param" line="138" description="&lt;p&gt;$_COOKIE variable key&lt;/p&gt;" type="string" variable="$name">
-            <type>string</type>
-          </tag>
-          <tag name="param" line="138" description="&lt;p&gt;Response if an integer&lt;/p&gt;" type="boolean" variable="$isint">
+          <tag name="method" line="150" description="Prevent undefined cookie variables" method_name="cookievar"/>
+          <tag name="access" line="150" description="public"/>
+          <tag name="param" line="150" description="" type="" variable="$name"/>
+          <tag name="param" line="150" description="" type="boolean" variable="$isint">
             <type>boolean</type>
           </tag>
-          <tag name="author" line="138" description="Brian Tafoya"/>
-          <tag name="copyright" line="138" description="Copyright 2001 - 2017, Brian Tafoya."/>
-          <tag name="version" line="138" description="1.0"/>
+          <tag name="return" line="150" description="" type="array|integer|string">
+            <type>array</type>
+            <type>integer</type>
+            <type>string</type>
+          </tag>
+          <tag name="author" line="150" description="Brian Tafoya"/>
+          <tag name="copyright" line="150" description="Copyright 2001 - 2017, Brian Tafoya."/>
+          <tag name="version" line="150" description="1.0"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$name</name>
           <default></default>
-          <type>string</type>
+          <type/>
         </argument>
         <argument line="0" by_reference="false">
           <name>$isint</name>
@@ -196,31 +196,31 @@
           <type>boolean</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="158" package="SqueakyMindsPhpHelper">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="173" package="SqueakyMindsPhpHelper">
         <name>servervar</name>
         <full_name>\SqueakyMindsPhpHelper::servervar()</full_name>
-        <docblock line="158">
+        <docblock line="173">
           <description>Prevent undefined server variables</description>
           <long-description></long-description>
-          <tag name="method" line="158" description="Prevent undefined servervar variables" method_name="servervar"/>
-          <tag name="access" line="158" description="public"/>
-          <tag name="return" line="158" description="" type="mixed">
-            <type>mixed</type>
-          </tag>
-          <tag name="param" line="158" description="&lt;p&gt;$_SERVER variable key&lt;/p&gt;" type="string" variable="$name">
-            <type>string</type>
-          </tag>
-          <tag name="param" line="158" description="&lt;p&gt;Response if an integer&lt;/p&gt;" type="boolean" variable="$isint">
+          <tag name="method" line="173" description="Prevent undefined servervar variables" method_name="servervar"/>
+          <tag name="access" line="173" description="public"/>
+          <tag name="param" line="173" description="" type="" variable="$name"/>
+          <tag name="param" line="173" description="" type="boolean" variable="$isint">
             <type>boolean</type>
           </tag>
-          <tag name="author" line="158" description="Brian Tafoya"/>
-          <tag name="copyright" line="158" description="Copyright 2001 - 2017, Brian Tafoya."/>
-          <tag name="version" line="158" description="1.0"/>
+          <tag name="return" line="173" description="" type="array|integer|string">
+            <type>array</type>
+            <type>integer</type>
+            <type>string</type>
+          </tag>
+          <tag name="author" line="173" description="Brian Tafoya"/>
+          <tag name="copyright" line="173" description="Copyright 2001 - 2017, Brian Tafoya."/>
+          <tag name="version" line="173" description="1.0"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$name</name>
           <default></default>
-          <type>string</type>
+          <type/>
         </argument>
         <argument line="0" by_reference="false">
           <name>$isint</name>
@@ -228,26 +228,26 @@
           <type>boolean</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="178" package="SqueakyMindsPhpHelper">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="196" package="SqueakyMindsPhpHelper">
         <name>getvar_default</name>
         <full_name>\SqueakyMindsPhpHelper::getvar_default()</full_name>
-        <docblock line="178">
+        <docblock line="196">
           <description>Return getvar with a default when blank.</description>
           <long-description></long-description>
-          <tag name="method" line="178" description="Return getvar with a default is blank." method_name="getvar_default"/>
-          <tag name="access" line="178" description="public"/>
-          <tag name="return" line="178" description="" type="mixed">
+          <tag name="method" line="196" description="Return getvar with a default is blank." method_name="getvar_default"/>
+          <tag name="access" line="196" description="public"/>
+          <tag name="return" line="196" description="" type="mixed">
             <type>mixed</type>
           </tag>
-          <tag name="param" line="178" description="&lt;p&gt;$_GET variable key name.&lt;/p&gt;" type="string" variable="$field_name">
+          <tag name="param" line="196" description="&lt;p&gt;$_GET variable key name.&lt;/p&gt;" type="string" variable="$field_name">
             <type>string</type>
           </tag>
-          <tag name="param" line="178" description="&lt;p&gt;The default value returned in the event the $_GET variable is empty or does not exist.&lt;/p&gt;" type="mixed" variable="$default_val">
+          <tag name="param" line="196" description="&lt;p&gt;The default value returned in the event the $_GET variable is empty or does not exist.&lt;/p&gt;" type="mixed" variable="$default_val">
             <type>mixed</type>
           </tag>
-          <tag name="author" line="178" description="Brian Tafoya"/>
-          <tag name="copyright" line="178" description="Copyright 2001 - 2017, Brian Tafoya."/>
-          <tag name="version" line="178" description="1.0"/>
+          <tag name="author" line="196" description="Brian Tafoya"/>
+          <tag name="copyright" line="196" description="Copyright 2001 - 2017, Brian Tafoya."/>
+          <tag name="version" line="196" description="1.0"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$field_name</name>
@@ -260,26 +260,26 @@
           <type>mixed</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="197" package="SqueakyMindsPhpHelper">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="215" package="SqueakyMindsPhpHelper">
         <name>postvar_default</name>
         <full_name>\SqueakyMindsPhpHelper::postvar_default()</full_name>
-        <docblock line="197">
+        <docblock line="215">
           <description>Return postvar with a default when blank.</description>
           <long-description></long-description>
-          <tag name="method" line="197" description="Return postvar with a default is blank." method_name="postvar_default"/>
-          <tag name="access" line="197" description="public"/>
-          <tag name="return" line="197" description="" type="mixed">
+          <tag name="method" line="215" description="Return postvar with a default is blank." method_name="postvar_default"/>
+          <tag name="access" line="215" description="public"/>
+          <tag name="return" line="215" description="" type="mixed">
             <type>mixed</type>
           </tag>
-          <tag name="param" line="197" description="&lt;p&gt;$_POST variable key name.&lt;/p&gt;" type="string" variable="$field_name">
+          <tag name="param" line="215" description="&lt;p&gt;$_POST variable key name.&lt;/p&gt;" type="string" variable="$field_name">
             <type>string</type>
           </tag>
-          <tag name="param" line="197" description="&lt;p&gt;The default value returned in the event the $_POST variable is empty or does not exist.&lt;/p&gt;" type="mixed" variable="$default_val">
+          <tag name="param" line="215" description="&lt;p&gt;The default value returned in the event the $_POST variable is empty or does not exist.&lt;/p&gt;" type="mixed" variable="$default_val">
             <type>mixed</type>
           </tag>
-          <tag name="author" line="197" description="Brian Tafoya"/>
-          <tag name="copyright" line="197" description="Copyright 2001 - 2017, Brian Tafoya."/>
-          <tag name="version" line="197" description="1.0"/>
+          <tag name="author" line="215" description="Brian Tafoya"/>
+          <tag name="copyright" line="215" description="Copyright 2001 - 2017, Brian Tafoya."/>
+          <tag name="version" line="215" description="1.0"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$field_name</name>
@@ -292,26 +292,26 @@
           <type>mixed</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="216" package="SqueakyMindsPhpHelper">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="234" package="SqueakyMindsPhpHelper">
         <name>left</name>
         <full_name>\SqueakyMindsPhpHelper::left()</full_name>
-        <docblock line="216">
+        <docblock line="234">
           <description>Return characters from the left</description>
           <long-description></long-description>
-          <tag name="method" line="216" description="Return characters from the left." method_name="left"/>
-          <tag name="access" line="216" description="public"/>
-          <tag name="return" line="216" description="" type="string">
+          <tag name="method" line="234" description="Return characters from the left." method_name="left"/>
+          <tag name="access" line="234" description="public"/>
+          <tag name="return" line="234" description="" type="string">
             <type>string</type>
           </tag>
-          <tag name="param" line="216" description="&lt;p&gt;String to truncate.&lt;/p&gt;" type="string" variable="$str">
+          <tag name="param" line="234" description="&lt;p&gt;String to truncate.&lt;/p&gt;" type="string" variable="$str">
             <type>string</type>
           </tag>
-          <tag name="param" line="216" description="&lt;p&gt;Number of characters to the left of the string.&lt;/p&gt;" type="integer" variable="$howManyCharsFromLeft">
+          <tag name="param" line="234" description="&lt;p&gt;Number of characters to the left of the string.&lt;/p&gt;" type="integer" variable="$howManyCharsFromLeft">
             <type>integer</type>
           </tag>
-          <tag name="author" line="216" description="Brian Tafoya"/>
-          <tag name="copyright" line="216" description="Copyright 2001 - 2017, Brian Tafoya."/>
-          <tag name="version" line="216" description="1.0"/>
+          <tag name="author" line="234" description="Brian Tafoya"/>
+          <tag name="copyright" line="234" description="Copyright 2001 - 2017, Brian Tafoya."/>
+          <tag name="version" line="234" description="1.0"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$str</name>
@@ -324,26 +324,26 @@
           <type>integer</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="235" package="SqueakyMindsPhpHelper">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="253" package="SqueakyMindsPhpHelper">
         <name>right</name>
         <full_name>\SqueakyMindsPhpHelper::right()</full_name>
-        <docblock line="235">
+        <docblock line="253">
           <description>Return characters from the right</description>
           <long-description></long-description>
-          <tag name="method" line="235" description="Return characters from the right." method_name="right"/>
-          <tag name="access" line="235" description="public"/>
-          <tag name="return" line="235" description="" type="string">
+          <tag name="method" line="253" description="Return characters from the right." method_name="right"/>
+          <tag name="access" line="253" description="public"/>
+          <tag name="return" line="253" description="" type="string">
             <type>string</type>
           </tag>
-          <tag name="param" line="235" description="&lt;p&gt;String to truncate.&lt;/p&gt;" type="string" variable="$str">
+          <tag name="param" line="253" description="&lt;p&gt;String to truncate.&lt;/p&gt;" type="string" variable="$str">
             <type>string</type>
           </tag>
-          <tag name="param" line="235" description="&lt;p&gt;Number of characters to the right of the string.&lt;/p&gt;" type="integer" variable="$howManyCharsFromRight">
+          <tag name="param" line="253" description="&lt;p&gt;Number of characters to the right of the string.&lt;/p&gt;" type="integer" variable="$howManyCharsFromRight">
             <type>integer</type>
           </tag>
-          <tag name="author" line="235" description="Brian Tafoya"/>
-          <tag name="copyright" line="235" description="Copyright 2001 - 2017, Brian Tafoya."/>
-          <tag name="version" line="235" description="1.0"/>
+          <tag name="author" line="253" description="Brian Tafoya"/>
+          <tag name="copyright" line="253" description="Copyright 2001 - 2017, Brian Tafoya."/>
+          <tag name="version" line="253" description="1.0"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$str</name>
@@ -356,29 +356,29 @@
           <type>integer</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="256" package="SqueakyMindsPhpHelper">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="274" package="SqueakyMindsPhpHelper">
         <name>mid</name>
         <full_name>\SqueakyMindsPhpHelper::mid()</full_name>
-        <docblock line="256">
+        <docblock line="274">
           <description>Return x many characters from the starting point</description>
           <long-description></long-description>
-          <tag name="method" line="256" description="Return x many characters from the starting point" method_name="mid"/>
-          <tag name="access" line="256" description="public"/>
-          <tag name="return" line="256" description="" type="string">
+          <tag name="method" line="274" description="Return x many characters from the starting point" method_name="mid"/>
+          <tag name="access" line="274" description="public"/>
+          <tag name="return" line="274" description="" type="string">
             <type>string</type>
           </tag>
-          <tag name="param" line="256" description="&lt;p&gt;String to truncate.&lt;/p&gt;" type="string" variable="$str">
+          <tag name="param" line="274" description="&lt;p&gt;String to truncate.&lt;/p&gt;" type="string" variable="$str">
             <type>string</type>
           </tag>
-          <tag name="param" line="256" description="&lt;p&gt;Where to start from the left of the string.&lt;/p&gt;" type="integer" variable="$start">
+          <tag name="param" line="274" description="&lt;p&gt;Where to start from the left of the string.&lt;/p&gt;" type="integer" variable="$start">
             <type>integer</type>
           </tag>
-          <tag name="param" line="256" description="&lt;p&gt;Number of characters to return.&lt;/p&gt;" type="integer" variable="$howManyChars">
+          <tag name="param" line="274" description="&lt;p&gt;Number of characters to return.&lt;/p&gt;" type="integer" variable="$howManyChars">
             <type>integer</type>
           </tag>
-          <tag name="author" line="256" description="Brian Tafoya"/>
-          <tag name="copyright" line="256" description="Copyright 2001 - 2017, Brian Tafoya."/>
-          <tag name="version" line="256" description="1.0"/>
+          <tag name="author" line="274" description="Brian Tafoya"/>
+          <tag name="copyright" line="274" description="Copyright 2001 - 2017, Brian Tafoya."/>
+          <tag name="version" line="274" description="1.0"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$str</name>
@@ -396,26 +396,26 @@
           <type>integer</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="280" package="SqueakyMindsPhpHelper">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="298" package="SqueakyMindsPhpHelper">
         <name>dump_simple_array</name>
         <full_name>\SqueakyMindsPhpHelper::dump_simple_array()</full_name>
-        <docblock line="280">
+        <docblock line="298">
           <description>HTML Dump of string/array/etc.</description>
           <long-description></long-description>
-          <tag name="method" line="280" description="HTML Dump of string/array/etc." method_name="dump_simple_array"/>
-          <tag name="access" line="280" description="public"/>
-          <tag name="return" line="280" description="" type="string">
+          <tag name="method" line="298" description="HTML Dump of string/array/etc." method_name="dump_simple_array"/>
+          <tag name="access" line="298" description="public"/>
+          <tag name="return" line="298" description="" type="string">
             <type>string</type>
           </tag>
-          <tag name="param" line="280" description="&lt;p&gt;Data to dump.&lt;/p&gt;" type="mixed" variable="$array">
+          <tag name="param" line="298" description="&lt;p&gt;Data to dump.&lt;/p&gt;" type="mixed" variable="$array">
             <type>mixed</type>
           </tag>
-          <tag name="param" line="280" description="&lt;p&gt;Table title.&lt;/p&gt;" type="string" variable="$title">
+          <tag name="param" line="298" description="&lt;p&gt;Table title.&lt;/p&gt;" type="string" variable="$title">
             <type>string</type>
           </tag>
-          <tag name="author" line="280" description="Brian Tafoya"/>
-          <tag name="copyright" line="280" description="Copyright 2001 - 2017, Brian Tafoya."/>
-          <tag name="version" line="280" description="1.0"/>
+          <tag name="author" line="298" description="Brian Tafoya"/>
+          <tag name="copyright" line="298" description="Copyright 2001 - 2017, Brian Tafoya."/>
+          <tag name="version" line="298" description="1.0"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$array</name>
@@ -428,26 +428,26 @@
           <type>string</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="315" package="SqueakyMindsPhpHelper">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="333" package="SqueakyMindsPhpHelper">
         <name>truncate</name>
         <full_name>\SqueakyMindsPhpHelper::truncate()</full_name>
-        <docblock line="315">
+        <docblock line="333">
           <description>Return truncated number.</description>
           <long-description></long-description>
-          <tag name="method" line="315" description="Return truncated number." method_name="truncate"/>
-          <tag name="access" line="315" description="public"/>
-          <tag name="return" line="315" description="" type="integer">
+          <tag name="method" line="333" description="Return truncated number." method_name="truncate"/>
+          <tag name="access" line="333" description="public"/>
+          <tag name="return" line="333" description="" type="integer">
             <type>integer</type>
           </tag>
-          <tag name="param" line="315" description="&lt;p&gt;Number to truncate.&lt;/p&gt;" type="integer" variable="$num">
+          <tag name="param" line="333" description="&lt;p&gt;Number to truncate.&lt;/p&gt;" type="integer" variable="$num">
             <type>integer</type>
           </tag>
-          <tag name="param" line="315" description="&lt;p&gt;Number of digits to truncate.&lt;/p&gt;" type="integer" variable="$digits">
+          <tag name="param" line="333" description="&lt;p&gt;Number of digits to truncate.&lt;/p&gt;" type="integer" variable="$digits">
             <type>integer</type>
           </tag>
-          <tag name="author" line="315" description="Brian Tafoya"/>
-          <tag name="copyright" line="315" description="Copyright 2001 - 2017, Brian Tafoya."/>
-          <tag name="version" line="315" description="1.0"/>
+          <tag name="author" line="333" description="Brian Tafoya"/>
+          <tag name="copyright" line="333" description="Copyright 2001 - 2017, Brian Tafoya."/>
+          <tag name="version" line="333" description="1.0"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$num</name>
@@ -460,20 +460,20 @@
           <type>integer</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="333" package="SqueakyMindsPhpHelper">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="351" package="SqueakyMindsPhpHelper">
         <name>multi_stripslashes</name>
         <full_name>\SqueakyMindsPhpHelper::multi_stripslashes()</full_name>
-        <docblock line="333">
+        <docblock line="351">
           <description>Return array stripslasshes recursive.</description>
           <long-description></long-description>
-          <tag name="method" line="333" description="Return array stripslasshes recursive." method_name="multi_stripslashes"/>
-          <tag name="access" line="333" description="public"/>
-          <tag name="param" line="333" description="&lt;p&gt;Input array.&lt;/p&gt;" type="callable" variable="$arr">
+          <tag name="method" line="351" description="Return array stripslasshes recursive." method_name="multi_stripslashes"/>
+          <tag name="access" line="351" description="public"/>
+          <tag name="param" line="351" description="&lt;p&gt;Input array.&lt;/p&gt;" type="callable" variable="$arr">
             <type>callable</type>
           </tag>
-          <tag name="author" line="333" description="Brian Tafoya"/>
-          <tag name="copyright" line="333" description="Copyright 2001 - 2017, Brian Tafoya."/>
-          <tag name="version" line="333" description="1.0"/>
+          <tag name="author" line="351" description="Brian Tafoya"/>
+          <tag name="copyright" line="351" description="Copyright 2001 - 2017, Brian Tafoya."/>
+          <tag name="version" line="351" description="1.0"/>
         </docblock>
         <argument line="0" by_reference="true">
           <name>$arr</name>
@@ -481,23 +481,23 @@
           <type>callable</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="357" package="SqueakyMindsPhpHelper">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="375" package="SqueakyMindsPhpHelper">
         <name>numberToRoman</name>
         <full_name>\SqueakyMindsPhpHelper::numberToRoman()</full_name>
-        <docblock line="357">
+        <docblock line="375">
           <description>Return roman numeral.</description>
           <long-description></long-description>
-          <tag name="method" line="357" description="Return roman numeral." method_name="numberToRoman"/>
-          <tag name="access" line="357" description="public"/>
-          <tag name="return" line="357" description="" type="string">
+          <tag name="method" line="375" description="Return roman numeral." method_name="numberToRoman"/>
+          <tag name="access" line="375" description="public"/>
+          <tag name="return" line="375" description="" type="string">
             <type>string</type>
           </tag>
-          <tag name="param" line="357" description="&lt;p&gt;Number to transform.&lt;/p&gt;" type="integer" variable="$num">
+          <tag name="param" line="375" description="&lt;p&gt;Number to transform.&lt;/p&gt;" type="integer" variable="$num">
             <type>integer</type>
           </tag>
-          <tag name="author" line="357" description="Brian Tafoya"/>
-          <tag name="copyright" line="357" description="Copyright 2001 - 2017, Brian Tafoya."/>
-          <tag name="version" line="357" description="1.0"/>
+          <tag name="author" line="375" description="Brian Tafoya"/>
+          <tag name="copyright" line="375" description="Copyright 2001 - 2017, Brian Tafoya."/>
+          <tag name="version" line="375" description="1.0"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$num</name>
@@ -505,23 +505,23 @@
           <type>integer</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="396" package="SqueakyMindsPhpHelper">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="414" package="SqueakyMindsPhpHelper">
         <name>duration</name>
         <full_name>\SqueakyMindsPhpHelper::duration()</full_name>
-        <docblock line="396">
+        <docblock line="414">
           <description>Return duration from seconds.</description>
           <long-description></long-description>
-          <tag name="method" line="396" description="Return duration from seconds." method_name="duration"/>
-          <tag name="access" line="396" description="public"/>
-          <tag name="return" line="396" description="" type="string">
+          <tag name="method" line="414" description="Return duration from seconds." method_name="duration"/>
+          <tag name="access" line="414" description="public"/>
+          <tag name="return" line="414" description="" type="string">
             <type>string</type>
           </tag>
-          <tag name="param" line="396" description="&lt;p&gt;Seconds value.&lt;/p&gt;" type="integer" variable="$secs">
+          <tag name="param" line="414" description="&lt;p&gt;Seconds value.&lt;/p&gt;" type="integer" variable="$secs">
             <type>integer</type>
           </tag>
-          <tag name="author" line="396" description="Brian Tafoya"/>
-          <tag name="copyright" line="396" description="Copyright 2001 - 2017, Brian Tafoya."/>
-          <tag name="version" line="396" description="1.0"/>
+          <tag name="author" line="414" description="Brian Tafoya"/>
+          <tag name="copyright" line="414" description="Copyright 2001 - 2017, Brian Tafoya."/>
+          <tag name="version" line="414" description="1.0"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$secs</name>
@@ -529,23 +529,23 @@
           <type>integer</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="430" package="SqueakyMindsPhpHelper">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="448" package="SqueakyMindsPhpHelper">
         <name>object2array</name>
         <full_name>\SqueakyMindsPhpHelper::object2array()</full_name>
-        <docblock line="430">
+        <docblock line="448">
           <description>Return an array from an object.</description>
           <long-description></long-description>
-          <tag name="method" line="430" description="Return an array from an object." method_name="object2array"/>
-          <tag name="access" line="430" description="public"/>
-          <tag name="return" line="430" description="" type="array">
+          <tag name="method" line="448" description="Return an array from an object." method_name="object2array"/>
+          <tag name="access" line="448" description="public"/>
+          <tag name="return" line="448" description="" type="array">
             <type>array</type>
           </tag>
-          <tag name="param" line="430" description="&lt;p&gt;Object to transform.&lt;/p&gt;" type="object" variable="$object">
+          <tag name="param" line="448" description="&lt;p&gt;Object to transform.&lt;/p&gt;" type="object" variable="$object">
             <type>object</type>
           </tag>
-          <tag name="author" line="430" description="Brian Tafoya"/>
-          <tag name="copyright" line="430" description="Copyright 2001 - 2017, Brian Tafoya."/>
-          <tag name="version" line="430" description="1.0"/>
+          <tag name="author" line="448" description="Brian Tafoya"/>
+          <tag name="copyright" line="448" description="Copyright 2001 - 2017, Brian Tafoya."/>
+          <tag name="version" line="448" description="1.0"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$object</name>
@@ -553,23 +553,23 @@
           <type>object</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="448" package="SqueakyMindsPhpHelper">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="466" package="SqueakyMindsPhpHelper">
         <name>xml2array</name>
         <full_name>\SqueakyMindsPhpHelper::xml2array()</full_name>
-        <docblock line="448">
+        <docblock line="466">
           <description>Return an array from xml string.</description>
           <long-description></long-description>
-          <tag name="method" line="448" description="Return an array from xml string." method_name="xml2array"/>
-          <tag name="access" line="448" description="public"/>
-          <tag name="return" line="448" description="" type="array">
+          <tag name="method" line="466" description="Return an array from xml string." method_name="xml2array"/>
+          <tag name="access" line="466" description="public"/>
+          <tag name="return" line="466" description="" type="array">
             <type>array</type>
           </tag>
-          <tag name="param" line="448" description="&lt;p&gt;XML to process.&lt;/p&gt;" type="string" variable="$xmlstring">
+          <tag name="param" line="466" description="&lt;p&gt;XML to process.&lt;/p&gt;" type="string" variable="$xmlstring">
             <type>string</type>
           </tag>
-          <tag name="author" line="448" description="Brian Tafoya"/>
-          <tag name="copyright" line="448" description="Copyright 2001 - 2017, Brian Tafoya."/>
-          <tag name="version" line="448" description="1.0"/>
+          <tag name="author" line="466" description="Brian Tafoya"/>
+          <tag name="copyright" line="466" description="Copyright 2001 - 2017, Brian Tafoya."/>
+          <tag name="version" line="466" description="1.0"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$xmlstring</name>
@@ -577,36 +577,36 @@
           <type>string</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="466" package="SqueakyMindsPhpHelper">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="484" package="SqueakyMindsPhpHelper">
         <name>send_no_cache_header</name>
         <full_name>\SqueakyMindsPhpHelper::send_no_cache_header()</full_name>
-        <docblock line="466">
+        <docblock line="484">
           <description>Send header stuff that tells the browser not to cache this page.</description>
           <long-description></long-description>
-          <tag name="method" line="466" description="" method_name="send_no_cache_header"/>
-          <tag name="access" line="466" description="public"/>
-          <tag name="author" line="466" description="Brian Tafoya"/>
-          <tag name="copyright" line="466" description="Copyright 2001 - 2017, Brian Tafoya."/>
-          <tag name="version" line="466" description="1.0"/>
+          <tag name="method" line="484" description="" method_name="send_no_cache_header"/>
+          <tag name="access" line="484" description="public"/>
+          <tag name="author" line="484" description="Brian Tafoya"/>
+          <tag name="copyright" line="484" description="Copyright 2001 - 2017, Brian Tafoya."/>
+          <tag name="version" line="484" description="1.0"/>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="488" package="SqueakyMindsPhpHelper">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="506" package="SqueakyMindsPhpHelper">
         <name>json_indent</name>
         <full_name>\SqueakyMindsPhpHelper::json_indent()</full_name>
-        <docblock line="488">
+        <docblock line="506">
           <description>Indents a flat JSON string to make it more human-readable.</description>
           <long-description></long-description>
-          <tag name="method" line="488" description="" method_name="xml2array"/>
-          <tag name="access" line="488" description="public"/>
-          <tag name="param" line="488" description="&lt;p&gt;The original JSON string to process.&lt;/p&gt;" type="string" variable="$json">
+          <tag name="method" line="506" description="" method_name="xml2array"/>
+          <tag name="access" line="506" description="public"/>
+          <tag name="param" line="506" description="&lt;p&gt;The original JSON string to process.&lt;/p&gt;" type="string" variable="$json">
             <type>string</type>
           </tag>
-          <tag name="return" line="488" description="Indented version of the original JSON string." type="string">
+          <tag name="return" line="506" description="Indented version of the original JSON string." type="string">
             <type>string</type>
           </tag>
-          <tag name="author" line="488" description="Brian Tafoya"/>
-          <tag name="copyright" line="488" description="Copyright 2001 - 2017, Brian Tafoya."/>
-          <tag name="version" line="488" description="1.0"/>
+          <tag name="author" line="506" description="Brian Tafoya"/>
+          <tag name="copyright" line="506" description="Copyright 2001 - 2017, Brian Tafoya."/>
+          <tag name="version" line="506" description="1.0"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$json</name>
@@ -614,26 +614,26 @@
           <type>string</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="554" package="SqueakyMindsPhpHelper">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="572" package="SqueakyMindsPhpHelper">
         <name>array_last</name>
         <full_name>\SqueakyMindsPhpHelper::array_last()</full_name>
-        <docblock line="554">
+        <docblock line="572">
           <description>Return the last array member.</description>
           <long-description></long-description>
-          <tag name="method" line="554" description="Return the last array member." method_name="array_last"/>
-          <tag name="access" line="554" description="public"/>
-          <tag name="param" line="554" description="&lt;p&gt;Array data.&lt;/p&gt;" type="array" variable="$array_val">
+          <tag name="method" line="572" description="Return the last array member." method_name="array_last"/>
+          <tag name="access" line="572" description="public"/>
+          <tag name="param" line="572" description="&lt;p&gt;Array data.&lt;/p&gt;" type="array" variable="$array_val">
             <type>array</type>
           </tag>
-          <tag name="return" line="554" description="" type="array">
+          <tag name="return" line="572" description="" type="array">
             <type>array</type>
           </tag>
-          <tag name="throws" line="554" description="Not array data." type="\InvalidArgumentException">
+          <tag name="throws" line="572" description="Not array data." type="\InvalidArgumentException">
             <type>\InvalidArgumentException</type>
           </tag>
-          <tag name="author" line="554" description="Brian Tafoya"/>
-          <tag name="copyright" line="554" description="Copyright 2001 - 2017, Brian Tafoya."/>
-          <tag name="version" line="554" description="1.0"/>
+          <tag name="author" line="572" description="Brian Tafoya"/>
+          <tag name="copyright" line="572" description="Copyright 2001 - 2017, Brian Tafoya."/>
+          <tag name="version" line="572" description="1.0"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$array_val</name>
@@ -641,26 +641,26 @@
           <type>array</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="578" package="SqueakyMindsPhpHelper">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="596" package="SqueakyMindsPhpHelper">
         <name>array_first</name>
         <full_name>\SqueakyMindsPhpHelper::array_first()</full_name>
-        <docblock line="578">
+        <docblock line="596">
           <description>Return the first array member.</description>
           <long-description></long-description>
-          <tag name="method" line="578" description="" method_name="array_first"/>
-          <tag name="access" line="578" description="public"/>
-          <tag name="param" line="578" description="" type="array" variable="$array_val">
+          <tag name="method" line="596" description="" method_name="array_first"/>
+          <tag name="access" line="596" description="public"/>
+          <tag name="param" line="596" description="" type="array" variable="$array_val">
             <type>array</type>
           </tag>
-          <tag name="return" line="578" description="" type="array">
+          <tag name="return" line="596" description="" type="array">
             <type>array</type>
           </tag>
-          <tag name="throws" line="578" description="Not array data." type="\InvalidArgumentException">
+          <tag name="throws" line="596" description="Not array data." type="\InvalidArgumentException">
             <type>\InvalidArgumentException</type>
           </tag>
-          <tag name="author" line="578" description="Brian Tafoya"/>
-          <tag name="copyright" line="578" description="Copyright 2001 - 2017, Brian Tafoya."/>
-          <tag name="version" line="578" description="1.0"/>
+          <tag name="author" line="596" description="Brian Tafoya"/>
+          <tag name="copyright" line="596" description="Copyright 2001 - 2017, Brian Tafoya."/>
+          <tag name="version" line="596" description="1.0"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$array_val</name>
@@ -668,87 +668,69 @@
           <type>array</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="600" package="SqueakyMindsPhpHelper">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="618" package="SqueakyMindsPhpHelper">
         <name>requested_url</name>
         <full_name>\SqueakyMindsPhpHelper::requested_url()</full_name>
-        <docblock line="600">
+        <docblock line="618">
           <description>Return the requested url.</description>
           <long-description></long-description>
-          <tag name="method" line="600" description="" method_name="requested_url"/>
-          <tag name="access" line="600" description="public"/>
-          <tag name="return" line="600" description="" type="string">
+          <tag name="method" line="618" description="" method_name="requested_url"/>
+          <tag name="access" line="618" description="public"/>
+          <tag name="return" line="618" description="" type="string">
             <type>string</type>
           </tag>
-          <tag name="author" line="600" description="Brian Tafoya"/>
-          <tag name="copyright" line="600" description="Copyright 2001 - 2017, Brian Tafoya."/>
-          <tag name="version" line="600" description="1.0"/>
+          <tag name="author" line="618" description="Brian Tafoya"/>
+          <tag name="copyright" line="618" description="Copyright 2001 - 2017, Brian Tafoya."/>
+          <tag name="version" line="618" description="1.0"/>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="620" package="SqueakyMindsPhpHelper">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="636" package="SqueakyMindsPhpHelper">
         <name>linkify</name>
         <full_name>\SqueakyMindsPhpHelper::linkify()</full_name>
-        <docblock line="620">
+        <docblock line="636">
           <description>Turn all URLs in clickable links.</description>
           <long-description></long-description>
-          <tag name="method" line="620" description="" method_name="linkify"/>
-          <tag name="access" line="620" description="public"/>
-          <tag name="param" line="620" description="" type="string" variable="$value">
+          <tag name="method" line="636" description=")" method_name="linkify"/>
+          <tag name="access" line="636" description="public"/>
+          <tag name="param" line="636" description="" type="" variable="$value"/>
+          <tag name="return" line="636" description="" type="string">
             <type>string</type>
           </tag>
-          <tag name="param" line="620" description="&lt;p&gt;http/https, ftp, mail, twitter&lt;/p&gt;" type="array" variable="$protocols">
-            <type>array</type>
-          </tag>
-          <tag name="param" line="620" description="" type="array" variable="$attributes">
-            <type>array</type>
-          </tag>
-          <tag name="return" line="620" description="" type="string">
-            <type>string</type>
-          </tag>
-          <tag name="author" line="620" description="Brian Tafoya"/>
-          <tag name="copyright" line="620" description="Copyright 2001 - 2017, Brian Tafoya."/>
-          <tag name="version" line="620" description="1.0"/>
+          <tag name="author" line="636" description="Brian Tafoya"/>
+          <tag name="copyright" line="636" description="Copyright 2001 - 2017, Brian Tafoya."/>
+          <tag name="version" line="636" description="1.0"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$value</name>
           <default></default>
-          <type>string</type>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$protocols</name>
-          <default>array('http', 'mail')</default>
-          <type>array</type>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$attributes</name>
-          <default>array()</default>
-          <type>array</type>
+          <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="695" package="SqueakyMindsPhpHelper">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="656" package="SqueakyMindsPhpHelper">
         <name>stringTruncate</name>
         <full_name>\SqueakyMindsPhpHelper::stringTruncate()</full_name>
-        <docblock line="695">
+        <docblock line="656">
           <description>Truncate a string.</description>
           <long-description></long-description>
-          <tag name="method" line="695" description="Truncate a string." method_name="stringTruncate"/>
-          <tag name="param" line="695" description="&lt;p&gt;The string to truncate.&lt;/p&gt;" type="string" variable="$string">
+          <tag name="method" line="656" description="Truncate a string." method_name="stringTruncate"/>
+          <tag name="param" line="656" description="&lt;p&gt;The string to truncate.&lt;/p&gt;" type="string" variable="$string">
             <type>string</type>
           </tag>
-          <tag name="param" line="695" description="&lt;p&gt;String length max.&lt;/p&gt;" type="integer" variable="$limit">
+          <tag name="param" line="656" description="&lt;p&gt;String length max.&lt;/p&gt;" type="integer" variable="$limit">
             <type>integer</type>
           </tag>
-          <tag name="param" line="695" description="&lt;p&gt;(optional) Break point, defauls to period.&lt;/p&gt;" type="string" variable="$break">
+          <tag name="param" line="656" description="&lt;p&gt;(optional) Break point, defauls to period.&lt;/p&gt;" type="string" variable="$break">
             <type>string</type>
           </tag>
-          <tag name="param" line="695" description="&lt;p&gt;(optional) String to append to the truncated string.&lt;/p&gt;" type="string" variable="$pad">
+          <tag name="param" line="656" description="&lt;p&gt;(optional) String to append to the truncated string.&lt;/p&gt;" type="string" variable="$pad">
             <type>string</type>
           </tag>
-          <tag name="return" line="695" description="Truncated string." type="string">
+          <tag name="return" line="656" description="Truncated string." type="string">
             <type>string</type>
           </tag>
-          <tag name="author" line="695" description="Brian Tafoya"/>
-          <tag name="copyright" line="695" description="Copyright 2001 - 2017, Brian Tafoya."/>
-          <tag name="version" line="695" description="1.0"/>
+          <tag name="author" line="656" description="Brian Tafoya"/>
+          <tag name="copyright" line="656" description="Copyright 2001 - 2017, Brian Tafoya."/>
+          <tag name="version" line="656" description="1.0"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$string</name>
@@ -771,22 +753,22 @@
           <type>string</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="722" package="SqueakyMindsPhpHelper">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="683" package="SqueakyMindsPhpHelper">
         <name>br2nl</name>
         <full_name>\SqueakyMindsPhpHelper::br2nl()</full_name>
-        <docblock line="722">
+        <docblock line="683">
           <description>Convert BR tags to PHP_EOL.</description>
           <long-description></long-description>
-          <tag name="method" line="722" description="Convert BR tags to PHP_EOL." method_name="br2nl"/>
-          <tag name="param" line="722" description="&lt;p&gt;The string to convert&lt;/p&gt;" type="string" variable="$string">
+          <tag name="method" line="683" description="Convert BR tags to PHP_EOL." method_name="br2nl"/>
+          <tag name="param" line="683" description="&lt;p&gt;The string to convert&lt;/p&gt;" type="string" variable="$string">
             <type>string</type>
           </tag>
-          <tag name="return" line="722" description="The converted string" type="string">
+          <tag name="return" line="683" description="The converted string" type="string">
             <type>string</type>
           </tag>
-          <tag name="author" line="722" description="Brian Tafoya"/>
-          <tag name="copyright" line="722" description="Copyright 2001 - 2017, Brian Tafoya."/>
-          <tag name="version" line="722" description="1.0"/>
+          <tag name="author" line="683" description="Brian Tafoya"/>
+          <tag name="copyright" line="683" description="Copyright 2001 - 2017, Brian Tafoya."/>
+          <tag name="version" line="683" description="1.0"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$string</name>
@@ -795,9 +777,9 @@
         </argument>
       </method>
     </class>
-    <source>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</source>
+    <source>eJztXHl32kgS/z+foofxDpDIxs5cu8TYQzCJ2cXGC3gy2ck8npAaUCwkjSSMvZN8962qbkmty+DMxb5dXl4Q3dXVdfy6uvqQj0+9hfek8fTpE/aUjX5ecf3m/sJyzOBq4Z1z2+M+k18dWw8CHgAdkn7n6caNPueMFbciGttybhh9FmHoBc1GY26Fi9X0wHCXjWmoz9x7vVHc6XjBS8R5bYXnqynzfPc9N0LqR1+FC9fHfl76lu6wMXFmx7KL76ZYKp6x6xNqZLjevW/NFyF7fnh4xPbh6+hbLcXhQGphcCdATS9640xJpJfrQYG78g1+4PrzhiQIGtCCVMHvvigUneshn7v+fYn1Jn1r6uv+fYEVZWdrPvV8HnAHegSV2ADK3vDplSzTSr2CLDux6jWjXqC3JLvi/tIKAst1mBWwBff59J7NfTAlNzU28zln7owZC92fQ4ehy3TnnkEvATRwwfaWYzlzpjO0NFKGC2ATuLNwrfsciE0GiHINC2xhMtM1VksOXgqxv5ll84DVQjBdZSRbVOrUicl1m1kOw7qoiq0BV+4qZKB+6FsG8tCAyLBXJsoQVdvW0pI9YHOyQYBMVwFogHJqbOma1gy/Oanlraa2FSw0ZlrIeroKoTDAQvKmhno0AHwBt23kYIHcpGsiHdFgLx4aNJQmon7XC/BdShMw0WzlO9AlpzamCyajHhHuWILkM9e23TWqZriOaaFGQVO6DfGmT91bzhKIO24I8go50Ate4lpZFSx0UGDKpdWgc7CxrujkowxBCN63wAGe61OnWV0PIiHOu2w0eDV+0x52WW/EroaD73tn3TNWaY/gd0Vjb3rj88H1mAHFsH05fssGr1j78i37R+/yTGPdH66G3dGIDYasd3HV73WhrHfZ6V+f9S5fs5fQ7nIAQ6oHAwuYjgfUoWTV646Q2UV32DmHn+2XvX5v/FZjr3rjS+T5Cpi22VV7OO51rvvtIbu6Hl4NRl3o/gzYXvYuXw2hl+5F93J8AL1CGet+Dz/Y6Lzd71NX7WuQfkjydQZXb4e91+djdj7on3Wh8GUXJGu/7HdFV6BUp9/uXWjsrH3Rft2lVgPgMiQyKd2b8y4VQX9t+NcZ9waXqEZncDkewk8NtByO46ZveqOuxtrD3ggN8mo4APZoTmgxICbQ7rIruKCp0x4BEvx9Peomspx1233gNcLGKjG6tPHkSTRJ0DzwYHgZI8IMIoMofWuZHKMHBe8lh4FoBqzHFjoA1OS33IZwZiK8dOPnleXj8y1QIqjuue4HonvjgV5/AeEwPJKA+HnKhjyEQQSx58vnbApDbuVY0JT1ziRBRPedEIjh0IbBtFpZZq2+sTXMOIbBUT2KA3GpL9pJZtAYY6NuhKBOzOIgK0Hx5BVXJ2O4s9WEJZuBCWl0M3Z0cChLG/QdYAA0pOgQaxyKllJ1ovhF0MNHKlQTGtWX5tc1VAQoYRYA8mcXluG7Y2vJaxCcj+r1F9T0Y94hMDHdQnQHO5h8ZjngZc8NQnarg/RTG9OKh/yCtEAKrtmST5mHPPDHku05+pJnyqaua7M9K7CcMOtPKPqwtO64+UGIs6MejIxE2mlSl9ZMtwNeZxnHWrPaZ3zphfe1vQmEvvGP1OinOvviC5iBJrrv69mqutJcxQbR1lO0L2LCj/HTHkzNnotZU4vVYOrhYYb/Kcz5MFImpIJag4G7P+4OJ6P2ZW/c+1d3MhpjfK43K5X6ixxWa+hJrjt1YYDTGvxXj3tvRliOSx6D2TnfGrJAWobYIi7/i4CVJnosXl93y+Cq1GxCa0K6NVgV7mmsJhU7BFVYfZA3toSrJC+DbBm3DTMhgTCD26hHAWr4mowgKcM0JWLObvh9tpG0lEQJzNDSP9YMkloEPJ9j/rGTOFds+1isS9OU4D1TuwnzafKtcZ/p5TRb8ntjewTh8tFoDlVAbxVjfyUub3Ub8ruCRlSxs8gMC8BJEudgmXU7QERQPiIoGa57Y/FtvSioy0JSCa/fdCKlkfMBp9OdnkgTQz02vnQGg3/0uiXhJV25KbqkqLcOLuk+TjMFf8a06ePqc+s4g9Tlk6as/T9IKdZEtioC6YNz4PD77rB0ClQrN8+ACvUjJkC1j9NMwe+NUbkZIZJl2slkOgOI6Ss7ZOsFd9jU1p2b3L6CRKpoN5ENks2NYn5WkOb2K/K7vZnFbXMSTaaQJKcmUoYVB9m2xBDIpTyQYNu0nxnJJ2ZZ0bvYosR9IjHw8CnTD6hDKMLtJdPlAW52Mn5nBeGubsNk3KUYUUtZpQWoywZ2ZbfG5k4t4Pas2YwWWQmjev20tKqp9rERk3LH4fGglA3zqCzh+PvBEvcZ/hBcpjv67wNm1mUPInMbYMbbVQXILKp7HDTjndeAzXx5xmLzWVgCSAkOpEjAWMZjSxSmZuMcDOGb5T4jUYmHPD4YXg/zSMTVL3z2Fu76QnfuOyBj8Aqk64Ng7HK1nEL2Ik/lpOzyyAglj05rhBC7CjXyAhpIK1Zzwy41HVP5ksGhxsTUW8joU1BEej8MIyJ5GEdE8vsB6dcgaUiOfQhKwvX/FVgSrigBE2maRRPS9mECazEZrrCgIMMrQlvUdr+kr5hiI/Lu2BJP04ugA5r6oTgVSVYDJUhcqudZj+X528HyEWgkSaJ2b/DSATYTpakoXIy/B9FdCmqh0a5iGJ0Y4wvskEEyIPWwAMRAuL+fwNaawaIkFwlZq4WtM8umLHtqp44G0FDwom7UhdRWw0RpWxSeywfH+fiiz85WSw9dKDg3aG3X4KFRlmyaQD8JrKVnc7lsrG/H6JPwH2WKxI2d6aFOtzigqxxEo6ESWiGkhGNKDOl5V4GYt6RQUxMqFK1JcIGLCXKLVY9D0tDgtu3pJt7LaX1NvwJPN/DXEZvODdd2/dbnX9MH5LhHtlTY/PyQPi8qJ1UV1lFWKWTIbQFEAhyQBP7JcWhCsr32dS/p7azb/bJ7xuAXiOK0np8cWydVdhB55gBaNqyT40Zo4n++2n+ydTBzfa4bC2kSpgdsD5YTrZNoO3WzWFLbqW7czH135Zj7QnH2OacPaH6MAkaEM9cJ9wPr37zJjg69uxeMCtYc/d9kU9c20VaoB65rSAtsLhRRdMjL85AsM/qgLIZr8iwf8EeyOyM0z6qe6U5k/AXQEq3T7D8ybgf8YYbqrnTeTTllG6TGRpuU+j1DhRhXCWWwkFSbpv1oegSM0lRVFtMiumRyL2u5IYips70yc+4BEyyVE+amiXvPtOZWqM6vsqCg4a4FtdiUqLMWq0LTYm5WXVgzjGWeu64dHcbERft/M9t1feIJUomGMBIa0eMmIIgggjOEF+DVpwUPgLexAuVu86aUqFgCwqxJ3AjaKJeZtmG44YTM0G2bYjjGONZzvFUo+O6qbwsM8gXKnvOsGrxF6GatE4gk2diFWZQS3wpjmwhoBV0j8x/3bn7aOqZJerEUUfjcZjlkwlI5rCCBBrsCKLmv22UwEgFk7A6ROEFQYdtPypHiCKOGF90JwAvLXYVS2igofTbnbjTYhX4DC5IVrlkWesjWnLmOfY+3i2mpIq8pRJdnoxWMckKMXgfWPrgciKFC9JS4W8mnYJJR+z7jhk33qhlEnpuVJ0d8JMjasm0hCBkb9RdCCcWaSQ+yeUswqFUvqjgWjiD10li1I379jX6c0fPXokL8+Ap+pLBZ7UTNgeiHjmwNz33ZGIv7sm2m6Q+yKZD0xPPf4PF70RALxeNX+ChI64pN5JhmtUgjHNcCxDS2Kb1IjzoyY4h3ox3VOOiopR4ai+gALzKVLEx7y8coHyUvWfaj0I3QkVmMl6UeMIQmPve4HtaE9FrcbxF/WmfpeFMc+4hXzEKRdB8SaOL7L7m86WMKXrjbPVQjAAsW7so28cr4dGXZsJKLUoqwbBG4ZRJkrnz5FgBKH3C84h6Ur+4EcRKnHmz+6fEKGAVsJLiJIburoSo2Ccmcz2JA+CAZ3msaObQKZ6IF4Pev38BAhu9v65khaRJ1muwv7NsM1SJF9eU3RPT8qwzVMkX1DdJ8kw0BgUKD1SrkAU5hrEeqApaXkAi3GJ0tvyiICGSCDfP83i07YYfswwfJr3AdE/UEWWRmyRFJ+KO4KUPLsPJpu2zIvHctp1ZlVY14bU4bo0SPsK/jezj42kjZ4BG1z6Ndke2YbBhC1DQ7ggQHtie/B8nLLLs+76dMJOUvPXkV9wzeB64zMTmuK2uxH7GMO1QWcdEINY/06d3SLttyl04Fioc9mmfxKS6Ndq+Am3z84aJPbzn5LvLaVYcm5klEz8dItBHMvbQhAc8T29XNiSBW2ymJGXoYmqQcDYT5taEKD2q1CQcj7phswXUTMpEgXM1mYm4PceuMJvep764DqMRDZHCAATGOy/e89HnpajEAthPHnRD5RPDfcFdy13xZrELWmbK80r3zLMhAmmy84hoDaf4OMoBYh+zwsEn/2OuLsXqbJ2rZ14Nw/wJfDLS42WQVCObzpYmbBpUzjZnsgr1l502rGVTqUFUpY9NBMfc7rhP6rt0Ed+0HmA5q+EQqaLBihZ58DvOThfyhQL/bBye2DrdgiMfm+1Bi3LQgZ/Z8Hv2oaGIqLGBx5evzpd6MRaiU47DnmNwJYd5kMxvw9/fR4DKKAoC6Ja59LEhrMcFdrCBTBD10E/cLtohUGwJRJubQWMOM1AVsWQ4koxlhMjEo+2qW0AQm7ghxciVWxO5Pj2Mx2ilwWCS6CBwx0nPLQ/qINWJcBeiInnF3S6mRp5ayJtpPpx4UKtHziM71gDUkZ0qlw9d9XDQJFpV3TkXtGQCNJzsFQrmrcDD758oNaRUlsig1X4M0zGodvoDej1tSTvzx7FldVZuA2mCvfX0qVjv8LlRevpPXcVL+jARAKlRank+JeLxnaem1pOygja8a4zo+sExcaf+MgkeHraf5DFIwB5UrVby3mBjiMyh7965amFKmTfKZ+jsjkZSqJ1+tVhQW8wLOGy69IMFtji9Xa0XNgT9t5IHV1sxGJ+JrwsLbiTWxIm06uW9lzWqKoh+rlDDHv3+q0o1NVYkN5wERlAqyaUSweqYZfQRO3hNO3h8jGT4IjGRps73FqM6zTR8afMyjwTTJPondo/sRgn0h3pSusV0eYz0RimyYchTOa11O9RwCFL1X/4Bjf4VT6Zg4cZ+Wcecvmd8//obuTY+Yop5KvImwePasyH9lSKH4BxBhx+yPQUsy8mO/F1A+8qwoQolI7Zf8oQMjopkguXJk9BCDDTOxaCLOOuk2ZJsKIGfRc5NuevkQLjBbhSmYcpy2P6c/+9C9M7hHs9ylGwmkMtu1zFOxZ2KEolctktOChCx3GBwucb81oUijSzXjxHO9GtIrM3PhAQKZmUZ/maVrFVkDYQFjBZkbMsWjQ5X3FiCcWf6jUEj026Z8WaD974BLmOmPRRcdTu4avnz+84oHmGit/NJDq5hoAkQbwVW03btrKCjSqPTSawX/NhCuS+Xt6uRtm+r5eHw1qtZPK0EF31XBBWqz0UDaQtLJ+WA0rtaLqofdf153R+PJ9bBXLV8mjglOts2uh/0Ac28D1Lqhc2P8U0alO/lYac2iix8azplu6OKlHFxRAHCiUBDKv8OTbGLXtwsme+q7mLsJguQSdMoauft9shosgEPw3YUVmO/6oiz6ruW3nqJm+ydygZy+ZfMx70t5OQISyYc3HUXtOL5LEe2rlTIoujCK3+N4obbVdVH6i07xBVNYt87DBe6ZlHYz9bl+w1jNpRiFUfUlldDFV02+0BHIv9ZkuWYpI083sUJhlNxy1T2Piz/5hPEruZqTNUF6V2JcQvdnYzK361boa006Q5M2blUw2KOZ4OngIH81EFYpUn9628dxcbnjzOmdfmkR/HthoDEtrRa6I3tQJ0DlVirh7bgliWAWjFEvKstONqETiQrxF9VCWGSFa86j7uRfzYqX08lWwqkqCW2wwcK+BQsMYkeIEvspsMZQzES1kbnqufkaeKkMjllWx312VLjIkkZLNjOiHg+jTokjhnZ0y/aHUSkD5oNEx3UAQyF7OWShPqexc3V+NekO+mXRYuo/d+xEoc0MtosWhuBTNrxwqS4o4iG2oyNM2CfWsk5NHk4AALtzvCdg6wavVRvvjqd+7V3wtH76rnH67qRhVbXIplrEN476H5/8BxjKjaM=</source>
   </file>
-  <file path="SqueakyMindsPhpHelper_lists.php" generated-path="SqueakyMindsPhpHelper_lists.html" hash="9868bc71524d6ac622e761a2a22d0b6b" package="SqueakyMindsPhpHelper_lists">
+  <file path="SqueakyMindsPhpHelper_lists.php" generated-path="SqueakyMindsPhpHelper_lists.html" hash="af569a64d401cce64b7ca082ebb03d2b" package="SqueakyMindsPhpHelper_lists">
     <docblock line="0">
       <description>SqueakyMindsPhpHelper Helper Classes</description>
       <long-description></long-description>
@@ -1515,7 +1497,7 @@
           <type>string</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="" line="549" package="SqueakyMindsPhpHelper_lists">
+      <method final="false" abstract="false" static="true" visibility="private" namespace="" line="549" package="SqueakyMindsPhpHelper_lists">
         <name>listFuncs_PrepListAsArray</name>
         <full_name>\SqueakyMindsPhpHelper_lists::listFuncs_PrepListAsArray()</full_name>
         <docblock line="549">
@@ -1580,7 +1562,7 @@
         </argument>
       </method>
     </class>
-    <source>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</source>
+    <source>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</source>
   </file>
   <package name="SqueakyMindsPhpHelper" full_name="SqueakyMindsPhpHelper"/>
   <package name="SqueakyMindsPhpHelper_lists" full_name="SqueakyMindsPhpHelper_lists"/>
