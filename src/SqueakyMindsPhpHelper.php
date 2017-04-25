@@ -22,10 +22,14 @@
 
 
 /**
- * This class provides helper methods I have developed or aquired over the years.
+ * Class SqueakyMindsPhpHelper
+ *
+ * This class provides helper methods I have developed or acquired over the years.
  */
 class SqueakyMindsPhpHelper
 {
+
+
     /**
      * Return a 32 bit unique ID
      *
@@ -48,9 +52,9 @@ class SqueakyMindsPhpHelper
      *
      * @method string postvar() Prevent undefined post variables
      * @access public
-     * @return mixed
-     * @param  mixed   $name  $_POST variable key
-     * @param  boolean $isint Response if an integer
+     * @param $name
+     * @param bool $isint
+     * @return int|mixed|string
      *
      * @author    Brian Tafoya
      * @copyright Copyright 2001 - 2017, Brian Tafoya.
@@ -58,6 +62,9 @@ class SqueakyMindsPhpHelper
      */
     static public function postvar($name, $isint=false) 
     {
+        if(!empty($_POST[$name]) && is_array($_POST[$name])) {
+            return (array)$_POST[$name];
+        }
         $response = (isset($_POST[$name])?filter_var($_POST[$name], FILTER_SANITIZE_STRING):"");
         return ((boolean)$isint?(int)$response:(string)$response);
     }
@@ -68,9 +75,9 @@ class SqueakyMindsPhpHelper
      *
      * @method string getvar() Prevent undefined get variables
      * @access public
-     * @return mixed
-     * @param  string  $name  $_GET variable key
-     * @param  boolean $isint Response if an integer
+     * @param $name
+     * @param bool $isint
+     * @return int|mixed|string
      *
      * @author    Brian Tafoya
      * @copyright Copyright 2001 - 2017, Brian Tafoya.
@@ -78,6 +85,9 @@ class SqueakyMindsPhpHelper
      */
     static public function getvar($name, $isint=false) 
     {
+        if(!empty($_GET[$name]) && is_array($_GET[$name])) {
+            return (array)$_GET[$name];
+        }
         $response = (isset($_GET[$name])?filter_var($_GET[$name], FILTER_SANITIZE_STRING):"");
         return ((boolean)$isint?(int)$response:(string)$response);
     }
@@ -98,6 +108,9 @@ class SqueakyMindsPhpHelper
      */
     static public function sessionvar($name, $isint=false) 
     {
+        if(!empty($_SESSION[$name]) && is_array($_SESSION[$name])) {
+            return (array)$_SESSION[$name];
+        }
         $response = (isset($_SESSION[$name])?$_SESSION[$name]:"");
         return ((boolean)$isint?(int)$response:(string)$response);
     }
@@ -118,7 +131,6 @@ class SqueakyMindsPhpHelper
     static public function setsessionvar($name, $value) 
     {
         $_SESSION[$name] = $value;
-        $_SESSION[$name] = $value;
     }
 
 
@@ -127,9 +139,9 @@ class SqueakyMindsPhpHelper
      *
      * @method string cookievar() Prevent undefined cookie variables
      * @access public
-     * @return mixed
-     * @param  string  $name  $_COOKIE variable key
-     * @param  boolean $isint Response if an integer
+     * @param $name
+     * @param bool $isint
+     * @return array|int|string
      *
      * @author    Brian Tafoya
      * @copyright Copyright 2001 - 2017, Brian Tafoya.
@@ -137,6 +149,9 @@ class SqueakyMindsPhpHelper
      */
     static public function cookievar($name, $isint=false) 
     {
+        if(!empty($_COOKIE[$name]) && is_array($_COOKIE[$name])) {
+            return (array)$_COOKIE[$name];
+        }
         $response = (isset($_COOKIE[$name])?$_COOKIE[$name]:"");
         return ((boolean)$isint?(int)$response:(string)$response);
     }
@@ -147,9 +162,9 @@ class SqueakyMindsPhpHelper
      *
      * @method string servervar() Prevent undefined servervar variables
      * @access public
-     * @return mixed
-     * @param  string  $name  $_SERVER variable key
-     * @param  boolean $isint Response if an integer
+     * @param $name
+     * @param bool $isint
+     * @return array|int|string
      *
      * @author    Brian Tafoya
      * @copyright Copyright 2001 - 2017, Brian Tafoya.
@@ -157,6 +172,9 @@ class SqueakyMindsPhpHelper
      */
     static public function servervar($name, $isint=false)
     {
+        if(!empty($_SERVER[$name]) && is_array($_SERVER[$name])) {
+            return (array)$_SERVER[$name];
+        }
         $response = (isset($_SERVER[$name])?$_SERVER[$name]:"");
         return ((boolean)$isint?(int)$response:(string)$response);
     }
@@ -606,76 +624,19 @@ class SqueakyMindsPhpHelper
     /**
      * Turn all URLs in clickable links.
      *
-     * @method linkify()
+     * @method linkify($value, $protocols = "", array $attributes = array())
      * @access public
-     * @param  string $value
-     * @param  array  $protocols  http/https, ftp, mail, twitter
-     * @param  array  $attributes
+     * @param $value
      * @return string
      *
      * @author    Brian Tafoya
      * @copyright Copyright 2001 - 2017, Brian Tafoya.
      * @version   1.0
      */
-    function linkify($value, $protocols = array('http', 'mail'), array $attributes = array()) 
+    static function linkify($value)
     {
-        // Link attributes
-        $attr = '';
-        foreach ($attributes as $key => $val) {
-            $attr = ' ' . $key . '="' . htmlentities($val) . '"';
-        }
-
-        $links = array();
-
-        // Extract existing links and tags
-        $value = preg_replace_callback(
-            '~(<a .*?>.*?</a>|<.*?>)~i', function ($match) use (&$links) {
-                return '<' . array_push($links, $match[1]) . '>'; 
-            }, $value
-        );
-
-        // Extract text links for each protocol
-        foreach ((array)$protocols as $protocol) {
-            switch ($protocol) {
-            case 'http':
-            case 'https':
-                $value = preg_replace_callback(
-                    '~(?:(https?)://([^\s<]+)|(www\.[^\s<]+?\.[^\s<]+))(?<![\.,:])~i', function ($match) use ($protocol, &$links, $attr) {
-                        if ($match[1]) { $protocol = $match[1];
-                        } $link = $match[2] ?: $match[3]; return '<' . array_push($links, "<a $attr href=\"$protocol://$link\">$link</a>") . '>'; 
-                    }, $value
-                );
-                break;
-            case 'mail':
-                $value = preg_replace_callback(
-                    '~([^\s<]+?@[^\s<]+?\.[^\s<]+)(?<![\.,:])~', function ($match) use (&$links, $attr) {
-                        return '<' . array_push($links, "<a $attr href=\"mailto:{$match[1]}\">{$match[1]}</a>") . '>'; 
-                    }, $value
-                );
-                break;
-            case 'twitter':
-                $value = preg_replace_callback(
-                    '~(?<!\w)[@#](\w++)~', function ($match) use (&$links, $attr) {
-                        return '<' . array_push($links, "<a $attr href=\"https://twitter.com/" . ($match[0][0] == '@' ? '' : 'search/%23') . $match[1]  . "\">{$match[0]}</a>") . '>'; 
-                    }, $value
-                );
-                break;
-            default:
-                $value = preg_replace_callback(
-                    '~' . preg_quote($protocol, '~') . '://([^\s<]+?)(?<![\.,:])~i', function ($match) use ($protocol, &$links, $attr) {
-                        return '<' . array_push($links, "<a $attr href=\"$protocol://{$match[1]}\">{$match[1]}</a>") . '>'; 
-                    }, $value
-                );
-                break;
-            }
-        }
-
-        // Insert all link
-        return preg_replace_callback(
-            '/<(\d+)>/', function ($match) use (&$links) {
-                return $links[$match[1] - 1]; 
-            }, $value
-        );
+        $linkify = new \Misd\Linkify\Linkify();
+        return $linkify->process($value);
     }
 
     /**
