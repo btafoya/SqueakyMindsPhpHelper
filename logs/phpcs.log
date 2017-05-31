@@ -1,12 +1,12 @@
-Changing into directory /mnt/hgfs/www/SqueakyMindsPhpHelper/src
-Processing SqueakyMindsPhpHelper_lists.php [PHP => 3881 tokens in 586 lines]... DONE in 384ms (0 fixable violations)
-Processing SqueakyMindsPhpHelper.php [PHP => 4584 tokens in 687 lines]... DONE in 424ms (9 fixable violations)
-	=> Fixing file: 9/9 violations remaining                                                                                	=> Fixing file: 9/9 violations remaining [made 1 pass]...                                                                                 	=> Fixing file: 0/9 violations remaining [made 2 passes]... [32mDONE[0m in 942ms
+Changing into directory /var/www/SqueakyMindsPhpHelper/src
+Processing SqueakyMindsPhpHelper_lists.php [PHP => 3881 tokens in 586 lines]... DONE in 70ms (0 fixable violations)
+Processing SqueakyMindsPhpHelper.php [PHP => 4901 tokens in 722 lines]... DONE in 99ms (91 fixable violations)
+	=> Fixing file: 91/91 violations remaining                                                                                	=> Fixing file: 92/91 violations remaining [made 1 pass]...                                                                                 	=> Fixing file: 28/91 violations remaining [made 2 passes]...                                                                                 	=> Fixing file: 0/91 violations remaining [made 3 passes]... [32mDONE[0m in 370ms
 Patched 1 file
-Time: 2.16 secs; Memory: 18.5Mb
+Time: 577ms; Memory: 19.75Mb
 
-Changing into directory /mnt/hgfs/www/SqueakyMindsPhpHelper/tests
-Processing SqueakyMindsPhpHelper_test.php [PHP => 886 tokens in 178 lines]... DONE in 94ms (0 fixable violations)
+Changing into directory /var/www/SqueakyMindsPhpHelper/tests
+Processing SqueakyMindsPhpHelper_test.php [PHP => 886 tokens in 178 lines]... DONE in 19ms (0 fixable violations)
 No fixable errors were found
-Time: 334ms; Memory: 5.5Mb
+Time: 34ms; Memory: 5.5Mb
 

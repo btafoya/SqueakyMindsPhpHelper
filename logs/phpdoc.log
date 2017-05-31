@@ -1,17 +1,17 @@
 Collecting files .. OK
 Initializing parser .. OK
 Parsing files
-Parsing /mnt/hgfs/www/SqueakyMindsPhpHelper/src/SqueakyMindsPhpHelper.php
-Parsing /mnt/hgfs/www/SqueakyMindsPhpHelper/src/SqueakyMindsPhpHelper_lists.php
-Storing cache in "/mnt/hgfs/www/SqueakyMindsPhpHelper/docs" .. OK
-Load cache                                                         ..    0.134s
-Preparing template "responsive"                                    ..    0.094s
+Parsing /var/www/SqueakyMindsPhpHelper/src/SqueakyMindsPhpHelper.php
+Parsing /var/www/SqueakyMindsPhpHelper/src/SqueakyMindsPhpHelper_lists.php
+Storing cache in "/var/www/SqueakyMindsPhpHelper/docs" .. OK
+Load cache                                                         ..    0.011s
+Preparing template "responsive"                                    ..    0.009s
 Preparing 13 transformations                                       ..    0.000s
-Build "elements" index                                             ..    0.001s
-Replace textual FQCNs with object aliases                          ..    0.038s
-Resolve @link and @see tags in descriptions                        ..    0.002s
-Enriches inline example tags with their sources                    ..    0.003s
-Build "packages" index                                             ..    0.017s
+Build "elements" index                                             ..    0.000s
+Replace textual FQCNs with object aliases                          ..    0.006s
+Resolve @link and @see tags in descriptions                        ..    0.000s
+Enriches inline example tags with their sources                    ..    0.000s
+Build "packages" index                                             ..    0.000s
 Build "namespaces" index and add namespaces to "elements"          ..    0.000s
 Collect all markers embedded in tags                               ..    0.000s
 Transform analyzed project into artifacts                          .. 
@@ -33,5 +33,5 @@ Applying 13 transformations
   Execute transformation using writer "xsl"
   Execute transformation using writer "xsl"
   Execute transformation using writer "Graph"
-   3.301s
-Analyze results and write report to log                            ..    0.001s
+Unable to find the `dot` command of the GraphViz package. Is GraphViz correctly installed and present in your path?   0.091s
+Analyze results and write report to log                            ..    0.000s

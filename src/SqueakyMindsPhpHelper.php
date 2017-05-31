@@ -41,9 +41,9 @@ class SqueakyMindsPhpHelper
      * @copyright Copyright 2001 - 2017, Brian Tafoya.
      * @version   1.0
      */
-    static public function uuid()
+    static public function uuid() 
     {
-        return (string)md5(uniqid(rand()+MicroTime(), 1));
+        return (string)md5(uniqid(rand() + MicroTime(), 1));
     }
 
 
@@ -52,21 +52,24 @@ class SqueakyMindsPhpHelper
      *
      * @method string postvar() Prevent undefined post variables
      * @access public
-     * @param  $name
-     * @param  bool $isint
+     *
+     * @param $name
+     * @param bool $isint
+     *
      * @return int|mixed|string
      *
      * @author    Brian Tafoya
      * @copyright Copyright 2001 - 2017, Brian Tafoya.
      * @version   1.0
      */
-    static public function postvar($name, $isint=false) 
+    static public function postvar($name, $isint = false) 
     {
         if(!empty($_POST[$name]) && is_array($_POST[$name])) {
             return (array)$_POST[$name];
         }
-        $response = (isset($_POST[$name])?filter_var($_POST[$name], FILTER_SANITIZE_STRING):"");
-        return ((boolean)$isint?(int)$response:(string)$response);
+        $response = (isset($_POST[$name]) ? filter_var($_POST[$name], FILTER_SANITIZE_STRING) : "");
+
+        return ((boolean)$isint ? (int)$response : (string)$response);
     }
 
 
@@ -75,21 +78,24 @@ class SqueakyMindsPhpHelper
      *
      * @method string getvar() Prevent undefined get variables
      * @access public
-     * @param  $name
-     * @param  bool $isint
+     *
+     * @param $name
+     * @param bool $isint
+     *
      * @return int|mixed|string
      *
      * @author    Brian Tafoya
      * @copyright Copyright 2001 - 2017, Brian Tafoya.
      * @version   1.0
      */
-    static public function getvar($name, $isint=false) 
+    static public function getvar($name, $isint = false) 
     {
         if(!empty($_GET[$name]) && is_array($_GET[$name])) {
             return (array)$_GET[$name];
         }
-        $response = (isset($_GET[$name])?filter_var($_GET[$name], FILTER_SANITIZE_STRING):"");
-        return ((boolean)$isint?(int)$response:(string)$response);
+        $response = (isset($_GET[$name]) ? filter_var($_GET[$name], FILTER_SANITIZE_STRING) : "");
+
+        return ((boolean)$isint ? (int)$response : (string)$response);
     }
 
 
@@ -99,20 +105,22 @@ class SqueakyMindsPhpHelper
      * @method string sessionvar() Prevent undefined session variables
      * @access public
      * @return mixed
-     * @param  string  $name  $_SESSION variable key
-     * @param  boolean $isint Response if an integer
+     *
+     * @param string  $name  $_SESSION variable key
+     * @param boolean $isint Response if an integer
      *
      * @author    Brian Tafoya
      * @copyright Copyright 2001 - 2017, Brian Tafoya.
      * @version   1.0
      */
-    static public function sessionvar($name, $isint=false) 
+    static public function sessionvar($name, $isint = false) 
     {
         if(!empty($_SESSION[$name]) && is_array($_SESSION[$name])) {
             return (array)$_SESSION[$name];
         }
-        $response = (isset($_SESSION[$name])?$_SESSION[$name]:"");
-        return ((boolean)$isint?(int)$response:(string)$response);
+        $response = (isset($_SESSION[$name]) ? $_SESSION[$name] : "");
+
+        return ((boolean)$isint ? (int)$response : (string)$response);
     }
 
 
@@ -121,8 +129,9 @@ class SqueakyMindsPhpHelper
      *
      * @method string setsessionvar()
      * @access public
-     * @param  string  $name  $_SESSION variable key
-     * @param  boolean $value $_SESSION variable value
+     *
+     * @param string  $name  $_SESSION variable key
+     * @param boolean $value $_SESSION variable value
      *
      * @author    Brian Tafoya
      * @copyright Copyright 2001 - 2017, Brian Tafoya.
@@ -139,21 +148,24 @@ class SqueakyMindsPhpHelper
      *
      * @method string cookievar() Prevent undefined cookie variables
      * @access public
-     * @param  $name
-     * @param  bool $isint
+     *
+     * @param $name
+     * @param bool $isint
+     *
      * @return array|int|string
      *
      * @author    Brian Tafoya
      * @copyright Copyright 2001 - 2017, Brian Tafoya.
      * @version   1.0
      */
-    static public function cookievar($name, $isint=false) 
+    static public function cookievar($name, $isint = false) 
     {
         if(!empty($_COOKIE[$name]) && is_array($_COOKIE[$name])) {
             return (array)$_COOKIE[$name];
         }
-        $response = (isset($_COOKIE[$name])?$_COOKIE[$name]:"");
-        return ((boolean)$isint?(int)$response:(string)$response);
+        $response = (isset($_COOKIE[$name]) ? $_COOKIE[$name] : "");
+
+        return ((boolean)$isint ? (int)$response : (string)$response);
     }
 
 
@@ -162,21 +174,24 @@ class SqueakyMindsPhpHelper
      *
      * @method string servervar() Prevent undefined servervar variables
      * @access public
-     * @param  $name
-     * @param  bool $isint
+     *
+     * @param $name
+     * @param bool $isint
+     *
      * @return array|int|string
      *
      * @author    Brian Tafoya
      * @copyright Copyright 2001 - 2017, Brian Tafoya.
      * @version   1.0
      */
-    static public function servervar($name, $isint=false)
+    static public function servervar($name, $isint = false) 
     {
         if(!empty($_SERVER[$name]) && is_array($_SERVER[$name])) {
             return (array)$_SERVER[$name];
         }
-        $response = (isset($_SERVER[$name])?$_SERVER[$name]:"");
-        return ((boolean)$isint?(int)$response:(string)$response);
+        $response = (isset($_SERVER[$name]) ? $_SERVER[$name] : "");
+
+        return ((boolean)$isint ? (int)$response : (string)$response);
     }
 
 
@@ -186,16 +201,17 @@ class SqueakyMindsPhpHelper
      * @method getvar_default() Return getvar with a default is blank.
      * @access public
      * @return mixed
-     * @param  string $field_name  $_GET variable key name.
-     * @param  mixed  $default_val The default value returned in the event the $_GET variable is empty or does not exist.
+     *
+     * @param string $field_name  $_GET variable key name.
+     * @param mixed  $default_val The default value returned in the event the $_GET variable is empty or does not exist.
      *
      * @author    Brian Tafoya
      * @copyright Copyright 2001 - 2017, Brian Tafoya.
      * @version   1.0
      */
-    static public function getvar_default($field_name, $default_val="") 
+    static public function getvar_default($field_name, $default_val = "") 
     {
-        return (strlen(self::getvar($field_name))?self::getvar($field_name):$default_val);
+        return (strlen(self::getvar($field_name)) ? self::getvar($field_name) : $default_val);
     }
 
 
@@ -205,16 +221,17 @@ class SqueakyMindsPhpHelper
      * @method postvar_default() Return postvar with a default is blank.
      * @access public
      * @return mixed
-     * @param  string $field_name  $_POST variable key name.
-     * @param  mixed  $default_val The default value returned in the event the $_POST variable is empty or does not exist.
+     *
+     * @param string $field_name  $_POST variable key name.
+     * @param mixed  $default_val The default value returned in the event the $_POST variable is empty or does not exist.
      *
      * @author    Brian Tafoya
      * @copyright Copyright 2001 - 2017, Brian Tafoya.
      * @version   1.0
      */
-    static public function postvar_default($field_name, $default_val="")
+    static public function postvar_default($field_name, $default_val = "") 
     {
-        return (strlen(self::postvar($field_name))?self::postvar($field_name):$default_val);
+        return (strlen(self::postvar($field_name)) ? self::postvar($field_name) : $default_val);
     }
 
 
@@ -224,14 +241,15 @@ class SqueakyMindsPhpHelper
      * @method string left() Return characters from the left.
      * @access public
      * @return string
-     * @param  string $str                  String to truncate.
-     * @param  int    $howManyCharsFromLeft Number of characters to the left of the string.
+     *
+     * @param string $str                  String to truncate.
+     * @param int    $howManyCharsFromLeft Number of characters to the left of the string.
      *
      * @author    Brian Tafoya
      * @copyright Copyright 2001 - 2017, Brian Tafoya.
      * @version   1.0
      */
-    static public function left($str, $howManyCharsFromLeft)
+    static public function left($str, $howManyCharsFromLeft) 
     {
         return (string)substr($str, 0, (int)$howManyCharsFromLeft);
     }
@@ -243,16 +261,18 @@ class SqueakyMindsPhpHelper
      * @method string right() Return characters from the right.
      * @access public
      * @return string
-     * @param  string $str                   String to truncate.
-     * @param  int    $howManyCharsFromRight Number of characters to the right of the string.
+     *
+     * @param string $str                   String to truncate.
+     * @param int    $howManyCharsFromRight Number of characters to the right of the string.
      *
      * @author    Brian Tafoya
      * @copyright Copyright 2001 - 2017, Brian Tafoya.
      * @version   1.0
      */
-    static public function right($str, $howManyCharsFromRight)
+    static public function right($str, $howManyCharsFromRight) 
     {
         $strLen = strlen($str);
+
         return (string)substr($str, $strLen - $howManyCharsFromRight, $strLen);
     }
 
@@ -263,18 +283,19 @@ class SqueakyMindsPhpHelper
      * @method string mid() Return x many characters from the starting point
      * @access public
      * @return string
-     * @param  string $str          String to truncate.
-     * @param  int    $start        Where to start from the left of the string.
-     * @param  int    $howManyChars Number of characters to return.
+     *
+     * @param string $str          String to truncate.
+     * @param int    $start        Where to start from the left of the string.
+     * @param int    $howManyChars Number of characters to return.
      *
      * @author    Brian Tafoya
      * @copyright Copyright 2001 - 2017, Brian Tafoya.
      * @version   1.0
      */
-    static public function mid($str, $start, $howManyChars = 0)
+    static public function mid($str, $start, $howManyChars = 0) 
     {
         $start--;
-        if ((int)$howManyChars === 0) {
+        if((int)$howManyChars === 0) {
             $howManyChars = (int)strlen($str) - (int)$start;
         }
 
@@ -288,20 +309,21 @@ class SqueakyMindsPhpHelper
      * @method dump_simple_array() HTML Dump of string/array/etc.
      * @access public
      * @return string
-     * @param  mixed  $array Data to dump.
-     * @param  string $title Table title.
+     *
+     * @param mixed  $array Data to dump.
+     * @param string $title Table title.
      *
      * @author    Brian Tafoya
      * @copyright Copyright 2001 - 2017, Brian Tafoya.
      * @version   1.0
      */
-    static public function dump_simple_array($array,$title="") 
+    static public function dump_simple_array($array, $title = "") 
     {
         $result = '<table cellpadding=5 cellspacing=1 bgcolor=#555555 style="color:#000000;">';
         if(strlen($title)) {
             $result .= '<tr><td nowrap bgcolor=#DEE3ED colspan=2><i>' . $title . '</i></td></tr>';
         }
-        foreach($array as $key=>$value) {
+        foreach($array as $key => $value) {
             $result .= '<tr><td style="background-color: #eeeeee;"><span style="font-size: 10px; font-weight: bold;">' . $key . '</span></td>';
             $result .= '<td style="background-color: #ffffff;"><code>';
             if(is_array($value)) {
@@ -313,6 +335,7 @@ class SqueakyMindsPhpHelper
             $result .= '</tr>';
         }
         $result .= '</table>';
+
         return $result;
     }
 
@@ -323,8 +346,9 @@ class SqueakyMindsPhpHelper
      * @method truncate() Return truncated number.
      * @access public
      * @return int
-     * @param  int $num    Number to truncate.
-     * @param  int $digits Number of digits to truncate.
+     *
+     * @param int $num    Number to truncate.
+     * @param int $digits Number of digits to truncate.
      *
      * @author    Brian Tafoya
      * @copyright Copyright 2001 - 2017, Brian Tafoya.
@@ -333,6 +357,7 @@ class SqueakyMindsPhpHelper
     static public function truncate($num, $digits = 0) 
     {
         $shift = pow(10, $digits);
+
         return ((floor($num * $shift)) / $shift);
     }
 
@@ -342,7 +367,8 @@ class SqueakyMindsPhpHelper
      *
      * @method multi_stripslashes() Return array stripslasshes recursive.
      * @access public
-     * @param  callable $arr Input array.
+     *
+     * @param callable $arr Input array.
      *
      * @author    Brian Tafoya
      * @copyright Copyright 2001 - 2017, Brian Tafoya.
@@ -351,7 +377,7 @@ class SqueakyMindsPhpHelper
     static public function multi_stripslashes(&$arr) 
     {
         foreach($arr as $k => $v) {
-            if (is_array($v)) {
+            if(is_array($v)) {
                 self::multi_stripslashes($arr[$k]);
             } else {
                 $arr[$k] = stripslashes($v);
@@ -366,24 +392,23 @@ class SqueakyMindsPhpHelper
      * @method numberToRoman() Return roman numeral.
      * @access public
      * @return string
-     * @param  int $num Number to transform.
+     *
+     * @param int $num Number to transform.
      *
      * @author    Brian Tafoya
      * @copyright Copyright 2001 - 2017, Brian Tafoya.
      * @version   1.0
      */
-    static public function numberToRoman($num)
+    static public function numberToRoman($num) 
     {
         // Make sure that we only use the integer portion of the value
         $numr = intval($num);
         $result = '';
 
         // Declare a lookup array that we will use to traverse the number:
-        $lookup = array('M' => 1000, 'CM' => 900, 'D' => 500, 'CD' => 400,
-            'C' => 100, 'XC' => 90, 'L' => 50, 'XL' => 40,
-            'X' => 10, 'IX' => 9, 'V' => 5, 'IV' => 4, 'I' => 1);
+        $lookup = array('M' => 1000, 'CM' => 900, 'D' => 500, 'CD' => 400, 'C' => 100, 'XC' => 90, 'L' => 50, 'XL' => 40, 'X' => 10, 'IX' => 9, 'V' => 5, 'IV' => 4, 'I' => 1);
 
-        foreach ($lookup as $roman => $value){
+        foreach($lookup as $roman => $value) {
             // Determine the number of matches
             $matches = intval($numr / $value);
 
@@ -405,7 +430,8 @@ class SqueakyMindsPhpHelper
      * @method duration() Return duration from seconds.
      * @access public
      * @return string
-     * @param  int $secs Seconds value.
+     *
+     * @param int $secs Seconds value.
      *
      * @author    Brian Tafoya
      * @copyright Copyright 2001 - 2017, Brian Tafoya.
@@ -413,17 +439,13 @@ class SqueakyMindsPhpHelper
      */
     static public function duration($secs) 
     {
-        $vals = array('w' => (int) ($secs / 86400 / 7),
-            'd' => $secs / 86400 % 7,
-            'h' => $secs / 3600 % 24,
-            'm' => $secs / 60 % 60,
-            's' => $secs % 60);
+        $vals = array('w' => (int)($secs / 86400 / 7), 'd' => $secs / 86400 % 7, 'h' => $secs / 3600 % 24, 'm' => $secs / 60 % 60, 's' => $secs % 60);
 
         $ret = array();
 
         $added = false;
-        foreach ($vals as $k => $v) {
-            if ($v > 0 || $added) {
+        foreach($vals as $k => $v) {
+            if($v > 0 || $added) {
                 $added = true;
                 $ret[] = $v . $k;
             }
@@ -439,7 +461,8 @@ class SqueakyMindsPhpHelper
      * @method object2array() Return an array from an object.
      * @access public
      * @return array
-     * @param  object $object Object to transform.
+     *
+     * @param object $object Object to transform.
      *
      * @author    Brian Tafoya
      * @copyright Copyright 2001 - 2017, Brian Tafoya.
@@ -457,7 +480,8 @@ class SqueakyMindsPhpHelper
      * @method xml2array() Return an array from xml string.
      * @access public
      * @return array
-     * @param  string $xmlstring XML to process.
+     *
+     * @param string $xmlstring XML to process.
      *
      * @author    Brian Tafoya
      * @copyright Copyright 2001 - 2017, Brian Tafoya.
@@ -467,6 +491,7 @@ class SqueakyMindsPhpHelper
     {
         $xml = simplexml_load_string($xmlstring);
         $json = json_encode($xml);
+
         return json_decode($json, true);
     }
 
@@ -496,7 +521,9 @@ class SqueakyMindsPhpHelper
      *
      * @method xml2array()
      * @access public
-     * @param  string $json The original JSON string to process.
+     *
+     * @param string $json The original JSON string to process.
+     *
      * @return string Indented version of the original JSON string.
      *
      * @author    Brian Tafoya
@@ -506,29 +533,29 @@ class SqueakyMindsPhpHelper
     function json_indent($json) 
     {
 
-        $result      = '';
-        $pos         = 0;
-        $strLen      = strlen($json);
-        $indentStr   = '  ';
-        $newLine     = "\n";
-        $prevChar    = '';
+        $result = '';
+        $pos = 0;
+        $strLen = strlen($json);
+        $indentStr = '  ';
+        $newLine = "\n";
+        $prevChar = '';
         $outOfQuotes = true;
 
-        for ($i=0; $i<=$strLen; $i++) {
+        for($i = 0; $i <= $strLen; $i++) {
 
             // Grab the next character in the string.
             $char = substr($json, $i, 1);
 
             // Are we inside a quoted string?
-            if ($char == '"' && $prevChar != '\\') {
+            if($char == '"' && $prevChar != '\\') {
                 $outOfQuotes = !$outOfQuotes;
 
                 // If this character is the end of an element,
                 // output a new line and indent the next line.
             } else if(($char == '}' || $char == ']') && $outOfQuotes) {
                 $result .= $newLine;
-                $pos --;
-                for ($j=0; $j<$pos; $j++) {
+                $pos--;
+                for($j = 0; $j < $pos; $j++) {
                     $result .= $indentStr;
                 }
             }
@@ -538,13 +565,13 @@ class SqueakyMindsPhpHelper
 
             // If the last character was the beginning of an element,
             // output a new line and indent the next line.
-            if (($char == ',' || $char == '{' || $char == '[') && $outOfQuotes) {
+            if(($char == ',' || $char == '{' || $char == '[') && $outOfQuotes) {
                 $result .= $newLine;
-                if ($char == '{' || $char == '[') {
-                    $pos ++;
+                if($char == '{' || $char == '[') {
+                    $pos++;
                 }
 
-                for ($j = 0; $j < $pos; $j++) {
+                for($j = 0; $j < $pos; $j++) {
                     $result .= $indentStr;
                 }
             }
@@ -561,7 +588,9 @@ class SqueakyMindsPhpHelper
      *
      * @method array_last() Return the last array member.
      * @access public
-     * @param  array $array_val Array data.
+     *
+     * @param array $array_val Array data.
+     *
      * @return array
      * @throws InvalidArgumentException Not array data.
      *
@@ -573,6 +602,7 @@ class SqueakyMindsPhpHelper
     {
         if(is_array($array_val)) {
             $tmp = $array_val;
+
             return array_pop($tmp);
         } else {
             throw new InvalidArgumentException("Invalid input data.", 10);
@@ -585,7 +615,9 @@ class SqueakyMindsPhpHelper
      *
      * @method array_first()
      * @access public
-     * @param  array $array_val
+     *
+     * @param array $array_val
+     *
      * @return array
      * @throws InvalidArgumentException Not array data.
      *
@@ -597,6 +629,7 @@ class SqueakyMindsPhpHelper
     {
         if(is_array($array_val)) {
             $tmp = $array_val;
+
             return array_shift($tmp);
         } else {
             throw new InvalidArgumentException("Invalid input data.", 10);
@@ -615,9 +648,9 @@ class SqueakyMindsPhpHelper
      * @copyright Copyright 2001 - 2017, Brian Tafoya.
      * @version   1.0
      */
-    static public function requested_url()
+    static public function requested_url() 
     {
-        return (string)"http" . (self::servervar('HTTPS')?"s":"") . "://" . self::servervar('HTTP_HOST') . self::servervar('REQUEST_URI');
+        return (string)"http" . (self::servervar('HTTPS') ? "s" : "") . "://" . self::servervar('HTTP_HOST') . self::servervar('REQUEST_URI');
     }
 
 
@@ -626,18 +659,22 @@ class SqueakyMindsPhpHelper
      *
      * @method linkify($value, $protocols = "", array $attributes = array())
      * @access public
-     * @param  $value
+     *
+     * @param $value
+     *
      * @return string
      *
      * @author    Brian Tafoya
      * @copyright Copyright 2001 - 2017, Brian Tafoya.
      * @version   1.0
      */
-    static function linkify($value)
+    static function linkify($value) 
     {
         $linkify = new \Misd\Linkify\Linkify();
+
         return $linkify->process($value);
     }
+
 
     /**
      * Truncate a string.
@@ -647,16 +684,18 @@ class SqueakyMindsPhpHelper
      * @param  int    $limit  String length max.
      * @param  string $break  (optional) Break point, defauls to period.
      * @param  string $pad    (optional) String to append to the truncated string.
+     *
      * @return string Truncated string.
      *
      * @author    Brian Tafoya
      * @copyright Copyright 2001 - 2017, Brian Tafoya.
      * @version   1.0
      */
-    static public function stringTruncate($string, $limit, $break=".", $pad="...") 
+    static public function stringTruncate($string, $limit, $break = ".", $pad = "...") 
     {
         // return with no change if string is shorter than $limit
-        if(strlen($string) <= $limit) { return $string;
+        if(strlen($string) <= $limit) {
+            return $string;
         }
 
         // is $break present between $limit and the end of the string?
@@ -669,19 +708,44 @@ class SqueakyMindsPhpHelper
         return $string;
     }
 
+
     /**
      * Convert BR tags to PHP_EOL.
      *
      * @method br2nl($string) Convert BR tags to PHP_EOL.
      * @param  string $string The string to convert
+     *
      * @return string The converted string
      *
      * @author    Brian Tafoya
      * @copyright Copyright 2001 - 2017, Brian Tafoya.
      * @version   1.0
      */
-    static public function br2nl( $string )     
+    static public function br2nl($string) 
     {
         return (string)preg_replace('/\<br(\s*)?\/?\>/i', PHP_EOL, $string);
+    }
+
+
+    /**
+     * Escape a string just like mysql_escape_string which is now depreciated.
+     *
+     * @method escape($inp) Escape a string just like mysql_escape_string which is now depreciated.
+     * @param  $inp
+     *
+     * @return string
+     *
+     * @author    Brian Tafoya
+     * @copyright Copyright 2001 - 2017, Brian Tafoya.
+     * @version   1.0
+     */
+    static public function escape($inp) 
+    {
+        if(!empty($inp) && is_string($inp)) {
+            return (string)str_replace(array('\\', "\0", "\n", "\r", "'", '"', "\x1a"), array('\\\\', '\\0', '\\n', '\\r', "\\'", '\\"', '\\Z'), $inp);
+        }
+
+        return (string)$inp;
+
     }
 }
