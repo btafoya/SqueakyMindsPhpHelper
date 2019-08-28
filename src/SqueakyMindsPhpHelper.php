@@ -43,7 +43,7 @@ class SqueakyMindsPhpHelper
      */
     static public function uuid() 
     {
-        return (string)md5(uniqid(rand() + MicroTime(), 1));
+        return (string)md5(uniqid((int)rand() + (int)MicroTime(), 1));
     }
 
 
